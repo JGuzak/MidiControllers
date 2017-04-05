@@ -1,5 +1,5 @@
-C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x_dbg\Release\MidiMixerMono.cpp.o: \
- C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x_dbg\Release\MidiMixerMono.cpp \
+C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o: \
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/arduino.h \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/pgmspace.h \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/avr/interrupt.h \
@@ -136,5 +136,8 @@ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x_dbg\Releas
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x_dbg\Release\RotaryHandler.h \
- C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x_dbg\Release\ButtonHandler.h
+ C:\Users\user\Documents\Arduino\libraries\MIDIUSB\src/MIDIUSB.h \
+ C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/PluggableUSB.h \
+ C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\RotaryHandler.h \
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\ButtonHandler.h

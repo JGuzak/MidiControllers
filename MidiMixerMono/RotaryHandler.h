@@ -4,6 +4,10 @@
 #ifndef ROTARY_HANDLER_H
 #define ROTARY_HANDLER_H
 
+//#include <MIDI.h>
+#include <MIDIUSB.h>
+
+
 // *************************************************
 // constants:
 const bool RUS_DEBUG = false; // rotaryUpdateState(int data[])
@@ -56,13 +60,19 @@ const int ROTARY_STATES[4] = { 0, 2, 3, 1 };
 * E: sends midi signal via serial port
 */
 void rotaryValGenerateMidiMessage(int data[]) {
-    int channel = data[5];
-    int CC = data[6];
-    int val = data[7];
+    byte channel = data[5];
+    byte CC = data[6];
+    byte val = data[7];
 
-    String midiMessage = String(channel, HEX) + " " + String(CC, HEX) + " " + String(val, HEX);
+    midiEventPacket_t midiEvent = { 0x0B, 0xB0 | channel, CC, val };
 
-    Serial.println(midiMessage);
+    //String midiMessage = String(CC, HEX) + " " + String(val, HEX) + " " + String(channel, HEX);
+    //MIDI.sendControlChange(CC, val, channel);
+    MidiUSB.sendMIDI(midiEvent);
+    MidiUSB.flush();
+
+    
+    //Serial.println(midiMessage);
 
 }
 
@@ -84,7 +94,7 @@ void rotaryDeltaGenerateMidiMessage(int data[]) {
 
     String midiMessage = String(channel, HEX) + " " + String(CC, HEX) + " " + String(val, HEX);
 
-    Serial.println(midiMessage);
+    //Serial.println(midiMessage);
 }
 
 /* R: pin a and pin b
@@ -131,7 +141,7 @@ int rotaryGetState(int a, int b) {
  * M: state, step, and value of rotary encoder
  * E: returns rotary encoder data
  */
-int* rotaryValueUpdateState(volatile int temp[]) {
+int* rotaryValueUpdateState( volatile int temp[]) {
     static int data[ROTARY_VALUE_ARRAY_SIZE];
 
     // populate static data array for returning data

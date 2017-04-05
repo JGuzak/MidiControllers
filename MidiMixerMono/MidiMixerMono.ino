@@ -4,6 +4,12 @@
  Author:	Jordan Guzak
 */
 
+//#include <MIDI.h>
+
+//MIDI_CREATE_DEFAULT_INSTANCE();
+
+#include <MIDIUSB.h>
+
 #include "RotaryHandler.h"
 #include "ButtonHandler.h"
 
@@ -77,7 +83,11 @@ volatile static int page4ButtonState[][BUTTON_ARRAY_SIZE] = {
 
 
 void setup() {
-    Serial.begin(56000);
+    //Serial.begin(56000);
+
+    //MIDI.begin(MIDI_CHANNEL_OMNI);
+
+    Serial.begin(115200);
 
     pinMode(shiftPin, INPUT_PULLUP);
 
