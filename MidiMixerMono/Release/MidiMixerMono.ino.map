@@ -2965,73 +2965,73 @@ OUTPUT(C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Rel
  .comment       0x00000000       0x71 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(interrupt_sam_nvic.o)
  .comment       0x00000000       0x71 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
 
-.debug_info     0x00000000    0x19c34
- .debug_info    0x00000000     0x256b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .debug_info    0x0000256b     0x17c0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
- .debug_info    0x00003d2b     0x1a43 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .debug_info    0x0000576e      0x2da C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_info    0x00005a48       0x60 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_info    0x00005aa8      0x62b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_info    0x000060d3     0x121e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
- .debug_info    0x000072f1      0x52f C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_info    0x00007820     0x1d7e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_info    0x0000959e      0xe00 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_info    0x0000a39e      0x3cf C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_info    0x0000a76d     0x27cd C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_info    0x0000cf3a      0x3df C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_info    0x0000d319      0x1f6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_info    0x0000d50f     0x24e3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_info    0x0000f9f2      0xbe2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_info    0x000105d4      0x220 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_info    0x000107f4     0x3af8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
- .debug_info    0x000142ec      0x6a1 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
- .debug_info    0x0001498d     0x209d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_info    0x00016a2a      0x27c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
- .debug_info    0x00016ca6     0x2f8e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+.debug_info     0x00000000    0x19c43
+ .debug_info    0x00000000     0x257a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .debug_info    0x0000257a     0x17c0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
+ .debug_info    0x00003d3a     0x1a43 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_info    0x0000577d      0x2da C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_info    0x00005a57       0x60 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_info    0x00005ab7      0x62b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_info    0x000060e2     0x121e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_info    0x00007300      0x52f C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_info    0x0000782f     0x1d7e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_info    0x000095ad      0xe00 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_info    0x0000a3ad      0x3cf C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_info    0x0000a77c     0x27cd C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_info    0x0000cf49      0x3df C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_info    0x0000d328      0x1f6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_info    0x0000d51e     0x24e3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_info    0x0000fa01      0xbe2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_info    0x000105e3      0x220 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_info    0x00010803     0x3af8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_info    0x000142fb      0x6a1 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+ .debug_info    0x0001499c     0x209d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_info    0x00016a39      0x27c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
+ .debug_info    0x00016cb5     0x2f8e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
 
-.debug_abbrev   0x00000000     0x41bb
- .debug_abbrev  0x00000000      0x50a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .debug_abbrev  0x0000050a      0x437 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
- .debug_abbrev  0x00000941      0x3fc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .debug_abbrev  0x00000d3d      0x106 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_abbrev  0x00000e43       0x47 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_abbrev  0x00000e8a      0x19c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_abbrev  0x00001026      0x2d2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
- .debug_abbrev  0x000012f8      0x160 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_abbrev  0x00001458      0x2fb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_abbrev  0x00001753      0x225 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_abbrev  0x00001978      0x196 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_abbrev  0x00001b0e      0x4e0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_abbrev  0x00001fee      0x14c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_abbrev  0x0000213a      0x175 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_abbrev  0x000022af      0x53e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_abbrev  0x000027ed      0x2eb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_abbrev  0x00002ad8      0x114 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_abbrev  0x00002bec      0x474 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
- .debug_abbrev  0x00003060      0x2b4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
- .debug_abbrev  0x00003314      0x6d3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_abbrev  0x000039e7       0xde C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
- .debug_abbrev  0x00003ac5      0x6f6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+.debug_abbrev   0x00000000     0x41ac
+ .debug_abbrev  0x00000000      0x4fb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .debug_abbrev  0x000004fb      0x437 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
+ .debug_abbrev  0x00000932      0x3fc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_abbrev  0x00000d2e      0x106 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_abbrev  0x00000e34       0x47 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_abbrev  0x00000e7b      0x19c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_abbrev  0x00001017      0x2d2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_abbrev  0x000012e9      0x160 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_abbrev  0x00001449      0x2fb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_abbrev  0x00001744      0x225 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_abbrev  0x00001969      0x196 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_abbrev  0x00001aff      0x4e0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_abbrev  0x00001fdf      0x14c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_abbrev  0x0000212b      0x175 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_abbrev  0x000022a0      0x53e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_abbrev  0x000027de      0x2eb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_abbrev  0x00002ac9      0x114 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_abbrev  0x00002bdd      0x474 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_abbrev  0x00003051      0x2b4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+ .debug_abbrev  0x00003305      0x6d3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_abbrev  0x000039d8       0xde C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
+ .debug_abbrev  0x00003ab6      0x6f6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
 
-.debug_loc      0x00000000     0x69d9
- .debug_loc     0x00000000      0x78b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .debug_loc     0x0000078b      0x327 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
- .debug_loc     0x00000ab2       0x8a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .debug_loc     0x00000b3c      0x176 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_loc     0x00000cb2      0x358 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
- .debug_loc     0x0000100a       0xfc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_loc     0x00001106      0x76c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_loc     0x00001872      0x1eb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_loc     0x00001a5d     0x117a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_loc     0x00002bd7       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_loc     0x00002bf5      0x42b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_loc     0x00003020      0x230 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_loc     0x00003250       0x69 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_loc     0x000032b9     0x200f C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
- .debug_loc     0x000052c8      0x21e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
- .debug_loc     0x000054e6      0xb08 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_loc     0x00005fee      0x3b3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
- .debug_loc     0x000063a1      0x638 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+.debug_loc      0x00000000     0x6a32
+ .debug_loc     0x00000000      0x7e4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .debug_loc     0x000007e4      0x327 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
+ .debug_loc     0x00000b0b       0x8a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_loc     0x00000b95      0x176 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_loc     0x00000d0b      0x358 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_loc     0x00001063       0xfc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_loc     0x0000115f      0x76c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_loc     0x000018cb      0x1eb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_loc     0x00001ab6     0x117a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_loc     0x00002c30       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_loc     0x00002c4e      0x42b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_loc     0x00003079      0x230 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_loc     0x000032a9       0x69 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_loc     0x00003312     0x200f C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_loc     0x00005321      0x21e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+ .debug_loc     0x0000553f      0xb08 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_loc     0x00006047      0x3b3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
+ .debug_loc     0x000063fa      0x638 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
 
 .debug_aranges  0x00000000      0xae0
  .debug_aranges
@@ -3103,74 +3103,74 @@ OUTPUT(C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Rel
  .debug_ranges  0x000011b0       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
  .debug_ranges  0x000011d8       0xd8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
 
-.debug_line     0x00000000     0x7381
- .debug_line    0x00000000      0x8d8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .debug_line    0x000008d8      0x6cd C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
- .debug_line    0x00000fa5      0x623 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .debug_line    0x000015c8      0x34e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_line    0x00001916       0xaf C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_line    0x000019c5      0x48d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_line    0x00001e52      0x5c9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
- .debug_line    0x0000241b      0x352 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_line    0x0000276d      0x5e3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_line    0x00002d50      0x49d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_line    0x000031ed      0x3c7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_line    0x000035b4      0x707 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_line    0x00003cbb      0x48b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_line    0x00004146      0x1d1 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_line    0x00004317      0x64c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_line    0x00004963      0x4ef C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_line    0x00004e52      0x3de C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_line    0x00005230      0xc20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
- .debug_line    0x00005e50      0x2f7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
- .debug_line    0x00006147      0x91b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_line    0x00006a62      0x11f C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
- .debug_line    0x00006b81      0x800 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+.debug_line     0x00000000     0x7399
+ .debug_line    0x00000000      0x8f0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .debug_line    0x000008f0      0x6cd C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
+ .debug_line    0x00000fbd      0x623 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_line    0x000015e0      0x34e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_line    0x0000192e       0xaf C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_line    0x000019dd      0x48d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_line    0x00001e6a      0x5c9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_line    0x00002433      0x352 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_line    0x00002785      0x5e3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_line    0x00002d68      0x49d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_line    0x00003205      0x3c7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_line    0x000035cc      0x707 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_line    0x00003cd3      0x48b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_line    0x0000415e      0x1d1 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_line    0x0000432f      0x64c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_line    0x0000497b      0x4ef C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_line    0x00004e6a      0x3de C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_line    0x00005248      0xc20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_line    0x00005e68      0x2f7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+ .debug_line    0x0000615f      0x91b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_line    0x00006a7a      0x11f C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
+ .debug_line    0x00006b99      0x800 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
 
-.debug_str      0x00000000     0x5b9b
- .debug_str     0x00000000     0x1270 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                               0x1370 (size before relaxing)
- .debug_str     0x00001270      0xcad C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
+.debug_str      0x00000000     0x5bdd
+ .debug_str     0x00000000     0x1264 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                               0x1364 (size before relaxing)
+ .debug_str     0x00001264      0xcfb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MIDIUSB\MIDIUSB.cpp.o
                                0x1180 (size before relaxing)
- .debug_str     0x00001f1d      0xe19 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_str     0x00001f5f      0xe19 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
                                0x120e (size before relaxing)
- .debug_str     0x00002d36      0x19c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_str     0x00002d78      0x19c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
                                 0x314 (size before relaxing)
- .debug_str     0x00002ed2       0x71 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_str     0x00002f14       0x71 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
                                 0x13b (size before relaxing)
- .debug_str     0x00002f43      0x1fc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_str     0x00002f85      0x1fc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
                                 0x4e5 (size before relaxing)
- .debug_str     0x0000313f      0x159 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_str     0x00003181      0x159 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
                                 0xba8 (size before relaxing)
- .debug_str     0x00003298       0x95 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_str     0x000032da       0x95 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
                                 0x37e (size before relaxing)
- .debug_str     0x0000332d      0x7e7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_str     0x0000336f      0x7e7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
                                0x1071 (size before relaxing)
- .debug_str     0x00003b14       0xc0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_str     0x00003b56       0xc0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
                                 0xa22 (size before relaxing)
- .debug_str     0x00003bd4      0x12e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_str     0x00003c16      0x12e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
                                 0x434 (size before relaxing)
- .debug_str     0x00003d02      0x3cb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_str     0x00003d44      0x3cb C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
                                0x1057 (size before relaxing)
- .debug_str     0x000040cd      0x101 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_str     0x0000410f      0x101 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
                                 0x3f5 (size before relaxing)
- .debug_str     0x000041ce       0x7c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_str     0x00004210       0x7c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
                                 0x2a4 (size before relaxing)
- .debug_str     0x0000424a      0x669 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_str     0x0000428c      0x669 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
                                0x17d8 (size before relaxing)
- .debug_str     0x000048b3      0x254 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_str     0x000048f5      0x254 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
                                 0xa40 (size before relaxing)
- .debug_str     0x00004b07      0x122 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_str     0x00004b49      0x122 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
                                 0x316 (size before relaxing)
- .debug_str     0x00004c29      0x38d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_str     0x00004c6b      0x38d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
                                 0xf89 (size before relaxing)
- .debug_str     0x00004fb6       0xa2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+ .debug_str     0x00004ff8       0xa2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
                                 0x5f4 (size before relaxing)
- .debug_str     0x00005058      0x708 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_str     0x0000509a      0x708 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
                                0x1356 (size before relaxing)
- .debug_str     0x00005760       0x6b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
+ .debug_str     0x000057a2       0x6b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(itoa.c.o)
                                 0x1ee (size before relaxing)
- .debug_str     0x000057cb      0x3d0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .debug_str     0x0000580d      0x3d0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
                                0x1d55 (size before relaxing)
 
 .debug_frame    0x00000000     0x2614

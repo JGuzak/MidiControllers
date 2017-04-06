@@ -5,7 +5,7 @@
 #define ROTARY_HANDLER_H
 
 //#include <MIDI.h>
-#include <MIDIUSB.h>
+//#include <MIDIUSB.h>
 
 
 // *************************************************
@@ -64,15 +64,18 @@ void rotaryValGenerateMidiMessage(int data[]) {
     byte CC = data[6];
     byte val = data[7];
 
-    midiEventPacket_t midiEvent = { 0x0B, 0xB0 | channel, CC, val };
+    //midiEventPacket_t midiEvent = { 0x0B, 0xB0 | channel, CC, val };
 
-    //String midiMessage = String(CC, HEX) + " " + String(val, HEX) + " " + String(channel, HEX);
+    String midiMessage = String(CC, HEX) + " " + String(val, HEX) + " " + String(channel, HEX);
     //MIDI.sendControlChange(CC, val, channel);
-    MidiUSB.sendMIDI(midiEvent);
-    MidiUSB.flush();
+    //MidiUSB.sendMIDI(midiEvent);
+    //MidiUSB.flush();
 
     
-    //Serial.println(midiMessage);
+    Serial.write(0xB0);
+    Serial.write(CC);
+    Serial.write(val);
+    Serial.write(channel);
 
 }
 
@@ -234,3 +237,4 @@ int* rotaryDeltaUpdateState(int temp[]) {
 }
 
 #endif // !ROTARY_HANDLER_H
+

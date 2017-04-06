@@ -98,3 +98,4 @@ int* buttonUpdateState(volatile int temp[]) {
 }
 
 #endif // !BUTTON_HANDLER_H
+
