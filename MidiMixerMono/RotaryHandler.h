@@ -72,10 +72,10 @@ void rotaryValGenerateMidiMessage(int data[]) {
     //MidiUSB.flush();
 
     
-    Serial.write(0xB0);
-    Serial.write(CC);
-    Serial.write(val);
-    Serial.write(channel);
+    Serial.write((byte)0xB0);
+    Serial.write((byte)CC);
+    Serial.write((byte)val);
+    Serial.write((byte)channel);
 
 }
 
@@ -226,7 +226,7 @@ int* rotaryValueUpdateState( volatile int temp[]) {
 * M: state, step, and value of rotary encoder
 * E: returns rotary encoder data
 */
-int* rotaryDeltaUpdateState(int temp[]) {
+int* rotaryDeltaUpdateState(volatile int temp[]) {
     static int data[ROTARY_DELTA_ARRAY_SIZE];
 
     for (int i = 0; i < ROTARY_DELTA_ARRAY_SIZE; i++) {
