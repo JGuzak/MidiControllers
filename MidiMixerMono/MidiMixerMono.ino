@@ -12,8 +12,8 @@ void setup() {
     Serial.begin(31250);
 
     pinMode(shiftPin, INPUT_PULLUP);
-    pinMode(shiftEncoderState[0], INPUT_PULLUP);
-    pinMode(shiftEncoderState[1], INPUT_PULLUP);
+    pinMode(shiftEncoderState[0][0], INPUT_PULLUP);
+    pinMode(shiftEncoderState[0][1], INPUT_PULLUP);
 
     // only done for first page because each page uses
     //  the same collection of pins.
@@ -28,8 +28,8 @@ void setup() {
 
     // shift button ISR attaching
     attachInterrupt(digitalPinToInterrupt(shiftPin), shiftButtonISR, CHANGE);
-    attachInterrupt(digitalPinToInterrupt(shiftEncoderState[0]), shiftEncoderISR, CHANGE);
-    attachInterrupt(digitalPinToInterrupt(shiftEncoderState[1]), shiftEncoderISR, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(shiftEncoderState[0][0]), shiftEncoderISR, CHANGE);
+    attachInterrupt(digitalPinToInterrupt(shiftEncoderState[0][1]), shiftEncoderISR, CHANGE);
 
     // page encoders ISR attaching
     attachInterrupt(digitalPinToInterrupt(page1EncoderState[0][0]), pageEncoder1ISR, CHANGE);
@@ -64,15 +64,17 @@ void setup() {
         delay(100);
     }
 
-    analogWrite(buttonLEDPins[0], 255);
-    analogWrite(buttonLEDPins[1], 255);
-    analogWrite(buttonLEDPins[2], 255);
-    analogWrite(buttonLEDPins[3], 255);
+    ledClear();
 
-    analogWrite(rotaryLEDPins[0], 255);
-    analogWrite(rotaryLEDPins[1], 255);
-    analogWrite(rotaryLEDPins[2], 255);
-    analogWrite(rotaryLEDPins[3], 255);
+    //analogWrite(buttonLEDPins[0], 0);
+    //analogWrite(buttonLEDPins[1], 0);
+    //analogWrite(buttonLEDPins[2], 0);
+    //analogWrite(buttonLEDPins[3], 0);
+
+    //analogWrite(rotaryLEDPins[0], 0);
+    //analogWrite(rotaryLEDPins[1], 0);
+    //analogWrite(rotaryLEDPins[2], 0);
+    //analogWrite(rotaryLEDPins[3], 0);
 
 }
 
@@ -93,6 +95,13 @@ void ledFlash(int pin1, int pin2) {
     
 }
 
+void ledClear() {
+    for (int i = 0; i < pageButtonEncoders; i++) {
+        digitalWrite(buttonLEDPins[i], HIGH);
+        digitalWrite(rotaryLEDPins[i], HIGH);
+    }
+}
+
 /** led output for page selection 
  *  @param p the current page
  */
@@ -101,56 +110,56 @@ void displayPageSelect(int p) {
     {
     case 1:
         ledFlash(buttonLEDPins[0], rotaryLEDPins[0]);
-        analogWrite(buttonLEDPins[1], HIGH);
-        analogWrite(buttonLEDPins[2], HIGH);
-        analogWrite(buttonLEDPins[3], HIGH);
+        analogWrite(buttonLEDPins[1], 255);
+        analogWrite(buttonLEDPins[2], 255);
+        analogWrite(buttonLEDPins[3], 255);
 
-        analogWrite(rotaryLEDPins[1], HIGH);
-        analogWrite(rotaryLEDPins[2], HIGH);
-        analogWrite(rotaryLEDPins[3], HIGH);
+        analogWrite(rotaryLEDPins[1], 255);
+        analogWrite(rotaryLEDPins[2], 255);
+        analogWrite(rotaryLEDPins[3], 255);
 
         break;
     case 2:
         ledFlash(buttonLEDPins[1], rotaryLEDPins[1]);
 
-        analogWrite(buttonLEDPins[0], HIGH);
-        analogWrite(buttonLEDPins[2], HIGH);
-        analogWrite(buttonLEDPins[3], HIGH);
+        analogWrite(buttonLEDPins[0], 255);
+        analogWrite(buttonLEDPins[2], 255);
+        analogWrite(buttonLEDPins[3], 255);
 
-        analogWrite(rotaryLEDPins[0], HIGH);
-        analogWrite(rotaryLEDPins[2], HIGH);
-        analogWrite(rotaryLEDPins[3], HIGH);
+        analogWrite(rotaryLEDPins[0], 255);
+        analogWrite(rotaryLEDPins[2], 255);
+        analogWrite(rotaryLEDPins[3], 255);
 
         break;
     case 3:
         ledFlash(buttonLEDPins[2], rotaryLEDPins[2]);
 
-        analogWrite(buttonLEDPins[0], HIGH);
-        analogWrite(buttonLEDPins[1], HIGH);
-        analogWrite(buttonLEDPins[3], HIGH);
+        analogWrite(buttonLEDPins[0], 255);
+        analogWrite(buttonLEDPins[1], 255);
+        analogWrite(buttonLEDPins[3], 255);
 
-        analogWrite(rotaryLEDPins[0], HIGH);
-        analogWrite(rotaryLEDPins[1], HIGH);
-        analogWrite(rotaryLEDPins[3], HIGH);
+        analogWrite(rotaryLEDPins[0], 255);
+        analogWrite(rotaryLEDPins[1], 255);
+        analogWrite(rotaryLEDPins[3], 255);
 
         break;
     case 4:
         ledFlash(buttonLEDPins[3], rotaryLEDPins[3]);
 
-        analogWrite(buttonLEDPins[0], HIGH);
-        analogWrite(buttonLEDPins[1], HIGH);
-        analogWrite(buttonLEDPins[2], HIGH);
+        analogWrite(buttonLEDPins[0], 255);
+        analogWrite(buttonLEDPins[1], 255);
+        analogWrite(buttonLEDPins[2], 255);
 
-        analogWrite(rotaryLEDPins[0], HIGH);
-        analogWrite(rotaryLEDPins[1], HIGH);
-        analogWrite(rotaryLEDPins[2], HIGH);
+        analogWrite(rotaryLEDPins[0], 255);
+        analogWrite(rotaryLEDPins[1], 255);
+        analogWrite(rotaryLEDPins[2], 255);
 
         break;
     default:
-        analogWrite(buttonLEDPins[0], HIGH);
-        analogWrite(buttonLEDPins[1], HIGH);
-        analogWrite(buttonLEDPins[2], HIGH);
-        analogWrite(buttonLEDPins[3], HIGH);
+        analogWrite(buttonLEDPins[0], 255);
+        analogWrite(buttonLEDPins[1], 255);
+        analogWrite(buttonLEDPins[2], 255);
+        analogWrite(buttonLEDPins[3], 255);
         break;
     }
 }
@@ -164,40 +173,40 @@ void displayButtonLEDs(int p) {
     case 1:
         for (int i = 0; i < pageButtonEncoders; i++) {
             if (page1ButtonState[i][2] == 1) {
-                analogWrite(buttonLEDPins[i], LOW);
+                digitalWrite(buttonLEDPins[i], LOW);
             }
             else {
-                analogWrite(buttonLEDPins[i], HIGH);
+                digitalWrite(buttonLEDPins[i], HIGH);
             }
         }
         break;
     case 2:
         for (int i = 0; i < pageButtonEncoders; i++) {
             if (page2ButtonState[i][2] == 1) {
-                analogWrite(buttonLEDPins[i], LOW);
+                analogWrite(buttonLEDPins[i], 0);
             }
             else {
-                analogWrite(buttonLEDPins[i], HIGH);
+                analogWrite(buttonLEDPins[i], 255);
             }
         }
         break;
     case 3:
         for (int i = 0; i < pageButtonEncoders; i++) {
             if (page3ButtonState[i][2] == 1) {
-                analogWrite(buttonLEDPins[i], LOW);
+                analogWrite(buttonLEDPins[i], 0);
             }
             else {
-                analogWrite(buttonLEDPins[i], HIGH);
+                analogWrite(buttonLEDPins[i], 255);
             }
         }
         break;
     case 4:
         for (int i = 0; i < pageButtonEncoders; i++) {
             if (page4ButtonState[i][2] == 1) {
-                analogWrite(buttonLEDPins[i], LOW);
+                analogWrite(buttonLEDPins[i], 255);
             }
             else {
-                analogWrite(buttonLEDPins[i], HIGH);
+                analogWrite(buttonLEDPins[i], 0);
             }
         }
         break;
@@ -212,7 +221,7 @@ void displayRotaryLEDs(int p) {
     {
     case 1:
         for (int i = 0; i < pageButtonEncoders; i++) {
-            analogWrite(rotaryLEDPins[i], map(page1EncoderState[i][7], 0, 127, 255, 0));
+            analogWrite(rotaryLEDPins[i], map(page1EncoderState[i][7], 0, 127, 32, 0)*8);
         }
         break;
     case 2:
@@ -323,13 +332,17 @@ void updatePageButtonState(int page) {
 
 void shiftEncoderISR() {
     if (shift) {
-
-    }
-    else {
-        curData = rotaryDeltaUpdateState(shiftEncoderState);
+        curData = rotaryDeltaUpdateState(shiftEncoderState[1]);
 
         for (int i = 0; i < ROTARY_DELTA_ARRAY_SIZE; i++) {
-            shiftEncoderState[i] = curData[i];
+            shiftEncoderState[1][i] = curData[i];
+        }
+    }
+    else {
+        curData = rotaryDeltaUpdateState(shiftEncoderState[0]);
+
+        for (int i = 0; i < ROTARY_DELTA_ARRAY_SIZE; i++) {
+            shiftEncoderState[0][i] = curData[i];
         }
     }
 }
@@ -363,6 +376,7 @@ void shiftButtonISR() {
     else {
         shift = true;
     }
+    ledClear();
 }
 
 // page button ISRs

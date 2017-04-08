@@ -27,5 +27,8 @@
     <ClInclude Include="RotaryHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="HardwareStates.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>

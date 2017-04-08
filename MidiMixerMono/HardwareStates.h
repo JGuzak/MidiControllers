@@ -13,7 +13,10 @@ volatile static int *curData;
 // shift handling
 volatile static bool shift = false;
 const static int shiftPin = 6;
-volatile static int shiftEncoderState[ROTARY_DELTA_ARRAY_SIZE] = { 44, 45, 0, 0, 0, 2, 10 };
+volatile static int shiftEncoderState[][ROTARY_DELTA_ARRAY_SIZE] = {
+    { 44, 45, 0, 0, 0, 2, 10 },
+    { 44, 45, 0, 0, 0, 16, 1 }
+};
 
 // LEDs and page 
 const static int pages = 4;
