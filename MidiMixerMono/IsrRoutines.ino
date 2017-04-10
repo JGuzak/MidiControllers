@@ -22,22 +22,30 @@ void shiftEncoderISR() {
 // page encoder ISRs
 void pageEncoder1ISR() {
     curPageEncoder = 0;
-    updatePageRotaryState(curPageEncoder);
+    if (!shift) {
+        updatePageRotaryState(curPageEncoder);
+    }
 }
 
 void pageEncoder2ISR() {
     curPageEncoder = 1;
-    updatePageRotaryState(curPageEncoder);
+    if (!shift) {
+        updatePageRotaryState(curPageEncoder);
+    }
 }
 
 void pageEncoder3ISR() {
     curPageEncoder = 2;
-    updatePageRotaryState(curPageEncoder);
+    if (!shift) {
+        updatePageRotaryState(curPageEncoder);
+    }
 }
 
 void pageEncoder4ISR() {
     curPageEncoder = 3;
-    updatePageRotaryState(curPageEncoder);
+    if (!shift) {
+        updatePageRotaryState(curPageEncoder);
+    }
 }
 
 // shift button ISR

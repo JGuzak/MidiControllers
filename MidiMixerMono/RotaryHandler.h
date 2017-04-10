@@ -66,17 +66,17 @@ void rotaryValGenerateMidiMessage(int data[]) {
 
     //midiEventPacket_t midiEvent = { 0x0B, 0xB0 | channel, CC, val };
 
-    String midiMessage = String(CC, HEX) + " " + String(val, HEX) + " " + String(channel, HEX);
+    //String midiMessage = String(CC, HEX) + " " + String(val, HEX) + " " + String(channel, HEX);
     //MIDI.sendControlChange(CC, val, channel);
     //MidiUSB.sendMIDI(midiEvent);
     //MidiUSB.flush();
 
     
-    Serial.write((byte)0xB0);
+    Serial.write(0xB0);
     //Serial.write((byte)channel);
     Serial.write((byte)CC);
-    Serial.write((byte)0);
-    Serial.write((byte)0);
+    Serial.write(val);
+    Serial.write(channel);
     //Serial.write((byte)val);
     
 
