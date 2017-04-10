@@ -73,9 +73,12 @@ void rotaryValGenerateMidiMessage(int data[]) {
 
     
     Serial.write((byte)0xB0);
+    //Serial.write((byte)channel);
     Serial.write((byte)CC);
-    Serial.write((byte)val);
-    Serial.write((byte)channel);
+    Serial.write((byte)0);
+    Serial.write((byte)0);
+    //Serial.write((byte)val);
+    
 
 }
 
