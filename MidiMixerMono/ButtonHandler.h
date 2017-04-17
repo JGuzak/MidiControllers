@@ -24,11 +24,15 @@ const int BUTTON_ARRAY_SIZE = 5;
 */
 void buttonGenerateMidi(int data[]) {
     int channel = data[3];
-    int cc = data[4];
-    int value = data[2];
+    int CC = data[4];
+    int val = data[2];
 
-    String midiMessage = String(channel, HEX) + " " + String(cc, HEX) + " " + String(value, HEX);
-    Serial.println(midiMessage);
+
+    Serial.write(0xB0);
+    Serial.write((byte)CC);
+    Serial.write(val);
+    Serial.write(channel);
+
 }
 
 /* R: button pin

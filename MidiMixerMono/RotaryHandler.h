@@ -62,7 +62,7 @@ void rotaryValGenerateMidiMessage(int data[]) {
     byte CC = data[6];
     byte val = data[7];
     
-    //Serial.write(0xB0);
+    Serial.write(0xB0);
     Serial.write((byte)CC);
     Serial.write(val);
     Serial.write(channel);
@@ -86,7 +86,7 @@ void rotaryDeltaGenerateMidiMessage(volatile int data[]) {
         val = -1;
     }
 
-    //Serial.write(0xB0);
+    Serial.write(0xB0);
     Serial.write((byte)CC);
     Serial.write(val);
     Serial.write(channel);
