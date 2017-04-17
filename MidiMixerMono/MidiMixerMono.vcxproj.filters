@@ -27,7 +27,16 @@
     <ClInclude Include="RotaryHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
-    <ClInclude Include="HardwareStates.h">
+    <ClInclude Include="HardwareHandler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="HardwareIO.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="IsrRoutines.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="DisplayHandler.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

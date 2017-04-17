@@ -136,8 +136,11 @@ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\Mi
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/USB/USBAPI.h \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/RingBuffer.h \
  C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Stream.h \
- C:\Users\user\Documents\Arduino\libraries\LiquidCrystal\src/LiquidCrystal.h \
- C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Print.h \
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\HardwareIO.h \
  C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\RotaryHandler.h \
  C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\ButtonHandler.h \
- C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\HardwareStates.h
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\DisplayHandler.h \
+ C:\Users\user\Documents\Arduino\libraries\LiquidCrystal\src/LiquidCrystal.h \
+ C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\cores\arduino/Print.h \
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\HardwareHandler.h \
+ C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\IsrRoutines.h

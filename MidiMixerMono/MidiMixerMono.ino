@@ -4,14 +4,16 @@
  Author:	Jordan Guzak
 */
 
+#include "HardwareIO.h"
 
-#include <LiquidCrystal.h>
+#include "DisplayHandler.h"
+
 #include "RotaryHandler.h"
 #include "ButtonHandler.h"
-#include "HardwareStates.h"
+#include "HardwareHandler.h"
 
+#include "IsrRoutines.h"
 
-LiquidCrystal lcd(19, 18, 17, 16, 15, 14);
 //const int ccDisplayTimeOut = 5000;
 //volatile int ccDisplayTime;
 
@@ -90,12 +92,21 @@ void setup() {
 void loop() {
     // shift handler
     if (shift) {
-        displayPageSelect(curPage);
+        displayPageSelectLED(curPage);
+
+        if (curMode != prevMode) {
+
+            displayCurModeLCD();
+
+            prevMode = curMode;
+        }
+
     }
     else {
-        displayButtonLEDs(curPage);
-        displayRotaryLEDs(curPage);
+        displayButtonLED(curPage);
+        displayRotaryLED(curPage);
     }
     
-}
+    // check for midi message
 
+}

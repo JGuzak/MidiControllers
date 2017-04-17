@@ -4,9 +4,6 @@
 #ifndef ROTARY_HANDLER_H
 #define ROTARY_HANDLER_H
 
-//#include <MIDI.h>
-//#include <MIDIUSB.h>
-
 
 // *************************************************
 // constants:
@@ -40,8 +37,9 @@ const int ROTARY_VALUE_MAX = 127;
 *  4 | last state
 *  5 | channel
 *  6 | CC
+*  7 | val
 */
-const int ROTARY_DELTA_ARRAY_SIZE = 7;
+const int ROTARY_DELTA_ARRAY_SIZE = 8;
 
 
 // int values of each state
@@ -63,21 +61,11 @@ void rotaryValGenerateMidiMessage(int data[]) {
     byte channel = data[5];
     byte CC = data[6];
     byte val = data[7];
-
-    //midiEventPacket_t midiEvent = { 0x0B, 0xB0 | channel, CC, val };
-
-    //String midiMessage = String(CC, HEX) + " " + String(val, HEX) + " " + String(channel, HEX);
-    //MIDI.sendControlChange(CC, val, channel);
-    //MidiUSB.sendMIDI(midiEvent);
-    //MidiUSB.flush();
-
     
-    Serial.write(0xB0);
-    //Serial.write((byte)channel);
+    //Serial.write(0xB0);
     Serial.write((byte)CC);
     Serial.write(val);
     Serial.write(channel);
-    //Serial.write((byte)val);
     
 
 }
@@ -86,10 +74,10 @@ void rotaryValGenerateMidiMessage(int data[]) {
 * M: nothing
 * E: sends midi signal via serial port
 */
-void rotaryDeltaGenerateMidiMessage(int data[]) {
-    int channel = data[4];
-    int CC = data[5];
-    int val;
+void rotaryDeltaGenerateMidiMessage(volatile int data[]) {
+    int channel = data[5];
+    int CC = data[6];
+    int val = 0;
     
     if (data[4] == 1) {
         val = 1;
@@ -98,9 +86,11 @@ void rotaryDeltaGenerateMidiMessage(int data[]) {
         val = -1;
     }
 
-    String midiMessage = String(channel, HEX) + " " + String(CC, HEX) + " " + String(val, HEX);
+    //Serial.write(0xB0);
+    Serial.write((byte)CC);
+    Serial.write(val);
+    Serial.write(channel);
 
-    //Serial.println(midiMessage);
 }
 
 /* R: pin a and pin b
@@ -232,12 +222,50 @@ int* rotaryValueUpdateState( volatile int temp[]) {
 int* rotaryDeltaUpdateState(volatile int temp[]) {
     static int data[ROTARY_DELTA_ARRAY_SIZE];
 
-    for (int i = 0; i < ROTARY_DELTA_ARRAY_SIZE; i++) {
-        data[i] = temp[i];
+    // populate static data array for returning data
+    for (int a = 0; a < ROTARY_VALUE_ARRAY_SIZE; a++) {
+        data[a] = temp[a];
+    }
+
+    // read in new state
+    int nextState = rotaryGetState(data[0], data[1]);
+
+    if (nextState != data[3]) {
+        if (nextState == (data[3] + 1 % 3)) {
+            data[2] += 1;
+            data[4] = 1;
+        }
+        else if (nextState == (data[3] - 1 % 3)) {
+            data[2] += 1;
+            data[4] = -1;
+        }
+        else {
+            data[2] = 0;
+        }
+
+        data[3] = nextState;
+    }
+
+    // checks for fourth state
+    //  checks for direction
+
+    if (data[2] == 3) {
+        if (data[4] == 1) {
+            data[7] = 1;
+        }
+        else {
+            data[7] = -1;
+        } 
+
+        
+
+        data[2] = 0;
+    }
+    else {
+        data[7] = 0;
     }
 
     return data;
 }
 
 #endif // !ROTARY_HANDLER_H
-
