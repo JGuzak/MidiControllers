@@ -1613,7 +1613,7 @@ END GROUP
 LOAD c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtend.o
 LOAD c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
 
-.text           0x00080000     0x76e8
+.text           0x00080000     0x76c8
                 0x00080000                . = ALIGN (0x4)
                 0x00080000                _sfixed = .
  *(.vectors .vectors.*)
@@ -1692,981 +1692,981 @@ LOAD c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-
                 0x00080a64       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
                 0x00080a64                pageEncoder4ISR()
  .text._Z30rotaryDeltaGenerateMidiMessagePVi
-                0x00080a80       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080a80       0x34 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
                 0x00080a80                rotaryDeltaGenerateMidiMessage(int volatile*)
  .text._Z15shiftEncoderISRv
-                0x00080abc       0xc0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080abc                shiftEncoderISR()
+                0x00080ab4       0xa8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080ab4                shiftEncoderISR()
  .text._Z18buttonGenerateMidiPi
-                0x00080b7c       0x34 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080b7c                buttonGenerateMidi(int*)
+                0x00080b5c       0x34 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080b5c                buttonGenerateMidi(int*)
  .text._Z17buttonUpdateStatePVi
-                0x00080bb0       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080bb0                buttonUpdateState(int volatile*)
+                0x00080b90       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080b90                buttonUpdateState(int volatile*)
  .text._Z21updatePageButtonStatei
-                0x00080bec       0xfc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080bec                updatePageButtonState(int)
+                0x00080bcc       0xfc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080bcc                updatePageButtonState(int)
  .text._Z14pageButton1ISRv
-                0x00080ce8       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080ce8                pageButton1ISR()
+                0x00080cc8       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080cc8                pageButton1ISR()
  .text._Z14pageButton2ISRv
-                0x00080d10       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080d10                pageButton2ISR()
+                0x00080cf0       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080cf0                pageButton2ISR()
  .text._Z14pageButton3ISRv
-                0x00080d38       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080d38                pageButton3ISR()
+                0x00080d18       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080d18                pageButton3ISR()
  .text._Z14pageButton4ISRv
-                0x00080d60       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080d60                pageButton4ISR()
- .text.setup    0x00080d88      0x28c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
-                0x00080d88                setup
+                0x00080d40       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080d40                pageButton4ISR()
+ .text.setup    0x00080d68      0x28c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x00080d68                setup
  .text._ZN13LiquidCrystal11pulseEnableEv
-                0x00081014       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x00081014                LiquidCrystal::pulseEnable()
+                0x00080ff4       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x00080ff4                LiquidCrystal::pulseEnable()
  .text._ZN13LiquidCrystal10write4bitsEh
-                0x0008104c       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x0008104c                LiquidCrystal::write4bits(unsigned char)
+                0x0008102c       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x0008102c                LiquidCrystal::write4bits(unsigned char)
  .text._ZN13LiquidCrystal10write8bitsEh
-                0x00081074       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x00081074                LiquidCrystal::write8bits(unsigned char)
+                0x00081054       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x00081054                LiquidCrystal::write8bits(unsigned char)
  .text._ZN13LiquidCrystal4sendEhh
-                0x0008109c       0x3e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x0008109c                LiquidCrystal::send(unsigned char, unsigned char)
+                0x0008107c       0x3e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x0008107c                LiquidCrystal::send(unsigned char, unsigned char)
  .text._ZN13LiquidCrystal7commandEh
-                0x000810da        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x000810da                LiquidCrystal::command(unsigned char)
+                0x000810ba        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x000810ba                LiquidCrystal::command(unsigned char)
  .text._ZN13LiquidCrystal5clearEv
-                0x000810e0       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x000810e0                LiquidCrystal::clear()
+                0x000810c0       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x000810c0                LiquidCrystal::clear()
  .text._ZN13LiquidCrystal9setCursorEhh
-                0x000810f4       0x26 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x000810f4                LiquidCrystal::setCursor(unsigned char, unsigned char)
+                0x000810d4       0x26 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x000810d4                LiquidCrystal::setCursor(unsigned char, unsigned char)
  .text._ZN13LiquidCrystal7displayEv
-                0x0008111a       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x0008111a                LiquidCrystal::display()
- *fill*         0x0008112e        0x2 
+                0x000810fa       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x000810fa                LiquidCrystal::display()
+ *fill*         0x0008110e        0x2 
  .text._ZN13LiquidCrystal5beginEhhh
-                0x00081130      0x134 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x00081130                LiquidCrystal::begin(unsigned char, unsigned char, unsigned char)
+                0x00081110      0x134 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x00081110                LiquidCrystal::begin(unsigned char, unsigned char, unsigned char)
  .text._ZN13LiquidCrystalC2Ehhhhhh
-                0x00081264       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x00081264                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
-                0x00081264                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x00081244       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x00081244                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
+                0x00081244                LiquidCrystal::LiquidCrystal(unsigned char, unsigned char, unsigned char, unsigned char, unsigned char, unsigned char)
  .text._ZN13LiquidCrystal7noBlinkEv
-                0x000812a8       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x000812a8                LiquidCrystal::noBlink()
+                0x00081288       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x00081288                LiquidCrystal::noBlink()
  .text._ZN13LiquidCrystal5writeEh
-                0x000812bc        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x000812bc                LiquidCrystal::write(unsigned char)
+                0x0008129c        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x0008129c                LiquidCrystal::write(unsigned char)
  .text._Z11serialEventv
-                0x000812c8        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812c8                serialEvent()
- *fill*         0x000812ca        0x2 
+                0x000812a8        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812a8                serialEvent()
+ *fill*         0x000812aa        0x2 
  .text.UART_Handler
-                0x000812cc        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812cc                UART_Handler
+                0x000812ac        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812ac                UART_Handler
  .text._Z12serialEvent1v
-                0x000812d8        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812d8                serialEvent1()
+                0x000812b8        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812b8                serialEvent1()
  .text._Z12serialEvent2v
-                0x000812da        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812da                serialEvent2()
+                0x000812ba        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812ba                serialEvent2()
  .text._Z12serialEvent3v
-                0x000812dc        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812dc                serialEvent3()
- *fill*         0x000812de        0x2 
+                0x000812bc        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812bc                serialEvent3()
+ *fill*         0x000812be        0x2 
  .text.USART0_Handler
-                0x000812e0        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812e0                USART0_Handler
+                0x000812c0        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812c0                USART0_Handler
  .text.USART1_Handler
-                0x000812ec        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812ec                USART1_Handler
+                0x000812cc        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812cc                USART1_Handler
  .text.USART3_Handler
-                0x000812f8        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x000812f8                USART3_Handler
- .text.init     0x00081304      0x128 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x00081304                init
+                0x000812d8        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812d8                USART3_Handler
+ .text.init     0x000812e4      0x128 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000812e4                init
  .text.startup._GLOBAL__sub_I_g_APinDescription
-                0x0008142c       0xd4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x0008140c       0xd4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
  .text._Z14serialEventRunv
-                0x00081500       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x00081500                serialEventRun()
+                0x000814e0       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x000814e0                serialEventRun()
  .text.PIO_PullUp
-                0x00081544        0xa C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x00081544                PIO_PullUp
- .text.PIO_Get  0x0008154e       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x0008154e                PIO_Get
+                0x00081524        0xa C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x00081524                PIO_PullUp
+ .text.PIO_Get  0x0008152e       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x0008152e                PIO_Get
  .text.PIO_SetPeripheral
-                0x00081562       0x26 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x00081562                PIO_SetPeripheral
+                0x00081542       0x26 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x00081542                PIO_SetPeripheral
  .text.PIO_SetInput
-                0x00081588       0x26 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x00081588                PIO_SetInput
+                0x00081568       0x26 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x00081568                PIO_SetInput
  .text.PIO_SetOutput
-                0x000815ae       0x24 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x000815ae                PIO_SetOutput
- *fill*         0x000815d2        0x2 
+                0x0008158e       0x24 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x0008158e                PIO_SetOutput
+ *fill*         0x000815b2        0x2 
  .text.PIO_Configure
-                0x000815d4       0x64 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x000815d4                PIO_Configure
+                0x000815b4       0x64 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x000815b4                PIO_Configure
  .text.PIO_GetOutputDataStatus
-                0x00081638       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
-                0x00081638                PIO_GetOutputDataStatus
+                0x00081618       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pio.o)
+                0x00081618                PIO_GetOutputDataStatus
  .text.pmc_enable_upll_clock
-                0x0008164c       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
-                0x0008164c                pmc_enable_upll_clock
+                0x0008162c       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
+                0x0008162c                pmc_enable_upll_clock
  .text.pmc_enable_periph_clk
-                0x00081660       0x44 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
-                0x00081660                pmc_enable_periph_clk
+                0x00081640       0x44 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
+                0x00081640                pmc_enable_periph_clk
  .text.pmc_disable_periph_clk
-                0x000816a4       0x40 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
-                0x000816a4                pmc_disable_periph_clk
+                0x00081684       0x40 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
+                0x00081684                pmc_disable_periph_clk
  .text.pmc_switch_udpck_to_upllck
-                0x000816e4       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
-                0x000816e4                pmc_switch_udpck_to_upllck
+                0x000816c4       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
+                0x000816c4                pmc_switch_udpck_to_upllck
  .text.pmc_enable_udpck
-                0x000816f8        0xc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
-                0x000816f8                pmc_enable_udpck
+                0x000816d8        0xc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pmc.o)
+                0x000816d8                pmc_enable_udpck
  .text.SystemInit
-                0x00081704       0x88 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(system_sam3xa.o)
-                0x00081704                SystemInit
+                0x000816e4       0x88 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(system_sam3xa.o)
+                0x000816e4                SystemInit
  .text.Reset_Handler
-                0x0008178c       0x78 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
-                0x0008178c                Reset_Handler
+                0x0008176c       0x78 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(startup_sam3xa.o)
+                0x0008176c                Reset_Handler
  .text.adc_init
-                0x00081804       0x98 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
-                0x00081804                adc_init
+                0x000817e4       0x98 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x000817e4                adc_init
  .text.adc_configure_trigger
-                0x0008189c        0xe C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
-                0x0008189c                adc_configure_trigger
+                0x0008187c        0xe C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x0008187c                adc_configure_trigger
  .text.adc_configure_timing
-                0x000818aa       0x1a C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
-                0x000818aa                adc_configure_timing
+                0x0008188a       0x1a C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x0008188a                adc_configure_timing
  .text.adc_disable_channel
-                0x000818c4        0xa C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
-                0x000818c4                adc_disable_channel
+                0x000818a4        0xa C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x000818a4                adc_disable_channel
  .text.adc_disable_all_channel
-                0x000818ce        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
-                0x000818ce                adc_disable_all_channel
+                0x000818ae        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x000818ae                adc_disable_all_channel
  .text.adc_disable_interrupt
-                0x000818d6        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
-                0x000818d6                adc_disable_interrupt
- *fill*         0x000818da        0x2 
+                0x000818b6        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x000818b6                adc_disable_interrupt
+ *fill*         0x000818ba        0x2 
  .text.UOTGHS_Handler
-                0x000818dc       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
-                0x000818dc                UOTGHS_Handler
- .text.__halt   0x000818ec        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
-                0x000818ec                DACC_Handler
-                0x000818ec                DebugMon_Handler
-                0x000818ec                DMAC_Handler
-                0x000818ec                TRNG_Handler
-                0x000818ec                HardFault_Handler
-                0x000818ec                TC2_Handler
-                0x000818ec                TWI1_Handler
-                0x000818ec                NMI_Handler
-                0x000818ec                TC7_Handler
-                0x000818ec                ADC_Handler
-                0x000818ec                SMC_Handler
-                0x000818ec                RTT_Handler
-                0x000818ec                EFC1_Handler
-                0x000818ec                RTC_Handler
-                0x000818ec                UsageFault_Handler
-                0x000818ec                TC6_Handler
-                0x000818ec                WDT_Handler
-                0x000818ec                CAN0_Handler
-                0x000818ec                TC4_Handler
-                0x000818ec                TC1_Handler
-                0x000818ec                HSMCI_Handler
-                0x000818ec                TC3_Handler
-                0x000818ec                TWI0_Handler
-                0x000818ec                SSC_Handler
-                0x000818ec                EFC0_Handler
-                0x000818ec                PMC_Handler
-                0x000818ec                PWM_Handler
-                0x000818ec                CAN1_Handler
-                0x000818ec                MemManage_Handler
-                0x000818ec                SUPC_Handler
-                0x000818ec                TC8_Handler
-                0x000818ec                USART2_Handler
-                0x000818ec                EMAC_Handler
-                0x000818ec                BusFault_Handler
-                0x000818ec                RSTC_Handler
-                0x000818ec                TC0_Handler
-                0x000818ec                TC5_Handler
-                0x000818ec                SPI0_Handler
+                0x000818bc       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs.o)
+                0x000818bc                UOTGHS_Handler
+ .text.__halt   0x000818cc        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+                0x000818cc                DACC_Handler
+                0x000818cc                DebugMon_Handler
+                0x000818cc                DMAC_Handler
+                0x000818cc                TRNG_Handler
+                0x000818cc                HardFault_Handler
+                0x000818cc                TC2_Handler
+                0x000818cc                TWI1_Handler
+                0x000818cc                NMI_Handler
+                0x000818cc                TC7_Handler
+                0x000818cc                ADC_Handler
+                0x000818cc                SMC_Handler
+                0x000818cc                RTT_Handler
+                0x000818cc                EFC1_Handler
+                0x000818cc                RTC_Handler
+                0x000818cc                UsageFault_Handler
+                0x000818cc                TC6_Handler
+                0x000818cc                WDT_Handler
+                0x000818cc                CAN0_Handler
+                0x000818cc                TC4_Handler
+                0x000818cc                TC1_Handler
+                0x000818cc                HSMCI_Handler
+                0x000818cc                TC3_Handler
+                0x000818cc                TWI0_Handler
+                0x000818cc                SSC_Handler
+                0x000818cc                EFC0_Handler
+                0x000818cc                PMC_Handler
+                0x000818cc                PWM_Handler
+                0x000818cc                CAN1_Handler
+                0x000818cc                MemManage_Handler
+                0x000818cc                SUPC_Handler
+                0x000818cc                TC8_Handler
+                0x000818cc                USART2_Handler
+                0x000818cc                EMAC_Handler
+                0x000818cc                BusFault_Handler
+                0x000818cc                RSTC_Handler
+                0x000818cc                TC0_Handler
+                0x000818cc                TC5_Handler
+                0x000818cc                SPI0_Handler
  .text.SVC_Handler
-                0x000818ee        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
-                0x000818ee                SVC_Handler
+                0x000818ce        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+                0x000818ce                SVC_Handler
  .text.PendSV_Handler
-                0x000818f2        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
-                0x000818f2                PendSV_Handler
+                0x000818d2        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+                0x000818d2                PendSV_Handler
  .text.SysTick_Handler
-                0x000818f6       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
-                0x000818f6                SysTick_Handler
- .text.__empty  0x0008190c        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
-                0x0008190c                yield
- .text.__false  0x0008190e        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
-                0x0008190e                sysTickHook
- .text.__halt   0x00081912        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
-                0x00081912                svcHook
-                0x00081912                pendSVHook
- .text._sbrk    0x00081914       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081914                _sbrk
- .text.link     0x00081930        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081930                link
- .text._close   0x00081936        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081936                _close
- .text._fstat   0x0008193c        0xa C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x0008193c                _fstat
- .text._isatty  0x00081946        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081946                _isatty
- .text._lseek   0x0008194a        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x0008194a                _lseek
- .text._read    0x0008194e        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x0008194e                _read
- *fill*         0x00081952        0x2 
- .text._write   0x00081954       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081954                _write
- .text._exit    0x00081978       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081978                _exit
- .text._kill    0x00081988        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x00081988                _kill
- .text._getpid  0x0008198a        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
-                0x0008198a                _getpid
+                0x000818d6       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+                0x000818d6                SysTick_Handler
+ .text.__empty  0x000818ec        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+                0x000818ec                yield
+ .text.__false  0x000818ee        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+                0x000818ee                sysTickHook
+ .text.__halt   0x000818f2        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+                0x000818f2                svcHook
+                0x000818f2                pendSVHook
+ .text._sbrk    0x000818f4       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x000818f4                _sbrk
+ .text.link     0x00081910        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x00081910                link
+ .text._close   0x00081916        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x00081916                _close
+ .text._fstat   0x0008191c        0xa C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x0008191c                _fstat
+ .text._isatty  0x00081926        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x00081926                _isatty
+ .text._lseek   0x0008192a        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x0008192a                _lseek
+ .text._read    0x0008192e        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x0008192e                _read
+ *fill*         0x00081932        0x2 
+ .text._write   0x00081934       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x00081934                _write
+ .text._exit    0x00081958       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x00081958                _exit
+ .text._kill    0x00081968        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x00081968                _kill
+ .text._getpid  0x0008196a        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+                0x0008196a                _getpid
  .text.attachInterrupt
-                0x00081990      0x148 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
-                0x00081990                attachInterrupt
+                0x00081970      0x148 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+                0x00081970                attachInterrupt
  .text.PIOA_Handler
-                0x00081ad8       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
-                0x00081ad8                PIOA_Handler
+                0x00081ab8       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+                0x00081ab8                PIOA_Handler
  .text.PIOB_Handler
-                0x00081b10       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
-                0x00081b10                PIOB_Handler
+                0x00081af0       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+                0x00081af0                PIOB_Handler
  .text.PIOC_Handler
-                0x00081b48       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
-                0x00081b48                PIOC_Handler
+                0x00081b28       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+                0x00081b28                PIOC_Handler
  .text.PIOD_Handler
-                0x00081b80       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
-                0x00081b80                PIOD_Handler
- .text.millis   0x00081bb8        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
-                0x00081bb8                millis
- .text.delay    0x00081bbc       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
-                0x00081bbc                delay
+                0x00081b60       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+                0x00081b60                PIOD_Handler
+ .text.millis   0x00081b98        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+                0x00081b98                millis
+ .text.delay    0x00081b9c       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+                0x00081b9c                delay
  .text.mapResolution
-                0x00081bd8       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x00081bb8       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
  .text.analogOutputInit
-                0x00081bea        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
-                0x00081bea                analogOutputInit
+                0x00081bca        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x00081bca                analogOutputInit
  .text.analogWrite
-                0x00081bec      0x2c0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
-                0x00081bec                analogWrite
- .text.pinMode  0x00081eac      0x108 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
-                0x00081eac                pinMode
+                0x00081bcc      0x2c0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x00081bcc                analogWrite
+ .text.pinMode  0x00081e8c      0x108 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+                0x00081e8c                pinMode
  .text.digitalWrite
-                0x00081fb4       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
-                0x00081fb4                digitalWrite
+                0x00081f94       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+                0x00081f94                digitalWrite
  .text.digitalRead
-                0x00082024       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
-                0x00082024                digitalRead
+                0x00082004       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+                0x00082004                digitalRead
  .text.initVariant
-                0x00082068        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
-                0x00082068                initVariant
- *fill*         0x0008206a        0x2 
+                0x00082048        0x2 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+                0x00082048                initVariant
+ *fill*         0x0008204a        0x2 
  .text.startup.main
-                0x0008206c       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
-                0x0008206c                main
+                0x0008204c       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+                0x0008204c                main
  .text._ZN5Print5writeEPKhj
-                0x000820a4       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x000820a4                Print::write(unsigned char const*, unsigned int)
+                0x00082084       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x00082084                Print::write(unsigned char const*, unsigned int)
  .text._ZN5Print5writeEPKc
-                0x000820c6       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x000820c6                Print::write(char const*)
+                0x000820a6       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x000820a6                Print::write(char const*)
  .text._ZN5Print5printERK6String
-                0x000820e4       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x000820e4                Print::print(String const&)
+                0x000820c4       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x000820c4                Print::print(String const&)
  .text._ZN5Print5printEPKc
-                0x000820f4        0x8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x000820f4                Print::print(char const*)
+                0x000820d4        0x8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x000820d4                Print::print(char const*)
  .text._ZN5Print5printEc
-                0x000820fc        0xa C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x000820fc                Print::print(char)
+                0x000820dc        0xa C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x000820dc                Print::print(char)
  .text._ZN5Print11printNumberEmh
-                0x00082106       0x3e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x00082106                Print::printNumber(unsigned long, unsigned char)
+                0x000820e6       0x3e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x000820e6                Print::printNumber(unsigned long, unsigned char)
  .text._ZN5Print5printEli
-                0x00082144       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x00082144                Print::print(long, int)
+                0x00082124       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x00082124                Print::print(long, int)
  .text._ZN5Print5printEii
-                0x00082180        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
-                0x00082180                Print::print(int, int)
+                0x00082160        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+                0x00082160                Print::print(int, int)
  .text.initiateReset
-                0x00082184        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
-                0x00082184                initiateReset
+                0x00082164        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+                0x00082164                initiateReset
  .text.cancelReset
-                0x00082190       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
-                0x00082190                cancelReset
+                0x00082170       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+                0x00082170                cancelReset
  .text.tickReset
-                0x000821a0       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
-                0x000821a0                tickReset
+                0x00082180       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+                0x00082180                tickReset
  .text._ZN10RingBufferC2Ev
-                0x000821c0       0x1a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
-                0x000821c0                RingBuffer::RingBuffer()
-                0x000821c0                RingBuffer::RingBuffer()
+                0x000821a0       0x1a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+                0x000821a0                RingBuffer::RingBuffer()
+                0x000821a0                RingBuffer::RingBuffer()
  .text._ZN10RingBuffer10store_charEh
-                0x000821da       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
-                0x000821da                RingBuffer::store_char(unsigned char)
+                0x000821ba       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+                0x000821ba                RingBuffer::store_char(unsigned char)
  .text._ZN9UARTClasscvbEv
-                0x000821f8        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x000821f8                UARTClass::operator bool()
+                0x000821d8        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x000821d8                UARTClass::operator bool()
  .text._ZN9UARTClass9availableEv
-                0x000821fc       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x000821fc                UARTClass::available()
+                0x000821dc       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x000821dc                UARTClass::available()
  .text._ZN9UARTClass4peekEv
-                0x0008220e       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x0008220e                UARTClass::peek()
+                0x000821ee       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x000821ee                UARTClass::peek()
  .text._ZN9UARTClass4readEv
-                0x0008222a       0x2a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x0008222a                UARTClass::read()
+                0x0008220a       0x2a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x0008220a                UARTClass::read()
  .text._ZN9UARTClass5flushEv
-                0x00082254       0x18 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x00082254                UARTClass::flush()
+                0x00082234       0x18 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x00082234                UARTClass::flush()
  .text._ZN9UARTClass5writeEh
-                0x0008226c       0x54 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x0008226c                UARTClass::write(unsigned char)
+                0x0008224c       0x54 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x0008224c                UARTClass::write(unsigned char)
  .text._ZN9UARTClass3endEv
-                0x000822c0       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x000822c0                UARTClass::end()
+                0x000822a0       0x3c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x000822a0                UARTClass::end()
  .text._ZN9UARTClassC2EP4Uart4IRQnmP10RingBufferS4_
-                0x000822fc       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x000822fc                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
-                0x000822fc                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
+                0x000822dc       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x000822dc                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
+                0x000822dc                UARTClass::UARTClass(Uart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
  .text._ZN9UARTClass4initEmm
-                0x00082320       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x00082320                UARTClass::init(unsigned long, unsigned long)
+                0x00082300       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x00082300                UARTClass::init(unsigned long, unsigned long)
  .text._ZN9UARTClass5beginEm
-                0x00082390        0x8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x00082390                UARTClass::begin(unsigned long)
+                0x00082370        0x8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x00082370                UARTClass::begin(unsigned long)
  .text._ZN9UARTClass10IrqHandlerEv
-                0x00082398       0x5a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x00082398                UARTClass::IrqHandler()
+                0x00082378       0x5a C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x00082378                UARTClass::IrqHandler()
  .text._ZN10USARTClass5beginEm
-                0x000823f2        0x8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
-                0x000823f2                USARTClass::begin(unsigned long)
- *fill*         0x000823fa        0x2 
+                0x000823d2        0x8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+                0x000823d2                USARTClass::begin(unsigned long)
+ *fill*         0x000823da        0x2 
  .text._ZN10USARTClassC2EP5Usart4IRQnmP10RingBufferS4_
-                0x000823fc       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
-                0x000823fc                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
-                0x000823fc                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
+                0x000823dc       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+                0x000823dc                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
+                0x000823dc                USARTClass::USARTClass(Usart*, IRQn, unsigned long, RingBuffer*, RingBuffer*)
  .text._watchdogDefaultSetup
-                0x00082420        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
-                0x00082420                _watchdogDefaultSetup
-                0x00082420                watchdogSetup()
+                0x00082400        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+                0x00082400                _watchdogDefaultSetup
+                0x00082400                watchdogSetup()
  .text._Z3maplllll
-                0x0008242c       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WMath.cpp.o)
-                0x0008242c                map(long, long, long, long, long)
+                0x0008240c       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WMath.cpp.o)
+                0x0008240c                map(long, long, long, long, long)
  .text._ZN6StringD2Ev
-                0x00082440        0xe C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
-                0x00082440                String::~String()
-                0x00082440                String::~String()
+                0x00082420        0xe C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+                0x00082420                String::~String()
+                0x00082420                String::~String()
  .text._ZN6String10invalidateEv
-                0x0008244e       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
-                0x0008244e                String::invalidate()
+                0x0008242e       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+                0x0008242e                String::invalidate()
  .text._ZN6String12changeBufferEj
-                0x00082464       0x18 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
-                0x00082464                String::changeBuffer(unsigned int)
+                0x00082444       0x18 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+                0x00082444                String::changeBuffer(unsigned int)
  .text._ZN6String7reserveEj
-                0x0008247c       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
-                0x0008247c                String::reserve(unsigned int)
+                0x0008245c       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+                0x0008245c                String::reserve(unsigned int)
  .text._ZN6String4copyEPKcj
-                0x0008249e       0x26 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
-                0x0008249e                String::copy(char const*, unsigned int)
+                0x0008247e       0x26 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+                0x0008247e                String::copy(char const*, unsigned int)
  .text._ZN6StringC2EPKc
-                0x000824c4       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
-                0x000824c4                String::String(char const*)
-                0x000824c4                String::String(char const*)
+                0x000824a4       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+                0x000824a4                String::String(char const*)
+                0x000824a4                String::String(char const*)
  .text.unlikely._ZL11USB_SendZlpv
-                0x000824e8       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x000824c8       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
  .text._Z14USBD_Availablem
-                0x00082508       0x2c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00082508                USBD_Available(unsigned long)
+                0x000824e8       0x2c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x000824e8                USBD_Available(unsigned long)
  .text._Z9USBD_RecvmPvm
-                0x00082534       0x7c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00082534                USBD_Recv(unsigned long, void*, unsigned long)
+                0x00082514       0x7c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082514                USBD_Recv(unsigned long, void*, unsigned long)
  .text._Z9USBD_Recvm
-                0x000825b0       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x000825b0                USBD_Recv(unsigned long)
- *fill*         0x000825d2        0x2 
+                0x00082590       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082590                USBD_Recv(unsigned long)
+ *fill*         0x000825b2        0x2 
  .text._Z9USBD_SendmPKvm
-                0x000825d4       0x4c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x000825d4                USBD_Send(unsigned long, void const*, unsigned long)
+                0x000825b4       0x4c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x000825b4                USBD_Send(unsigned long, void const*, unsigned long)
  .text._Z16USBD_SendControlhPKvm
-                0x00082620       0x40 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00082620                USBD_SendControl(unsigned char, void const*, unsigned long)
+                0x00082600       0x40 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082600                USBD_SendControl(unsigned char, void const*, unsigned long)
  .text.unlikely._ZL24USB_SendStringDescriptorPKhi
-                0x00082660       0x64 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082640       0x64 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
  .text._Z16USBD_RecvControlPvm
-                0x000826c4       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x000826c4                USBD_RecvControl(void*, unsigned long)
+                0x000826a4       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x000826a4                USBD_RecvControl(void*, unsigned long)
  .text._Z26USBD_ClassInterfaceRequestR8USBSetup
-                0x000826e0       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x000826e0                USBD_ClassInterfaceRequest(USBSetup&)
+                0x000826c0       0x1e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x000826c0                USBD_ClassInterfaceRequest(USBSetup&)
  .text._Z19USBD_SendInterfacesv
-                0x000826fe       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x000826fe                USBD_SendInterfaces()
+                0x000826de       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x000826de                USBD_SendInterfaces()
  .text._Z24USBD_SendOtherInterfacesv
-                0x00082720       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00082720                USBD_SendOtherInterfaces()
+                0x00082700       0x22 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082700                USBD_SendOtherInterfaces()
  .text._Z10USBD_Flushm
-                0x00082742       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00082742                USBD_Flush(unsigned long)
+                0x00082722       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082722                USBD_Flush(unsigned long)
  .text._ZN10USBDevice_C2Ev
-                0x00082758       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00082758                USBDevice_::USBDevice_()
-                0x00082758                USBDevice_::USBDevice_()
+                0x00082738       0x24 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082738                USBDevice_::USBDevice_()
+                0x00082738                USBDevice_::USBDevice_()
  .text._ZN10USBDevice_6attachEv
-                0x0008277c       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x0008277c                USBDevice_::attach()
+                0x0008275c       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x0008275c                USBDevice_::attach()
  .text.startup._GLOBAL__sub_I_EndPoints
-                0x0008279c        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x0008277c        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
  .text._ZL7USB_ISRv
-                0x000827a8      0x454 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00082788      0x454 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
  .text._ZN7Serial_9availableEv
-                0x00082bfc       0x18 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082bfc                Serial_::available()
+                0x00082bdc       0x18 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082bdc                Serial_::available()
  .text._ZN7Serial_17availableForWriteEv
-                0x00082c14        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082c14                Serial_::availableForWrite()
- *fill*         0x00082c1a        0x2 
+                0x00082bf4        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082bf4                Serial_::availableForWrite()
+ *fill*         0x00082bfa        0x2 
  .text._ZN7Serial_4peekEv
-                0x00082c1c       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082c1c                Serial_::peek()
+                0x00082bfc       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082bfc                Serial_::peek()
  .text._ZN7Serial_5writeEh
-                0x00082c3c       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082c3c                Serial_::write(unsigned char)
- *fill*         0x00082c52        0x2 
+                0x00082c1c       0x16 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082c1c                Serial_::write(unsigned char)
+ *fill*         0x00082c32        0x2 
  .text._ZN7Serial_4readEv
-                0x00082c54       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082c54                Serial_::read()
+                0x00082c34       0x44 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082c34                Serial_::read()
  .text._ZN7Serial_5flushEv
-                0x00082c98        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082c98                Serial_::flush()
- *fill*         0x00082c9e        0x2 
+                0x00082c78        0x6 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082c78                Serial_::flush()
+ *fill*         0x00082c7e        0x2 
  .text._ZN7Serial_6acceptEv
-                0x00082ca0       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082ca0                Serial_::accept()
+                0x00082c80       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082c80                Serial_::accept()
  .text._ZN7Serial_5writeEPKhj
-                0x00082d10       0x2c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082d10                Serial_::write(unsigned char const*, unsigned int)
+                0x00082cf0       0x2c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082cf0                Serial_::write(unsigned char const*, unsigned int)
  .text._Z16CDC_GetInterfacePh
-                0x00082d3c       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082d3c                CDC_GetInterface(unsigned char*)
+                0x00082d1c       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082d1c                CDC_GetInterface(unsigned char*)
  .text._Z21CDC_GetOtherInterfacePh
-                0x00082d50       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082d50                CDC_GetOtherInterface(unsigned char*)
+                0x00082d30       0x14 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082d30                CDC_GetOtherInterface(unsigned char*)
  .text._Z9CDC_SetupR8USBSetup
-                0x00082d64       0x78 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x00082d64                CDC_Setup(USBSetup&)
+                0x00082d44       0x78 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082d44                CDC_Setup(USBSetup&)
  .text.startup._GLOBAL__sub_I_cdc_rx_buffer
-                0x00082ddc       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00082dbc       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
  .text._ZN13PluggableUSB_12getInterfaceEPh
-                0x00082df8       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
-                0x00082df8                PluggableUSB_::getInterface(unsigned char*)
+                0x00082dd8       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+                0x00082dd8                PluggableUSB_::getInterface(unsigned char*)
  .text._ZN13PluggableUSB_13getDescriptorER8USBSetup
-                0x00082e20       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
-                0x00082e20                PluggableUSB_::getDescriptor(USBSetup&)
+                0x00082e00       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+                0x00082e00                PluggableUSB_::getDescriptor(USBSetup&)
  .text._ZN13PluggableUSB_12getShortNameEPc
-                0x00082e3c       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
-                0x00082e3c                PluggableUSB_::getShortName(char*)
+                0x00082e1c       0x1c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+                0x00082e1c                PluggableUSB_::getShortName(char*)
  .text._ZN13PluggableUSB_5setupER8USBSetup
-                0x00082e58       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
-                0x00082e58                PluggableUSB_::setup(USBSetup&)
+                0x00082e38       0x20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+                0x00082e38                PluggableUSB_::setup(USBSetup&)
  .text._Z12PluggableUSBv
-                0x00082e78       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
-                0x00082e78                PluggableUSB()
+                0x00082e58       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+                0x00082e58                PluggableUSB()
  .text.FindClockConfiguration
-                0x00082ea0       0x7c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00082e80       0x7c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .text.PWMC_ConfigureChannel
-                0x00082f1c       0x60 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
-                0x00082f1c                PWMC_ConfigureChannel
+                0x00082efc       0x60 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00082efc                PWMC_ConfigureChannel
  .text.PWMC_ConfigureClocks
-                0x00082f7c       0x54 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
-                0x00082f7c                PWMC_ConfigureClocks
+                0x00082f5c       0x54 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00082f5c                PWMC_ConfigureClocks
  .text.PWMC_SetPeriod
-                0x00082fd0       0x1a C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
-                0x00082fd0                PWMC_SetPeriod
- *fill*         0x00082fea        0x2 
+                0x00082fb0       0x1a C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00082fb0                PWMC_SetPeriod
+ *fill*         0x00082fca        0x2 
  .text.PWMC_SetDutyCycle
-                0x00082fec       0x44 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
-                0x00082fec                PWMC_SetDutyCycle
+                0x00082fcc       0x44 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00082fcc                PWMC_SetDutyCycle
  .text.PWMC_EnableChannel
-                0x00083030        0xa C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
-                0x00083030                PWMC_EnableChannel
- *fill*         0x0008303a        0x2 
+                0x00083010        0xa C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00083010                PWMC_EnableChannel
+ *fill*         0x0008301a        0x2 
  .text.TC_Configure
-                0x0008303c       0x38 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x0008303c                TC_Configure
+                0x0008301c       0x38 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x0008301c                TC_Configure
  .text.TC_Start
-                0x00083074       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x00083074                TC_Start
+                0x00083054       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00083054                TC_Start
  .text.TC_SetRA
-                0x000830a0        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x000830a0                TC_SetRA
+                0x00083080        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00083080                TC_SetRA
  .text.TC_SetRB
-                0x000830a8        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x000830a8                TC_SetRB
+                0x00083088        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00083088                TC_SetRB
  .text.TC_SetRC
-                0x000830b0        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
-                0x000830b0                TC_SetRC
+                0x00083090        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00083090                TC_SetRC
  .text.TimeTick_Increment
-                0x000830b8       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
-                0x000830b8                TimeTick_Increment
+                0x00083098       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x00083098                TimeTick_Increment
  .text.GetTickCount
-                0x000830c8        0xc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
-                0x000830c8                GetTickCount
+                0x000830a8        0xc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(timetick.o)
+                0x000830a8                GetTickCount
  .text.WDT_Disable
-                0x000830d4        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(wdt.o)
-                0x000830d4                WDT_Disable
+                0x000830b4        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(wdt.o)
+                0x000830b4                WDT_Disable
  .text.UDD_SetStack
-                0x000830dc        0xc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000830dc                UDD_SetStack
+                0x000830bc        0xc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000830bc                UDD_SetStack
  .text.UDD_Init
-                0x000830e8       0xd0 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000830e8                UDD_Init
+                0x000830c8       0xd0 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000830c8                UDD_Init
  .text.UDD_Attach
-                0x000831b8       0x50 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000831b8                UDD_Attach
+                0x00083198       0x50 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083198                UDD_Attach
  .text.UDD_InitEP
-                0x00083208       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083208                UDD_InitEP
+                0x000831e8       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000831e8                UDD_InitEP
  .text.UDD_InitEndpoints
-                0x00083234       0x3c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083234                UDD_InitEndpoints
+                0x00083214       0x3c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083214                UDD_InitEndpoints
  .text.UDD_WaitIN
-                0x00083270       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083270                UDD_WaitIN
+                0x00083250       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083250                UDD_WaitIN
  .text.UDD_WaitOUT
-                0x00083280       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083280                UDD_WaitOUT
+                0x00083260       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083260                UDD_WaitOUT
  .text.UDD_ClearIN
-                0x00083290       0x18 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083290                UDD_ClearIN
+                0x00083270       0x18 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083270                UDD_ClearIN
  .text.UDD_ClearOUT
-                0x000832a8       0x18 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000832a8                UDD_ClearOUT
+                0x00083288       0x18 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083288                UDD_ClearOUT
  .text.UDD_ReceivedSetupInt
-                0x000832c0       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000832c0                UDD_ReceivedSetupInt
+                0x000832a0       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000832a0                UDD_ReceivedSetupInt
  .text.UDD_ClearSetupInt
-                0x000832d0       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000832d0                UDD_ClearSetupInt
+                0x000832b0       0x10 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000832b0                UDD_ClearSetupInt
  .text.UDD_Send
-                0x000832e0       0x88 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000832e0                UDD_Send
+                0x000832c0       0x88 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000832c0                UDD_Send
  .text.UDD_Send8
-                0x00083368       0x24 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083368                UDD_Send8
+                0x00083348       0x24 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083348                UDD_Send8
  .text.UDD_Recv8
-                0x0008338c       0x28 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x0008338c                UDD_Recv8
+                0x0008336c       0x28 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x0008336c                UDD_Recv8
  .text.UDD_Recv
-                0x000833b4       0x34 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000833b4                UDD_Recv
+                0x00083394       0x34 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083394                UDD_Recv
  .text.UDD_Stall
-                0x000833e8       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000833e8                UDD_Stall
+                0x000833c8       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000833c8                UDD_Stall
  .text.UDD_FifoByteCount
-                0x000833fc       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x000833fc                UDD_FifoByteCount
+                0x000833dc       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000833dc                UDD_FifoByteCount
  .text.UDD_ReleaseRX
-                0x00083410       0x28 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083410                UDD_ReleaseRX
+                0x000833f0       0x28 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x000833f0                UDD_ReleaseRX
  .text.UDD_ReleaseTX
-                0x00083438       0x28 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083438                UDD_ReleaseTX
+                0x00083418       0x28 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083418                UDD_ReleaseTX
  .text.UDD_SetAddress
-                0x00083460       0x20 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
-                0x00083460                UDD_SetAddress
+                0x00083440       0x20 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(uotghs_device.o)
+                0x00083440                UDD_SetAddress
  .text.dacc_reset
-                0x00083480        0x6 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x00083480                dacc_reset
+                0x00083460        0x6 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x00083460                dacc_reset
  .text.dacc_set_transfer_mode
-                0x00083486       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x00083486                dacc_set_transfer_mode
+                0x00083466       0x14 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x00083466                dacc_set_transfer_mode
  .text.dacc_get_interrupt_status
-                0x0008349a        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x0008349a                dacc_get_interrupt_status
+                0x0008347a        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x0008347a                dacc_get_interrupt_status
  .text.dacc_write_conversion_data
-                0x0008349e        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x0008349e                dacc_write_conversion_data
+                0x0008347e        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x0008347e                dacc_write_conversion_data
  .text.dacc_set_channel_selection
-                0x000834a2       0x18 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x000834a2                dacc_set_channel_selection
+                0x00083482       0x18 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x00083482                dacc_set_channel_selection
  .text.dacc_set_power_save
-                0x000834ba       0x24 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x000834ba                dacc_set_power_save
+                0x0008349a       0x24 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x0008349a                dacc_set_power_save
  .text.dacc_set_timing
-                0x000834de       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x000834de                dacc_set_timing
+                0x000834be       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x000834be                dacc_set_timing
  .text.dacc_enable_channel
-                0x0008350a       0x12 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x0008350a                dacc_enable_channel
+                0x000834ea       0x12 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x000834ea                dacc_enable_channel
  .text.dacc_get_channel_status
-                0x0008351c        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x0008351c                dacc_get_channel_status
+                0x000834fc        0x4 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x000834fc                dacc_get_channel_status
  .text.dacc_set_analog_control
-                0x00083520        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
-                0x00083520                dacc_set_analog_control
+                0x00083500        0x8 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(dacc.o)
+                0x00083500                dacc_set_analog_control
  .text.__aeabi_atexit
-                0x00083528        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-aeabi_atexit.o)
-                0x00083528                __aeabi_atexit
+                0x00083508        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-aeabi_atexit.o)
+                0x00083508                __aeabi_atexit
  .text.__assert_func
-                0x00083534       0x3c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-assert.o)
-                0x00083534                __assert_func
+                0x00083514       0x3c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-assert.o)
+                0x00083514                __assert_func
  .text.__cxa_atexit
-                0x00083570       0x14 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-cxa_atexit.o)
-                0x00083570                __cxa_atexit
+                0x00083550       0x14 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-cxa_atexit.o)
+                0x00083550                __cxa_atexit
  .text.fiprintf
-                0x00083584       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fiprintf.o)
-                0x00083584                fiprintf
+                0x00083564       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fiprintf.o)
+                0x00083564                fiprintf
  .text.__libc_init_array
-                0x000835ac       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-init.o)
-                0x000835ac                __libc_init_array
- .text.iprintf  0x000835fc       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-iprintf.o)
-                0x000835fc                iprintf
- .text.malloc   0x00083624       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-malloc.o)
-                0x00083624                malloc
- .text.free     0x00083634       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-malloc.o)
-                0x00083634                free
+                0x0008358c       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-init.o)
+                0x0008358c                __libc_init_array
+ .text.iprintf  0x000835dc       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-iprintf.o)
+                0x000835dc                iprintf
+ .text.malloc   0x00083604       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-malloc.o)
+                0x00083604                malloc
+ .text.free     0x00083614       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-malloc.o)
+                0x00083614                free
  .text._malloc_r
-                0x00083644      0x538 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mallocr.o)
-                0x00083644                _malloc_r
- .text          0x00083b7c       0xec c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
-                0x00083b7c                memcpy
- .text.memmove  0x00083c68       0xcc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memmove.o)
-                0x00083c68                memmove
- .text.memset   0x00083d34       0x94 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
-                0x00083d34                memset
+                0x00083624      0x538 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mallocr.o)
+                0x00083624                _malloc_r
+ .text          0x00083b5c       0xec c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memcpy.o)
+                0x00083b5c                memcpy
+ .text.memmove  0x00083c48       0xcc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memmove.o)
+                0x00083c48                memmove
+ .text.memset   0x00083d14       0x94 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+                0x00083d14                memset
  .text.__malloc_lock
-                0x00083dc8        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mlock.o)
-                0x00083dc8                __malloc_lock
+                0x00083da8        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mlock.o)
+                0x00083da8                __malloc_lock
  .text.__malloc_unlock
-                0x00083dcc        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mlock.o)
-                0x00083dcc                __malloc_unlock
- .text.realloc  0x00083dd0       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-realloc.o)
-                0x00083dd0                realloc
+                0x00083dac        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mlock.o)
+                0x00083dac                __malloc_unlock
+ .text.realloc  0x00083db0       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-realloc.o)
+                0x00083db0                realloc
  .text._realloc_r
-                0x00083de0      0x3c0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-reallocr.o)
-                0x00083de0                _realloc_r
- .text._sbrk_r  0x000841a0       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-sbrkr.o)
-                0x000841a0                _sbrk_r
- .text.strcpy   0x000841c4       0xbc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strcpy.o)
-                0x000841c4                strcpy
- .text.strlen   0x00084280       0x60 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strlen.o)
-                0x00084280                strlen
- .text.kill     0x000842e0       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-syskill.o)
-                0x000842e0                kill
+                0x00083dc0      0x3c0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-reallocr.o)
+                0x00083dc0                _realloc_r
+ .text._sbrk_r  0x00084180       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-sbrkr.o)
+                0x00084180                _sbrk_r
+ .text.strcpy   0x000841a4       0xbc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strcpy.o)
+                0x000841a4                strcpy
+ .text.strlen   0x00084260       0x60 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strlen.o)
+                0x00084260                strlen
+ .text.kill     0x000842c0       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-syskill.o)
+                0x000842c0                kill
  .text.__sprint_r.part.0
-                0x000842f0       0x78 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+                0x000842d0       0x78 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
  .text._vfiprintf_r
-                0x00084368      0xc54 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
-                0x00084368                _vfiprintf_r
+                0x00084348      0xc54 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+                0x00084348                _vfiprintf_r
  .text.__sbprintf
-                0x00084fbc       0x7c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+                0x00084f9c       0x7c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
  .text.__swsetup_r
-                0x00085038       0xc4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wsetup.o)
-                0x00085038                __swsetup_r
+                0x00085018       0xc4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wsetup.o)
+                0x00085018                __swsetup_r
  .text.__register_exitproc
-                0x000850fc       0xa8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__atexit.o)
-                0x000850fc                __register_exitproc
+                0x000850dc       0xa8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__atexit.o)
+                0x000850dc                __register_exitproc
  .text.startup.register_fini
-                0x000851a4       0x14 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__call_atexit.o)
- .text.abort    0x000851b8       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-abort.o)
-                0x000851b8                abort
- .text.atexit   0x000851c8        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-atexit.o)
-                0x000851c8                atexit
+                0x00085184       0x14 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__call_atexit.o)
+ .text.abort    0x00085198       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-abort.o)
+                0x00085198                abort
+ .text.atexit   0x000851a8        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-atexit.o)
+                0x000851a8                atexit
  .text.__sflush_r
-                0x000851d4      0x148 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fflush.o)
-                0x000851d4                __sflush_r
+                0x000851b4      0x148 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fflush.o)
+                0x000851b4                __sflush_r
  .text._fflush_r
-                0x0008531c       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fflush.o)
-                0x0008531c                _fflush_r
+                0x000852fc       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fflush.o)
+                0x000852fc                _fflush_r
  .text._cleanup_r
-                0x00085348        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
-                0x00085348                _cleanup_r
- .text.__sinit  0x00085354       0xf4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
-                0x00085354                __sinit
+                0x00085328        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
+                0x00085328                _cleanup_r
+ .text.__sinit  0x00085334       0xf4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
+                0x00085334                __sinit
  .text.__sfp_lock_acquire
-                0x00085448        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
-                0x00085448                __sfp_lock_acquire
+                0x00085428        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
+                0x00085428                __sfp_lock_acquire
  .text.__sfp_lock_release
-                0x0008544c        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
-                0x0008544c                __sfp_lock_release
+                0x0008542c        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
+                0x0008542c                __sfp_lock_release
  .text.__libc_fini_array
-                0x00085450       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fini.o)
-                0x00085450                __libc_fini_array
+                0x00085430       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fini.o)
+                0x00085430                __libc_fini_array
  .text._fputwc_r
-                0x00085480       0xc0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fputwc.o)
-                0x00085480                _fputwc_r
+                0x00085460       0xc0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fputwc.o)
+                0x00085460                _fputwc_r
  .text._malloc_trim_r
-                0x00085540       0x9c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-freer.o)
-                0x00085540                _malloc_trim_r
- .text._free_r  0x000855dc      0x198 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-freer.o)
-                0x000855dc                _free_r
+                0x00085520       0x9c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-freer.o)
+                0x00085520                _malloc_trim_r
+ .text._free_r  0x000855bc      0x198 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-freer.o)
+                0x000855bc                _free_r
  .text.__sfvwrite_r
-                0x00085774      0x314 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fvwrite.o)
-                0x00085774                __sfvwrite_r
- .text._fwalk   0x00085a88       0x48 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fwalk.o)
-                0x00085a88                _fwalk
+                0x00085754      0x314 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fvwrite.o)
+                0x00085754                __sfvwrite_r
+ .text._fwalk   0x00085a68       0x48 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fwalk.o)
+                0x00085a68                _fwalk
  .text.__locale_charset
-                0x00085ad0        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-locale.o)
-                0x00085ad0                __locale_charset
+                0x00085ab0        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-locale.o)
+                0x00085ab0                __locale_charset
  .text.__locale_mb_cur_max
-                0x00085ad8        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-locale.o)
-                0x00085ad8                __locale_mb_cur_max
+                0x00085ab8        0xc c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-locale.o)
+                0x00085ab8                __locale_mb_cur_max
  .text.__smakebuf_r
-                0x00085ae4       0xe0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-makebuf.o)
-                0x00085ae4                __smakebuf_r
- .text.memchr   0x00085bc4       0x94 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memchr-stub.o)
-                0x00085bc4                memchr
+                0x00085ac4       0xe0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-makebuf.o)
+                0x00085ac4                __smakebuf_r
+ .text.memchr   0x00085ba4       0x94 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memchr-stub.o)
+                0x00085ba4                memchr
  .text._raise_r
-                0x00085c58       0x58 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signal.o)
-                0x00085c58                _raise_r
- .text.raise    0x00085cb0       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signal.o)
-                0x00085cb0                raise
- .text._kill_r  0x00085cc0       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signalr.o)
-                0x00085cc0                _kill_r
+                0x00085c38       0x58 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signal.o)
+                0x00085c38                _raise_r
+ .text.raise    0x00085c90       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signal.o)
+                0x00085c90                raise
+ .text._kill_r  0x00085ca0       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signalr.o)
+                0x00085ca0                _kill_r
  .text._getpid_r
-                0x00085ce8        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signalr.o)
-                0x00085ce8                _getpid_r
- .text.__sread  0x00085cec       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
-                0x00085cec                __sread
+                0x00085cc8        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signalr.o)
+                0x00085cc8                _getpid_r
+ .text.__sread  0x00085ccc       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
+                0x00085ccc                __sread
  .text.__swrite
-                0x00085d10       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
-                0x00085d10                __swrite
- .text.__sseek  0x00085d48       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
-                0x00085d48                __sseek
+                0x00085cf0       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
+                0x00085cf0                __swrite
+ .text.__sseek  0x00085d28       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
+                0x00085d28                __sseek
  .text.__sclose
-                0x00085d68        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
-                0x00085d68                __sclose
+                0x00085d48        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
+                0x00085d48                __sclose
  .text.__swbuf_r
-                0x00085d70       0xa8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wbuf.o)
-                0x00085d70                __swbuf_r
+                0x00085d50       0xa8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wbuf.o)
+                0x00085d50                __swbuf_r
  .text._wcrtomb_r
-                0x00085e18       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wcrtomb.o)
-                0x00085e18                _wcrtomb_r
+                0x00085df8       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wcrtomb.o)
+                0x00085df8                _wcrtomb_r
  .text.__ascii_wctomb
-                0x00085e68       0x1c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wctomb_r.o)
-                0x00085e68                __ascii_wctomb
+                0x00085e48       0x1c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wctomb_r.o)
+                0x00085e48                __ascii_wctomb
  .text._write_r
-                0x00085e84       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-writer.o)
-                0x00085e84                _write_r
+                0x00085e64       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-writer.o)
+                0x00085e64                _write_r
  .text._close_r
-                0x00085eac       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-closer.o)
-                0x00085eac                _close_r
+                0x00085e8c       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-closer.o)
+                0x00085e8c                _close_r
  .text._fclose_r
-                0x00085ed0       0x80 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fclose.o)
-                0x00085ed0                _fclose_r
- .text.fclose   0x00085f50       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fclose.o)
-                0x00085f50                fclose
+                0x00085eb0       0x80 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fclose.o)
+                0x00085eb0                _fclose_r
+ .text.fclose   0x00085f30       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fclose.o)
+                0x00085f30                fclose
  .text._fstat_r
-                0x00085f60       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fstatr.o)
-                0x00085f60                _fstat_r
+                0x00085f40       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fstatr.o)
+                0x00085f40                _fstat_r
  .text._isatty_r
-                0x00085f88       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-isattyr.o)
-                0x00085f88                _isatty_r
+                0x00085f68       0x24 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-isattyr.o)
+                0x00085f68                _isatty_r
  .text._lseek_r
-                0x00085fac       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-lseekr.o)
-                0x00085fac                _lseek_r
- .text._read_r  0x00085fd4       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-readr.o)
-                0x00085fd4                _read_r
- .text          0x00085ffc       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_aeabi_uldivmod.o)
-                0x00085ffc                __aeabi_uldivmod
- .text          0x00086028       0x60 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(bpabi.o)
-                0x00086028                __gnu_ldivmod_helper
-                0x00086058                __gnu_uldivmod_helper
- .text          0x00086088        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_dvmd_tls.o)
-                0x00086088                __aeabi_idiv0
-                0x00086088                __aeabi_ldiv0
- .text          0x0008608c      0x2a0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_divdi3.o)
-                0x0008608c                __divdi3
- .text          0x0008632c      0x290 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_udivdi3.o)
-                0x0008632c                __udivdi3
+                0x00085f8c       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-lseekr.o)
+                0x00085f8c                _lseek_r
+ .text._read_r  0x00085fb4       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-readr.o)
+                0x00085fb4                _read_r
+ .text          0x00085fdc       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_aeabi_uldivmod.o)
+                0x00085fdc                __aeabi_uldivmod
+ .text          0x00086008       0x60 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(bpabi.o)
+                0x00086008                __gnu_ldivmod_helper
+                0x00086038                __gnu_uldivmod_helper
+ .text          0x00086068        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_dvmd_tls.o)
+                0x00086068                __aeabi_idiv0
+                0x00086068                __aeabi_ldiv0
+ .text          0x0008606c      0x2a0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_divdi3.o)
+                0x0008606c                __divdi3
+ .text          0x0008630c      0x290 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_udivdi3.o)
+                0x0008630c                __udivdi3
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
  *(.glue_7)
  .glue_7        0x00000000        0x0 linker stubs
  *(.rodata .rodata* .gnu.linkonce.r.*)
  .rodata._ZL13buttonLEDPins
-                0x000865bc       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x0008659c       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
  .rodata.str1.1
-                0x000865cc       0x40 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+                0x000865ac       0x40 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
                                  0x45 (size before relaxing)
  .rodata._ZL13rotaryLEDPins
-                0x0008660c       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- *fill*         0x0008661c        0x4 
+                0x000865ec       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ *fill*         0x000865fc        0x4 
  .rodata._ZTV13LiquidCrystal
-                0x00086620       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
-                0x00086620                vtable for LiquidCrystal
+                0x00086600       0x10 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+                0x00086600                vtable for LiquidCrystal
  .rodata.g_APinDescription
-                0x00086630      0xa2c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
-                0x00086630                g_APinDescription
- .rodata        0x0008705c       0x40 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
+                0x00086610      0xa2c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+                0x00086610                g_APinDescription
+ .rodata        0x0008703c       0x40 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(adc.o)
  .rodata.str1.1
-                0x0008709c       0x19 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- *fill*         0x000870b5        0x3 
+                0x0008707c       0x19 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ *fill*         0x00087095        0x3 
  .rodata.channelToId.9433
-                0x000870b8       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x00087098       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
  .rodata.channelToTC.9432
-                0x00087100       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x000870e0       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
  .rodata.channelToChNo.9430
-                0x00087148       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x00087128       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
  .rodata.channelToAB.9431
-                0x00087190       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+                0x00087170       0x48 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
  .rodata._ZTV9UARTClass
-                0x000871d8       0x30 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
-                0x000871d8                vtable for UARTClass
+                0x000871b8       0x30 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+                0x000871b8                vtable for UARTClass
  .rodata._ZTV10USARTClass
-                0x00087208       0x30 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
-                0x00087208                vtable for USARTClass
+                0x000871e8       0x30 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+                0x000871e8                vtable for USARTClass
  .rodata.STRING_PRODUCT
-                0x00087238        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00087238                STRING_PRODUCT
+                0x00087218        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00087218                STRING_PRODUCT
  .rodata.USB_DeviceDescriptor
-                0x00087244       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00087244                USB_DeviceDescriptor
+                0x00087224       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00087224                USB_DeviceDescriptor
  .rodata.STRING_LANGUAGE
-                0x00087256        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x00087256                STRING_LANGUAGE
+                0x00087236        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x00087236                STRING_LANGUAGE
  .rodata._ZL18test_packet_buffer
-                0x0008725a       0x35 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x0008723a       0x35 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
  .rodata.STRING_MANUFACTURER
-                0x0008728f        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x0008728f                STRING_MANUFACTURER
+                0x0008726f        0xc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x0008726f                STRING_MANUFACTURER
  .rodata.USB_DeviceDescriptorA
-                0x0008729b       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
-                0x0008729b                USB_DeviceDescriptorA
+                0x0008727b       0x12 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+                0x0008727b                USB_DeviceDescriptorA
  .rodata._ZL19USB_DeviceQualifier
-                0x000872ad        0x9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- *fill*         0x000872b6        0x2 
+                0x0008728d        0x9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ *fill*         0x00087296        0x2 
  .rodata._ZTV7Serial_
-                0x000872b8       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x000872b8                vtable for Serial_
+                0x00087298       0x28 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x00087298                vtable for Serial_
  .rodata._ZL18_cdcOtherInterface
-                0x000872e0       0x42 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x000872c0       0x42 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
  .rodata._ZL13_cdcInterface
-                0x00087322       0x42 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
- .rodata        0x00087364       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00087302       0x42 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .rodata        0x00087344       0x2c C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .rodata.__func__.6830
-                0x00087390       0x15 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00087370       0x15 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .rodata.__func__.6841
-                0x000873a5       0x12 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00087385       0x12 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .rodata.str1.1
-                0x000873b7      0x1cc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00087397      0x1cc C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .rodata.__func__.6804
-                0x00087583       0x16 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00087563       0x16 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .rodata.__func__.6793
-                0x00087599       0x17 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
+                0x00087579       0x17 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(pwmc.o)
  .rodata.__func__.6792
-                0x000875b0        0xd C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x00087590        0xd C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .rodata.str1.1
-                0x000875bd       0x54 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+                0x0008759d       0x54 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
  .rodata.__func__.6798
-                0x00087611        0x9 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
- *fill*         0x0008761a        0x2 
+                0x000875f1        0x9 C:\Users\user\AppData\Local\arduino15\packages\arduino\hardware\sam\1.6.11\variants\arduino_due_x/libsam_sam3x8e_gcc_rel.a(tc.o)
+ *fill*         0x000875fa        0x2 
  .rodata.str1.4
-                0x0008761c       0x3f c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-assert.o)
+                0x000875fc       0x3f c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-assert.o)
                                  0x44 (size before relaxing)
- *fill*         0x0008765b        0x1 
+ *fill*         0x0008763b        0x1 
  .rodata.str1.4
-                0x0008765c        0x2 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-impure.o)
+                0x0008763c        0x2 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-impure.o)
                                   0x4 (size before relaxing)
- *fill*         0x0008765e        0x2 
+ *fill*         0x0008763e        0x2 
  .rodata._global_impure_ptr
-                0x00087660        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-impure.o)
-                0x00087660                _global_impure_ptr
+                0x00087640        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-impure.o)
+                0x00087640                _global_impure_ptr
  .rodata.blanks.6717
-                0x00087664       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+                0x00087644       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
  .rodata.str1.4
-                0x00087674       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+                0x00087654       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
  .rodata.zeroes.6718
-                0x000876a4       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+                0x00087684       0x10 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
  *(.ARM.extab* .gnu.linkonce.armextab.*)
-                0x000876b4                . = ALIGN (0x4)
+                0x00087694                . = ALIGN (0x4)
  *(.init)
- .init          0x000876b4        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
-                0x000876b4                _init
- .init          0x000876b8        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
-                0x000876c0                . = ALIGN (0x4)
-                0x000876c0                __preinit_array_start = .
+ .init          0x00087694        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
+                0x00087694                _init
+ .init          0x00087698        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
+                0x000876a0                . = ALIGN (0x4)
+                0x000876a0                __preinit_array_start = .
  *(.preinit_array)
-                0x000876c0                __preinit_array_end = .
-                0x000876c0                . = ALIGN (0x4)
-                0x000876c0                __init_array_start = .
+                0x000876a0                __preinit_array_end = .
+                0x000876a0                . = ALIGN (0x4)
+                0x000876a0                __init_array_start = .
  *(SORT(.init_array.*))
  .init_array.00000
-                0x000876c0        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__call_atexit.o)
+                0x000876a0        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__call_atexit.o)
  *(.init_array)
- .init_array    0x000876c4        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
- .init_array    0x000876c8        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .init_array    0x000876cc        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .init_array    0x000876d0        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .init_array    0x000876d4        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
-                0x000876d8                __init_array_end = .
-                0x000876d8                . = ALIGN (0x4)
+ .init_array    0x000876a4        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+ .init_array    0x000876a8        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .init_array    0x000876ac        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .init_array    0x000876b0        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .init_array    0x000876b4        0x4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+                0x000876b8                __init_array_end = .
+                0x000876b8                . = ALIGN (0x4)
  *crtbegin.o(.ctors)
  *(EXCLUDE_FILE(*crtend.o) .ctors)
  *(SORT(.ctors.*))
  *crtend.o(.ctors)
-                0x000876d8                . = ALIGN (0x4)
+                0x000876b8                . = ALIGN (0x4)
  *(.fini)
- .fini          0x000876d8        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
-                0x000876d8                _fini
- .fini          0x000876dc        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
-                0x000876e4                . = ALIGN (0x4)
-                0x000876e4                __fini_array_start = .
+ .fini          0x000876b8        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crti.o
+                0x000876b8                _fini
+ .fini          0x000876bc        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtn.o
+                0x000876c4                . = ALIGN (0x4)
+                0x000876c4                __fini_array_start = .
  *(.fini_array)
- .fini_array    0x000876e4        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+ .fini_array    0x000876c4        0x4 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
  *(SORT(.fini_array.*))
-                0x000876e8                __fini_array_end = .
+                0x000876c8                __fini_array_end = .
  *crtbegin.o(.dtors)
  *(EXCLUDE_FILE(*crtend.o) .dtors)
  *(SORT(.dtors.*))
  *crtend.o(.dtors)
-                0x000876e8                . = ALIGN (0x4)
-                0x000876e8                _efixed = .
-                0x000876e8                PROVIDE (__exidx_start, .)
+                0x000876c8                . = ALIGN (0x4)
+                0x000876c8                _efixed = .
+                0x000876c8                PROVIDE (__exidx_start, .)
 
-.vfp11_veneer   0x000876e8        0x0
+.vfp11_veneer   0x000876c8        0x0
  .vfp11_veneer  0x00000000        0x0 linker stubs
 
-.v4_bx          0x000876e8        0x0
+.v4_bx          0x000876c8        0x0
  .v4_bx         0x00000000        0x0 linker stubs
 
-.iplt           0x000876e8        0x0
+.iplt           0x000876c8        0x0
  .iplt          0x00000000        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.ARM.exidx      0x000876e8        0x8
+.ARM.exidx      0x000876c8        0x8
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000876e8        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_divdi3.o)
- .ARM.exidx     0x000876f0        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_udivdi3.o)
+ .ARM.exidx     0x000876c8        0x8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_divdi3.o)
+ .ARM.exidx     0x000876d0        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_udivdi3.o)
                                   0x8 (size before relaxing)
-                0x000876f0                PROVIDE (__exidx_end, .)
+                0x000876d0                PROVIDE (__exidx_end, .)
 
-.eh_frame       0x000876f0        0x0
- .eh_frame      0x000876f0        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+.eh_frame       0x000876d0        0x0
+ .eh_frame      0x000876d0        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.rel.dyn        0x000876f0        0x0
+.rel.dyn        0x000876d0        0x0
  .rel.iplt      0x00000000        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.jcr            0x000876f0        0x0
- .jcr           0x000876f0        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
+.jcr            0x000876d0        0x0
+ .jcr           0x000876d0        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
 
-.igot.plt       0x000876f0        0x0
+.igot.plt       0x000876d0        0x0
  .igot.plt      0x00000000        0x0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m/crtbegin.o
-                0x000876f0                . = ALIGN (0x4)
-                0x000876f0                _etext = .
+                0x000876d0                . = ALIGN (0x4)
+                0x000876d0                _etext = .
 
-.relocate       0x20070000      0xc64 load address 0x000876f0
+.relocate       0x20070000      0xc64 load address 0x000876d0
                 0x20070000                . = ALIGN (0x4)
                 0x20070000                _srelocate = .
  *(.ramfunc .ramfunc.*)
@@ -2741,7 +2741,7 @@ LOAD c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-
                 0x20070c64                . = ALIGN (0x4)
                 0x20070c64                _erelocate = .
 
-.bss            0x20070c64      0xadc load address 0x00088354
+.bss            0x20070c64      0xadc load address 0x00088334
                 0x20070c64                . = ALIGN (0x4)
                 0x20070c64                _sbss = .
                 0x20070c64                _szero = .
@@ -3257,29 +3257,29 @@ OUTPUT(C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Rel
  .debug_ranges  0x00001298       0xd8 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
  .debug_ranges  0x00001370       0xd0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
 
-.debug_line     0x00000000     0x7899
- .debug_line    0x00000000      0xb51 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .debug_line    0x00000b51      0x886 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
- .debug_line    0x000013d7      0x623 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .debug_line    0x000019fa      0x34e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_line    0x00001d48       0xaf C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_line    0x00001df7      0x48d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_line    0x00002284      0x5c9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
- .debug_line    0x0000284d      0x352 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_line    0x00002b9f      0x5e3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_line    0x00003182      0x49d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_line    0x0000361f      0x3c7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_line    0x000039e6      0x707 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_line    0x000040ed      0x48b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_line    0x00004578      0x1d1 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_line    0x00004749      0x64c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_line    0x00004d95      0x4ef C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_line    0x00005284      0x3de C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_line    0x00005662      0x205 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WMath.cpp.o)
- .debug_line    0x00005867      0xc20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
- .debug_line    0x00006487      0x91b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_line    0x00006da2      0x800 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
- .debug_line    0x000075a2      0x2f7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+.debug_line     0x00000000     0x788d
+ .debug_line    0x00000000      0xb45 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .debug_line    0x00000b45      0x886 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+ .debug_line    0x000013cb      0x623 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_line    0x000019ee      0x34e C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_line    0x00001d3c       0xaf C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_line    0x00001deb      0x48d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_line    0x00002278      0x5c9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_line    0x00002841      0x352 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_line    0x00002b93      0x5e3 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_line    0x00003176      0x49d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_line    0x00003613      0x3c7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_line    0x000039da      0x707 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_line    0x000040e1      0x48b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_line    0x0000456c      0x1d1 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_line    0x0000473d      0x64c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_line    0x00004d89      0x4ef C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_line    0x00005278      0x3de C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_line    0x00005656      0x205 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WMath.cpp.o)
+ .debug_line    0x0000585b      0xc20 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_line    0x0000647b      0x91b C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_line    0x00006d96      0x800 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .debug_line    0x00007596      0x2f7 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
 
 .debug_str      0x00000000     0x5f95
  .debug_str     0x00000000     0x14b9 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
@@ -3327,79 +3327,79 @@ OUTPUT(C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Rel
  .debug_str     0x00005ef8       0x9d C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
                                 0x5c8 (size before relaxing)
 
-.debug_frame    0x00000000     0x2b04
- .debug_frame   0x00000000      0x358 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
- .debug_frame   0x00000358      0x2ec C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
- .debug_frame   0x00000644       0xf0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
- .debug_frame   0x00000734       0x58 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
- .debug_frame   0x0000078c       0x40 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
- .debug_frame   0x000007cc       0xd0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
- .debug_frame   0x0000089c       0xb4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
- .debug_frame   0x00000950       0x5c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
- .debug_frame   0x000009ac       0xa4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
- .debug_frame   0x00000a50       0x6c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
- .debug_frame   0x00000abc       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
- .debug_frame   0x00000af4      0x2e0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
- .debug_frame   0x00000dd4       0x58 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
- .debug_frame   0x00000e2c       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
- .debug_frame   0x00000e64      0x138 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
- .debug_frame   0x00000f9c       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
- .debug_frame   0x0000100c       0x50 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
- .debug_frame   0x0000105c       0x88 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WMath.cpp.o)
- .debug_frame   0x000010e4      0x838 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
- .debug_frame   0x0000191c      0x22c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
- .debug_frame   0x00001b48      0x1c0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
- .debug_frame   0x00001d08       0xbc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
- .debug_frame   0x00001dc4       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-aeabi_atexit.o)
- .debug_frame   0x00001de4       0x40 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-assert.o)
- .debug_frame   0x00001e24       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-cxa_atexit.o)
- .debug_frame   0x00001e4c       0x5c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fiprintf.o)
- .debug_frame   0x00001ea8       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-init.o)
- .debug_frame   0x00001ed4       0x5c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-iprintf.o)
- .debug_frame   0x00001f30       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-malloc.o)
- .debug_frame   0x00001f60       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mallocr.o)
- .debug_frame   0x00001f98       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memmove.o)
- .debug_frame   0x00001fc4       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
- .debug_frame   0x00001ff0       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mlock.o)
- .debug_frame   0x00002020       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-realloc.o)
- .debug_frame   0x00002040       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-reallocr.o)
- .debug_frame   0x00002078       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-sbrkr.o)
- .debug_frame   0x000020a4       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strcpy.o)
- .debug_frame   0x000020c4       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strlen.o)
- .debug_frame   0x000020e4       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-syskill.o)
- .debug_frame   0x00002104       0xb8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
- .debug_frame   0x000021bc       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wsetup.o)
- .debug_frame   0x000021e8       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__atexit.o)
- .debug_frame   0x00002218       0x48 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__call_atexit.o)
- .debug_frame   0x00002260       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-abort.o)
- .debug_frame   0x00002288       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-atexit.o)
- .debug_frame   0x000022a8       0x5c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fflush.o)
- .debug_frame   0x00002304      0x110 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
- .debug_frame   0x00002414       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fini.o)
- .debug_frame   0x00002440       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fputwc.o)
- .debug_frame   0x00002490       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-freer.o)
- .debug_frame   0x000024e0       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fvwrite.o)
- .debug_frame   0x00002518       0x54 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fwalk.o)
- .debug_frame   0x0000256c       0x98 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-locale.o)
- .debug_frame   0x00002604       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-makebuf.o)
- .debug_frame   0x00002634       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memchr-stub.o)
- .debug_frame   0x00002660       0x48 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-reent.o)
- .debug_frame   0x000026a8       0xc0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signal.o)
- .debug_frame   0x00002768       0x3c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signalr.o)
- .debug_frame   0x000027a4       0x80 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
- .debug_frame   0x00002824       0x40 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wbuf.o)
- .debug_frame   0x00002864       0x58 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wcrtomb.o)
- .debug_frame   0x000028bc       0x44 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wctomb_r.o)
- .debug_frame   0x00002900       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-writer.o)
- .debug_frame   0x0000292c       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-closer.o)
- .debug_frame   0x00002958       0x3c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fclose.o)
- .debug_frame   0x00002994       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fstatr.o)
- .debug_frame   0x000029c0       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-isattyr.o)
- .debug_frame   0x000029ec       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-lseekr.o)
- .debug_frame   0x00002a18       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-readr.o)
- .debug_frame   0x00002a44       0x58 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(bpabi.o)
- .debug_frame   0x00002a9c       0x34 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_divdi3.o)
- .debug_frame   0x00002ad0       0x34 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_udivdi3.o)
+.debug_frame    0x00000000     0x2b08
+ .debug_frame   0x00000000      0x35c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\MidiMixerMono.cpp.o
+ .debug_frame   0x0000035c      0x2ec C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\LiquidCrystal\LiquidCrystal.cpp.o
+ .debug_frame   0x00000648       0xf0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release\variant\variant.cpp.o
+ .debug_frame   0x00000738       0x58 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(cortex_handlers.c.o)
+ .debug_frame   0x00000790       0x40 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(hooks.c.o)
+ .debug_frame   0x000007d0       0xd0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(syscalls_sam3.c.o)
+ .debug_frame   0x000008a0       0xb4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WInterrupts.c.o)
+ .debug_frame   0x00000954       0x5c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring.c.o)
+ .debug_frame   0x000009b0       0xa4 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_analog.c.o)
+ .debug_frame   0x00000a54       0x6c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(wiring_digital.c.o)
+ .debug_frame   0x00000ac0       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(main.cpp.o)
+ .debug_frame   0x00000af8      0x2e0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Print.cpp.o)
+ .debug_frame   0x00000dd8       0x58 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(Reset.cpp.o)
+ .debug_frame   0x00000e30       0x38 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(RingBuffer.cpp.o)
+ .debug_frame   0x00000e68      0x138 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(UARTClass.cpp.o)
+ .debug_frame   0x00000fa0       0x70 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USARTClass.cpp.o)
+ .debug_frame   0x00001010       0x50 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(watchdog.cpp.o)
+ .debug_frame   0x00001060       0x88 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WMath.cpp.o)
+ .debug_frame   0x000010e8      0x838 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(WString.cpp.o)
+ .debug_frame   0x00001920      0x22c C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(USBCore.cpp.o)
+ .debug_frame   0x00001b4c      0x1c0 C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(CDC.cpp.o)
+ .debug_frame   0x00001d0c       0xbc C:\Users\user\AppData\Local\Temp\VMBuilds\MidiMixerMono\arduino_due_x\Release/core.a(PluggableUSB.cpp.o)
+ .debug_frame   0x00001dc8       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-aeabi_atexit.o)
+ .debug_frame   0x00001de8       0x40 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-assert.o)
+ .debug_frame   0x00001e28       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-cxa_atexit.o)
+ .debug_frame   0x00001e50       0x5c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fiprintf.o)
+ .debug_frame   0x00001eac       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-init.o)
+ .debug_frame   0x00001ed8       0x5c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-iprintf.o)
+ .debug_frame   0x00001f34       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-malloc.o)
+ .debug_frame   0x00001f64       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mallocr.o)
+ .debug_frame   0x00001f9c       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memmove.o)
+ .debug_frame   0x00001fc8       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memset.o)
+ .debug_frame   0x00001ff4       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-mlock.o)
+ .debug_frame   0x00002024       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-realloc.o)
+ .debug_frame   0x00002044       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-reallocr.o)
+ .debug_frame   0x0000207c       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-sbrkr.o)
+ .debug_frame   0x000020a8       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strcpy.o)
+ .debug_frame   0x000020c8       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-strlen.o)
+ .debug_frame   0x000020e8       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-syskill.o)
+ .debug_frame   0x00002108       0xb8 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-vfiprintf.o)
+ .debug_frame   0x000021c0       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wsetup.o)
+ .debug_frame   0x000021ec       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__atexit.o)
+ .debug_frame   0x0000221c       0x48 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-__call_atexit.o)
+ .debug_frame   0x00002264       0x28 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-abort.o)
+ .debug_frame   0x0000228c       0x20 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-atexit.o)
+ .debug_frame   0x000022ac       0x5c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fflush.o)
+ .debug_frame   0x00002308      0x110 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-findfp.o)
+ .debug_frame   0x00002418       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fini.o)
+ .debug_frame   0x00002444       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fputwc.o)
+ .debug_frame   0x00002494       0x50 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-freer.o)
+ .debug_frame   0x000024e4       0x38 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fvwrite.o)
+ .debug_frame   0x0000251c       0x54 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fwalk.o)
+ .debug_frame   0x00002570       0x98 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-locale.o)
+ .debug_frame   0x00002608       0x30 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-makebuf.o)
+ .debug_frame   0x00002638       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-memchr-stub.o)
+ .debug_frame   0x00002664       0x48 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-reent.o)
+ .debug_frame   0x000026ac       0xc0 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signal.o)
+ .debug_frame   0x0000276c       0x3c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-signalr.o)
+ .debug_frame   0x000027a8       0x80 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-stdio.o)
+ .debug_frame   0x00002828       0x40 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wbuf.o)
+ .debug_frame   0x00002868       0x58 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wcrtomb.o)
+ .debug_frame   0x000028c0       0x44 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-wctomb_r.o)
+ .debug_frame   0x00002904       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-writer.o)
+ .debug_frame   0x00002930       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-closer.o)
+ .debug_frame   0x0000295c       0x3c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fclose.o)
+ .debug_frame   0x00002998       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-fstatr.o)
+ .debug_frame   0x000029c4       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-isattyr.o)
+ .debug_frame   0x000029f0       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-lseekr.o)
+ .debug_frame   0x00002a1c       0x2c c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/../../../../arm-none-eabi/lib/armv7-m\libg.a(lib_a-readr.o)
+ .debug_frame   0x00002a48       0x58 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(bpabi.o)
+ .debug_frame   0x00002aa0       0x34 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_divdi3.o)
+ .debug_frame   0x00002ad4       0x34 c:/users/user/appdata/local/arduino15/packages/arduino/tools/arm-none-eabi-gcc/4.8.3-2014q1/bin/../lib/gcc/arm-none-eabi/4.8.3/armv7-m\libgcc.a(_udivdi3.o)
 
 Cross Reference Table
 

@@ -16,13 +16,13 @@ void shiftEncoderISR() {
         curData = rotaryDeltaUpdateState(shiftEncoderState[1]);
 
         // check for delta value
-        if (curData[7] == 1 && curMode < 3) {
+        if (curData[7] == 65 && curMode < 3) {
             curMode += 1;
-            curData[7] = 0;
+
         }
-        else if (curData[7] == -1 && curMode > 1) {
+        else if (curData[7] == 63 && curMode > 1) {
             curMode -= 1;
-            curData[7] = 0;
+            curData[7] = 64;
         }
 
         for (int i = 0; i < ROTARY_DELTA_ARRAY_SIZE; i++) {
@@ -32,23 +32,23 @@ void shiftEncoderISR() {
     else {
         curData = rotaryDeltaUpdateState(shiftEncoderState[0]);
 
-        if (curData[7] == 1) {
+        if (curData[7] == 65) {
             rotaryDeltaGenerateMidiMessage(curData);
             if (curMode == 2) {
                 displayDeltaRotaryLCD(curData);
             }
         }
-        else if (curData[7] == -1 ) {
+        else if (curData[7] == 63 ) {
+            rotaryDeltaGenerateMidiMessage(curData);
             if (curMode == 2) {
                 displayDeltaRotaryLCD(curData);
             }
-            rotaryDeltaGenerateMidiMessage(curData);
         }
 
         
 
 
-        curData[7] = 0;
+        curData[7] = 64;
 
         for (int i = 0; i < ROTARY_DELTA_ARRAY_SIZE; i++) {
             shiftEncoderState[0][i] = curData[i];

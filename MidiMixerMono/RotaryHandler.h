@@ -77,14 +77,7 @@ void rotaryValGenerateMidiMessage(int data[]) {
 void rotaryDeltaGenerateMidiMessage(volatile int data[]) {
     int channel = data[5];
     int CC = data[6];
-    int val = 0;
-    
-    if (data[4] == 1) {
-        val = 1;
-    }
-    else {
-        val = -1;
-    }
+    int val = data[7];
 
     Serial.write(0xB0);
     Serial.write((byte)CC);
@@ -188,13 +181,13 @@ int* rotaryValueUpdateState( volatile int temp[]) {
     // check for send state and update value accordingly
     if (data[2] == 3) {
         if (data[4] == 1) {
-            if (ROTARY_VALUE_MIN <= data[7] && data[7] < ROTARY_VALUE_MAX) {
-                data[7] += 1;
+            if (ROTARY_VALUE_MIN <= data[7] && data[7] < ROTARY_VALUE_MAX-1) {
+                data[7] += 2;
             }
         }
         else {
-            if (ROTARY_VALUE_MIN < data[7] && data[7] <= ROTARY_VALUE_MAX) {
-                data[7] -= 1;
+            if (ROTARY_VALUE_MIN+1 < data[7] && data[7] <= ROTARY_VALUE_MAX) {
+                data[7] -= 2;
             }
         }
 
@@ -251,10 +244,10 @@ int* rotaryDeltaUpdateState(volatile int temp[]) {
 
     if (data[2] == 3) {
         if (data[4] == 1) {
-            data[7] = 1;
+            data[7] = 65;
         }
         else {
-            data[7] = -1;
+            data[7] = 63;
         } 
 
         
@@ -262,7 +255,7 @@ int* rotaryDeltaUpdateState(volatile int temp[]) {
         data[2] = 0;
     }
     else {
-        data[7] = 0;
+        data[7] = 64;
     }
 
     return data;

@@ -14,7 +14,7 @@ volatile static int *curData;
 volatile static bool shift = false;
 const static int shiftPin = 6;
 volatile static int shiftEncoderState[][ROTARY_DELTA_ARRAY_SIZE] = {
-    { 44, 45, 0, 0, 0, 2, 10, 0 },
+    { 44, 45, 0, 0, 0, 1, 42, 0 },
     { 44, 45, 0, 0, 0, 16, 1, 0 }
 };
 
