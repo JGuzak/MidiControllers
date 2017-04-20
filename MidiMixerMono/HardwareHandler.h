@@ -84,4 +84,86 @@ void updatePageButtonState(int page) {
 
 }
 
+void updateMachineState(int cc, int val) {
+
+    // check paged values
+    for (int i = 0; i < pages; i++) {
+        
+        if (10 <= cc <= 25) {
+            // check encoder cc values
+            if (page1EncoderState[i][6] == cc) {
+                page1EncoderState[i][7] = val;
+                break;
+            }
+
+            if (page2EncoderState[i][6] == cc) {
+                page2EncoderState[i][7] = val;
+                break;
+            }
+
+            if (page3EncoderState[i][6] == cc) {
+                page3EncoderState[i][7] = val;
+                break;
+            }
+
+            if (page4EncoderState[i][6] == cc) {
+                page4EncoderState[i][7] = val;
+                break;
+            }
+        }
+        else if (26 <= cc <= 41) {
+            // check button cc values
+            if (page1ButtonState[i][4] == cc) {
+                page1ButtonState[i][2] = val;
+                break;
+            }
+
+            if (page2ButtonState[i][4] == cc) {
+                page2ButtonState[i][2] = val;
+                break;
+            }
+
+            if (page3ButtonState[i][4] == cc) {
+                page3ButtonState[i][2] = val;
+                break;
+            }
+
+            if (page4ButtonState[i][4] == cc) {
+                page4ButtonState[i][2] = val;
+                break;
+            }
+
+        }
+
+
+    }
+}
+
+
+
+void parseMidiData(UARTClass s) {
+    byte cmdByte, channelByte, ccByte, valueByte;
+    
+    if (s.available() > 2) {
+        cmdByte = s.read();
+        ccByte = s.read();
+        valueByte = s.read();
+        channelByte = s.read();
+
+        if (curMode == 3) {
+            lcd.clear();
+            lcd.setCursor(0, 0);
+            lcd.print("Received midi:");
+            lcd.setCursor(0, 1);
+            lcd.print(ccByte);
+            lcd.print(" ");
+            lcd.print(valueByte);
+            lcd.print(" ");
+        }
+
+        updateMachineState(ccByte, valueByte);
+    }
+
+}
+
 #endif // !HARDWARE_HANDLER_H

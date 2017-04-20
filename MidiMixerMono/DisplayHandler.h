@@ -14,7 +14,7 @@ LiquidCrystal lcd(19, 18, 17, 16, 15, 14);
 
 const static int numModes = 3;
 volatile static int curMode = 1, prevMode = 1;
-const static String modeName[numModes] = { "Performance", "Map", "derp derp" };
+const static String modeName[numModes] = { "Performance", "View Midi Out", "View Midi In" };
 
 // ***************************************
 // led display functions
@@ -196,11 +196,11 @@ void displayDeltaRotaryLCD(volatile int data[]) {
     lcd.print("Delta Rotary: ");
 
     lcd.setCursor(0, 1);
-    lcd.print(curData[5]);
+    lcd.print(String(curData[5], HEX));
     lcd.print(" ");
-    lcd.print(curData[6]);
+    lcd.print(String(curData[6], HEX));
     lcd.print(" ");
-    lcd.print(curData[7]);
+    lcd.print(String(curData[7], HEX));
 }
 
 void displayPageRotaryLCD(int page) {
@@ -232,11 +232,11 @@ void displayPageRotaryLCD(int page) {
     lcd.print(": ");
 
     lcd.setCursor(0,1);
-    lcd.print(curData[5]);
+    lcd.print(String(curData[5], HEX));
     lcd.print(" ");
-    lcd.print(curData[6]);
+    lcd.print(String(curData[6], HEX));
     lcd.print(" ");
-    lcd.print(curData[7]);
+    lcd.print(String(curData[7], HEX));
 
 }
 
@@ -268,11 +268,11 @@ void displayPageButtonLCD(int page) {
     lcd.print(": ");
 
     lcd.setCursor(0, 1);
-    lcd.print(curData[3]);
+    lcd.print(String(curData[3], HEX));
     lcd.print(" ");
-    lcd.print(curData[4]);
+    lcd.print(String(curData[4], HEX));
     lcd.print(" ");
-    lcd.print(curData[2]);
+    lcd.print(String(curData[2], HEX));
 }
 
 void displayCurModeLCD() {

@@ -85,7 +85,7 @@ void setup() {
         delay(100);
     }
 
-    ledClear();    
+    ledClear();
     
 }
 
@@ -108,5 +108,8 @@ void loop() {
     }
     
     // check for midi message
+    if (Serial.peek() == 0xB0) {
+        parseMidiData(Serial);
+    }
 
 }
