@@ -135,11 +135,8 @@ void updateMachineState(int cc, int val) {
 
         }
 
-
     }
 }
-
-
 
 void parseMidiData(UARTClass s) {
     byte cmdByte, channelByte, ccByte, valueByte;
