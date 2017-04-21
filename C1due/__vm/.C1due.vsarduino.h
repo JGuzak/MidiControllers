@@ -227,5 +227,5 @@ __attribute__((always_inline)) static __INLINE void __set_PRIMASK(uint32_t priMa
 }
 
 
-#include "MidiMixerMono.ino"
+#include "C1due.ino"
 #endif

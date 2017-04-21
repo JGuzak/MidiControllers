@@ -1,7 +1,7 @@
 /*
- Name:		MidiMixerMono.ino
- Created:	4/1/2017 7:18:03 PM
- Author:	Jordan Guzak
+Name:		MidiMixerMono.ino
+Created:	4/1/2017 7:18:03 PM
+Author:	Jordan Guzak
 */
 
 #include "HardwareIO.h"
@@ -20,7 +20,7 @@
 void setup() {
     Serial.begin(31250);
 
-    lcd.begin(16,2);
+    lcd.begin(16, 2);
 
     pinMode(shiftPin, INPUT_PULLUP);
     pinMode(shiftEncoderState[0][0], INPUT_PULLUP);
@@ -68,25 +68,26 @@ void setup() {
     for (int p = 0; p < pages; p++) {
         pinMode(buttonLEDPins[p], OUTPUT);
         pinMode(rotaryLEDPins[p], OUTPUT);
-        
+
         for (int v = 0; v < 127; v++) {
             if (v != 126) {
                 analogWrite(rotaryLEDPins[p], map(v, 0, 127, 0, 255));
                 analogWrite(buttonLEDPins[p], map(v, 0, 127, 0, 255));
-            } else {
+            }
+            else {
                 digitalWrite(rotaryLEDPins[p], HIGH);
                 digitalWrite(buttonLEDPins[p], HIGH);
             }
-            
+
             delay(2);
-            
+
         }
 
         delay(100);
     }
 
     ledClear();
-    
+
 }
 
 void loop() {
@@ -106,7 +107,7 @@ void loop() {
         displayButtonLED(curPage);
         displayRotaryLED(curPage);
     }
-    
+
     // check for midi message
     if (Serial.peek() == 0xB0) {
         parseMidiData(Serial);

@@ -15,29 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <None Include="MidiMixerMono.ino" />
+    <None Include="C1due.ino" />
   </ItemGroup>
-  <ItemGroup>
-    <ClInclude Include="__vm\.MidiMixerMono.vsarduino.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="ButtonHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="RotaryHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HardwareHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="HardwareIO.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="IsrRoutines.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-    <ClInclude Include="DisplayHandler.h">
-      <Filter>Header Files</Filter>
-    </ClInclude>
-  </ItemGroup>
+ 
 </Project>
