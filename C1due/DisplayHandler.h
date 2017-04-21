@@ -26,7 +26,7 @@ void ledClear() {
     }
 }
 
-/** flicker selected page leds
+/* flicker selected page leds
 *  @param pin1 first led to flicker
 *  @param pin2 second led to flicker
 */

@@ -6,7 +6,10 @@
 #ifndef HARDWARE_HANDLER_H
 #define HARDWARE_HANDLER_H
 
-// page handling for rotary states
+/*
+* R: page handling for rotary states
+* M: updates rotary state of paged encoder
+*/
 void updatePageRotaryState(int page) {
     switch (curPage)
     {
@@ -46,7 +49,10 @@ void updatePageRotaryState(int page) {
     }
 }
 
-// page handling for button states
+/* 
+* R: page handling for button states
+* M: updates state of paged button
+*/
 void updatePageButtonState(int page) {
     switch (page)
     {
@@ -84,6 +90,10 @@ void updatePageButtonState(int page) {
 
 }
 
+/*
+* R: cc and value to update
+* M: value of data for given cc
+*/
 void updateMachineState(int cc, int val) {
 
     // check paged values
@@ -138,6 +148,10 @@ void updateMachineState(int cc, int val) {
     }
 }
 
+/*
+* R: port to read on
+* M: calls machine state updates based on midi data
+*/
 void parseMidiData(UARTClass s) {
     byte cmdByte, channelByte, ccByte, valueByte;
     
