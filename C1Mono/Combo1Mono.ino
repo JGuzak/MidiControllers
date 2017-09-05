@@ -56,6 +56,7 @@ volatile int buttonValue[NUM_ENCODERS-1][NUM_BANKS] = {
 
 bool shiftMode = false;
 int curBank = 0;
+// int previousShiftRotaryValue = -90, nextShiftRotaryValue;
 
 void setup() {
     Serial.begin(56000);
@@ -124,7 +125,17 @@ void rotaryHandler() {
         }
 
         // for the shift rotary
-        int newValue = rotaryEncoder[4].read();
+        // if (previousShiftRotaryValue == -90) {
+        //     previousShiftRotaryValue = rotaryEncoder[4].read();
+        // } else {
+        //     nextShiftRotaryValue = rotaryEncoder[4].read();
+        //     if (previousShiftRotaryValue < nextShiftRotaryValue) {
+        //         // send positive change
+        //     } else if (previousShiftRotaryValue > nextShiftRotaryValue) {
+        //         // send negative change
+        //     }
+        // }
+
 
     }
 }
