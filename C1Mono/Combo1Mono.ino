@@ -10,6 +10,7 @@ Author:	Jordan Guzak
 const bool ROTARY_CHANGE_DEBUG = false;
 const bool ROTARY_MIDI_OUTPUT = true;
 const int MAX_ENCODER_VAL = 512;
+const int NUM_BANKS = 4;
 
 const int numEnocders = 5;
 
@@ -28,9 +29,24 @@ Encoder rotaryEncoder[numEnocders] = {
     { rotaryAPin[4], rotaryBPin[4] }
 };
 
-const int midiRotaryCC[numEnocders-1] = { 10, 11, 12, 13 };
-volatile int rotaryValue[numEnocders] = { 0, 0, 0, 0, 0 };
-volatile int buttonValue[numEnocders] = { 0, 0, 0, 0, 0 };
+const int midiRotaryCC[numEnocders-1][NUM_BANKS] = {
+    { 10, 11, 12, 13 },
+    { 14, 15, 16, 17 },
+    { 18, 19, 20, 21 },
+    { 22, 23, 24, 25 }
+};
+volatile int rotaryValue[numEnocders][NUM_BANKS] = {
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 }
+};
+volatile int buttonValue[numEnocders][NUM_BANKS] = {
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 },
+    { 0, 0, 0, 0, 0 }
+};
 
 void setup() {
     Serial.begin(56000);
