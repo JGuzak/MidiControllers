@@ -7,58 +7,66 @@ Author:	Jordan Guzak
 #include <Encoder.h>
 
 // constants:
-const bool ROTARY_CHANGE_DEBUG = false;
-const bool ROTARY_MIDI_OUTPUT = true;
+const bool ROTARY_CHANGE_DEBUG = true;
+const bool ROTARY_MIDI_OUTPUT = false;
+const bool BUTTON_CHANGE_DEBUG = true;
+const bool BUTTON_MIDI_OUTPUT = false;
+
 const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
+const int NUM_ENCODERS = 5;
 
-const int numEnocders = 5;
+const int rotaryAPin[NUM_ENCODERS] = { 2, 7, 10, 12, 0 };
+const int rotaryBPin[NUM_ENCODERS] = { 4, 8, 11, 13, 1 };
+const int encoderButtonPin[NUM_ENCODERS] = { A0, A1, A2, A3, A4 };
+const int encoderLEDPin[NUM_ENCODERS-1] = { 3, 5, 6, 9 };
+const int encoderButtonLEDPin[NUM_ENCODERS-1] = { 0, 0, 0, 0 };
 
-const int rotaryAPin[numEnocders] = { 2, 7, 10, 12, 0 };
-const int rotaryBPin[numEnocders] = { 4, 8, 11, 13, 1 };
-const int encoderButtonPin[numEnocders] = { A0, A1, A2, A3, A4 };
-
-const int encoderLEDPin[numEnocders-1] = { 3, 5, 6, 9 };
-const int encoderButtonLEDPin[numEnocders-1] = { 0, 0, 0, 0 };
-
-Encoder rotaryEncoder[numEnocders] = {
+Encoder rotaryEncoder[NUM_ENCODERS] = {
     { rotaryAPin[0], rotaryBPin[0] },
     { rotaryAPin[1], rotaryBPin[1] },
     { rotaryAPin[2], rotaryBPin[2] },
     { rotaryAPin[3], rotaryBPin[3] },
     { rotaryAPin[4], rotaryBPin[4] }
 };
+const int midiRotaryCC[NUM_ENCODERS][NUM_BANKS] = {
+    { 10, 11, 12, 13, 26 },
+    { 14, 15, 16, 17, 26 },
+    { 18, 19, 20, 21, 26 },
+    { 22, 23, 24, 25, 26 }
+};
+const int midiButtonCC[NUM_ENCODERS-1][NUM_BANKS] = {
+    { 27, 28, 29, 30 },
+    { 31, 32, 33, 34 },
+    { 35, 36, 37, 38 },
+    { 39, 40, 41, 42 }
+};
+volatile int rotaryValue[NUM_ENCODERS-1][NUM_BANKS] = {
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 }
+};
+volatile int buttonValue[NUM_ENCODERS-1][NUM_BANKS] = {
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 },
+    { 0, 0, 0, 0 }
+};
 
-const int midiRotaryCC[numEnocders-1][NUM_BANKS] = {
-    { 10, 11, 12, 13 },
-    { 14, 15, 16, 17 },
-    { 18, 19, 20, 21 },
-    { 22, 23, 24, 25 }
-};
-volatile int rotaryValue[numEnocders][NUM_BANKS] = {
-    { 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 }
-};
-volatile int buttonValue[numEnocders][NUM_BANKS] = {
-    { 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 },
-    { 0, 0, 0, 0, 0 }
-};
+bool shiftMode = false;
+int curBank = 0;
 
 void setup() {
     Serial.begin(56000);
 
     // initalize led pins
-    for (int i = 0; i < numEnocders - 1; i++) {
+    for (int i = 0; i < NUM_ENCODERS - 1; i++) {
         pinMode(encoderLEDPin[i], OUTPUT);
         pinMode(encoderButtonLEDPin[i], OUTPUT);
     }
     ledBoot();
 }
-
 
 void loop() {
     rotaryHandler();
@@ -67,33 +75,36 @@ void loop() {
 }
 
 void rotaryHandler() {
-
     // check for shift mode
-    if (buttonValue[4] == 1) {
+    if (shiftMode) {
 
     }
     else {
-        for (int i = 0; i < numEnocders; i++) {
+        // cycle through all 4 rotaries on the selected bank and check for changes
+        for (int i = 0; i < (NUM_ENCODERS-1); i++) {
             long newRotaryValue;
-            newRotaryValue = rotaryEncoder[i].read();
+            newRotaryValue = rotaryEncoder[i][curBank].read();
 
             // check for rotary change, do nothing otherwise
-            if ((newRotaryValue >= (rotaryValue[i] + 4)) || (newRotaryValue <= (rotaryValue[i] - 4))) {
+
+            // for banked rotaries
+            if ((newRotaryValue >= (rotaryValue[i][curBank] + 4)) || (newRotaryValue <= (rotaryValue[i][curBank] - 4))) {
                 // check for min/max value, update value otherwise
+                // handle edge cases where rotary would excede maximum and minimum values
                 if (newRotaryValue < 0) {
-                    rotaryEncoder[i].write(0);
+                    rotaryEncoder[i][curBank].write(0);
                 }
                 else if (newRotaryValue > MAX_ENCODER_VAL) {
-                    rotaryEncoder[i].write(MAX_ENCODER_VAL);
+                    rotaryEncoder[i][curBank].write(MAX_ENCODER_VAL);
                 }
                 else {
-                    rotaryEncoder[i].write(newRotaryValue);
-                    rotaryValue[i] = newRotaryValue;
+                    rotaryEncoder[i][curBank].write(newRotaryValue);
+                    rotaryValue[i][curBank] = newRotaryValue;
 
                     if (ROTARY_MIDI_OUTPUT) {
-                        if (i != numEnocders) {
-                            int cc = midiRotaryCC[i];
-                            int val = rotaryValue[i];
+                        if (i != NUM_ENCODERS) {
+                            int cc = midiRotaryCC[i][curBank];
+                            int val = rotaryValue[i][curBank];
                             Serial.write(0xB0);
                             Serial.write((byte)cc);
                             Serial.write((byte)val);
@@ -112,26 +123,41 @@ void rotaryHandler() {
             }
         }
 
-        if (ROTARY_CHANGE_DEBUG) {
-            if (Serial.available()) {
-                Serial.read();
-                Serial.println("Reset knob to zero");
-                for (int j = 0; j < numEnocders; j++) {
-                    rotaryEncoder[j].write(0);
-                    rotaryValue[j] = 0;
-                }
-            }
-        }
+        // for the shift rotary
+        int newValue = rotaryEncoder[4].read();
+
     }
 }
 
 void buttonHandler() {
-    // check for shift mode
-    if (buttonValue[4] == 1) {
-
+    // set shift mode
+    if (digitalRead(encoderButtonPin[4]) == 1) {
+        shiftMode = true;
     }
     else {
-    
+        shiftMode = false;
+    }
+
+    // check for shift mode
+    if (shiftMode) {
+        for (int i = 0; i (NUM_ENCODERS-1); i++) {
+            if (digitalRead(encoderButtonPin[i]) == 1) {
+                curBank = i;
+            }
+        }
+    } else {
+        // TODO: get normal use buttons working
+        // cycle through all 4 buttons on the current bank to check for changes.
+        for (int i = 0; i < (NUM_ENCODERS-1); i++) {
+            // int newButtonValue = digitalRead(encoderButtonPin[i]);
+            // if (buttonValue[i][curBank] != newButtonValue) {
+            //     buttonValue[i][curBank] = newButtonValue;
+            // }
+
+            // TODO: Add serial output for debugging
+
+            // TODO: Add serial output for midi
+        }
     }
 }
 
@@ -139,7 +165,7 @@ void ledBoot() {
     // button led loop
 
     // rotary led loop
-    for (int i = 0; i < (numEnocders - 1); i++) {
+    for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
         for (int j = 0; j < 255; j++) {
             if (j <= 127) {
                 analogWrite(encoderLEDPin[i], map(j, 0, 127, 0, 255));
@@ -155,13 +181,27 @@ void ledBoot() {
 
 }
 
-void ledDisplay() {
-
-    // check for shift mode
-    if (buttonValue[4] == 1) {
-
+void ledFlash(int analogPin, int digitalPin) {
+    if (millis() % 200 > 100) {
+        analogWrite(analogPin, 127);
+        digitalWrite(digitalPin, HIGH);
     } else {
-        for (int i; i < (numEnocders - 1); i++ ) {
+        analogWrite(analogPin, 0);
+        digitalWrite(digitalPin, LOW);
+    }
+}
+
+void ledDisplay() {
+    // check for shift mode
+    if (shiftMode) {
+        for (int i = 0; i < (NUM_ENCODERS-1); i++) {
+            // flash leds of current bank
+            if (curBank == i) {
+                ledFlash(encoderLEDPin[i], encoderButtonLEDPin[i])
+            }
+        }
+    } else {
+        for (int i = 0; i < (NUM_ENCODERS - 1); i++ ) {
             // update rotary leds
             analogWrite(encoderLEDPin[i], map(rotaryValue[i], 0, MAX_ENCODER_VAL, 0, 127));
             // update button leds
