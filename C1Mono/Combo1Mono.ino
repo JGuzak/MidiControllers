@@ -4,6 +4,8 @@ Created:	4/8/2017 1:54:56 PM
 Author:	Jordan Guzak
 */
 
+#include <Wire.h>
+#include <SparkFunSX1509.h>
 #include <Encoder.h>
 
 // constants:
@@ -14,11 +16,14 @@ const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
 const int NUM_ENCODERS = 5;
 
-const int rotaryAPin[NUM_ENCODERS] = { 2, 7, 10, 12, 0 };
-const int rotaryBPin[NUM_ENCODERS] = { 4, 8, 11, 13, 1 };
-const int encoderButtonPin[NUM_ENCODERS] = { A0, A1, A2, A3, A4 };
-const int encoderLEDPin[NUM_ENCODERS-1] = { 3, 5, 6, 9 };
-const int encoderButtonLEDPin[NUM_ENCODERS-1] = { 0, 0, 0, 0 };
+const int rotaryAPin[NUM_ENCODERS] = { 0, 2, 4, 6, 8 };
+const int rotaryBPin[NUM_ENCODERS] = { 1, 3, 5, 7, 9 };
+const byte buttonPin[NUM_ENCODERS] = { 0, 1, 2, 3, 4 };
+const byte rotaryLEDPin[NUM_ENCODERS-1] = { 5, 6, 7, 8 };
+const byte buttonLEDPin[NUM_ENCODERS-1] = { 9, 10, 11, 12 };
+
+const byte SX1509_ADDRESS = 0x3E;
+SX1509 io;
 
 Encoder rotaryEncoder[NUM_ENCODERS] = {
     { rotaryAPin[0], rotaryBPin[0] },
@@ -58,10 +63,20 @@ volatile int curBank = 0, shiftRotaryValue = 0;
 void setup() {
     Serial.begin(56000);
 
-    // initalize led pins
+    // Call io.begin(<address>) to initialize the SX1509. If it 
+    // successfully communicates, it'll return 1.
+    if (!io.begin(SX1509_ADDRESS)) 
+    {
+        while (1) ; // If we fail to communicate, loop forever.
+    }
+
+    // initalize led and button pins on i/o expander board
     for (int i = 0; i < NUM_ENCODERS - 1; i++) {
-        pinMode(encoderLEDPin[i], OUTPUT);
-        pinMode(encoderButtonLEDPin[i], OUTPUT);
+        io.pinMode(buttonPin[i], DIGITAL_INPUT);
+        if ( i <= NUM_ENCODERS-1) {
+            io.pinMode(rotaryLEDPin[i], ANALOG_OUTPUT);
+            io.pinMode(buttonLEDPin[i], ANALOG_OUTPUT);
+        }
     }
     ledBoot();
 }
@@ -159,7 +174,7 @@ void rotaryHandler() {
 
 void buttonHandler() {
     // set shift mode
-    if (digitalRead(encoderButtonPin[4]) == 1) {
+    if (digitalRead(buttonPin[4]) == 1) {
         shiftMode = true;
     }
     else {
@@ -169,7 +184,7 @@ void buttonHandler() {
     // check for shift mode
     if (shiftMode) {
         for (int i = 0; i (NUM_ENCODERS-1); i++) {
-            if (digitalRead(encoderButtonPin[i]) == 1) {
+            if (io.digitalRead(buttonPin[i]) == 1) {
                 curBank = i;
             }
         }
@@ -177,7 +192,7 @@ void buttonHandler() {
         // TODO: get buttons working
         // cycle through all 4 buttons on the current bank to check for changes.
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-            // int newButtonValue = digitalRead(encoderButtonPin[i]);
+            // int newButtonValue = io.digitalRead(buttonPin[i]);
             // if (buttonValue[i][curBank] != newButtonValue) {
             //     buttonValue[i][curBank] = newButtonValue;
             // }
@@ -196,39 +211,23 @@ void buttonHandler() {
 }
 
 void ledBoot() {
-    // button led sequence
-    for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-        digitalWrite(buttonLEDPin[i], 1);
-        delay(100);
-    }
-    for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-        digitalWrite(buttonLEDPin[i], 0);
-    }
-
-    // rotary led sequence
+    // button and rotary led sequence
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
         for (int j = 0; j < 255; j++) {
             if (j <= 127) {
-                analogWrite(encoderLEDPin[i], map(j, 0, 127, 0, 255));
+                io.analogWrite(rotaryLEDPin[i], map(j, 0, 127, 0, 255));
+                io.analogWrite(buttonLEDPin[i], map(j, 0, 127, 0, 255));
             }
             else {
-                analogWrite(encoderLEDPin[i], map(j, 128, 255, 255, 0));
+                io.analogWrite(rotaryLEDPin[i], map(j, 128, 255, 255, 0));
+                io.analogWrite(buttonLEDPin[i], map(j, 128, 255, 255, 0));
             }
             delay(1);
         }
-        digitalWrite(encoderLEDPin[i], 0);
+        io.analogWrite(rotaryLEDPin[i], 0);
+        io.analogWrite(buttonLEDPin[i], 0);
     }
 
-}
-
-void ledFlash(int analogPin, int digitalPin) {
-    if (millis() % 200 > 100) {
-        analogWrite(analogPin, 127);
-        digitalWrite(digitalPin, HIGH);
-    } else {
-        analogWrite(analogPin, 0);
-        digitalWrite(digitalPin, LOW);
-    }
 }
 
 void ledDisplay() {
@@ -237,15 +236,25 @@ void ledDisplay() {
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
             // flash leds of current bank
             if (curBank == i) {
-                ledFlash(encoderLEDPin[i], encoderButtonLEDPin[i])
+                
+                // TODO: verify this works
+                // this may not work properly
+                int curTime = millis() % 200;
+                if (curTime <= 100) {
+                    io.analogWrite(rotaryLEDPin[i], map(curTime, 0, 200, 0, 255));
+                    io.analogWrite(buttonLEDPin[i], map(curTime, 0, 200, 0, 255));
+                }
+                else {
+                    io.analogWrite(rotaryLEDPin[i], map(curTime, 0, 200, 255, 0));
+                    io.analogWrite(buttonLEDPin[i], map(curTime, 0, 200, 255, 0));
+                }
             }
         }
     } else {
         for (int i = 0; i < (NUM_ENCODERS - 1); i++ ) {
-            // update rotary leds
-            analogWrite(encoderLEDPin[i], map(rotaryValue[i], 0, MAX_ENCODER_VAL, 0, 127));
-            // update button leds
-            digitalWrite(encoderButtonLEDPin[i], buttonValue[i]);
+            // update rotary and button leds to reflect current machine state
+            io.analogWrite(rotaryLEDPin[i], map(rotaryValue[i], 0, MAX_ENCODER_VAL, 0, 255));
+            io.analogWrite(buttonLEDPin[i], map(buttonValue[i], 0, 1, 0, 255);
         }
     }
 }
