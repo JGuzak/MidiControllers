@@ -122,7 +122,7 @@ void rotaryHandler() {
 
                         // Midi output
                         if (MIDI_OUTPUT) {
-                            if (i != NUM_ENCODERS) {
+                            if (i != NUM_ENCODERS-1) {
                                 int cc = midiRotaryCC[i][curBank];
                                 int val = rotaryValue[i][curBank];
                                 Serial.write(0xB0);
@@ -154,6 +154,7 @@ void rotaryHandler() {
                             Serial.print("Shift Rotary");
                             Serial.print(" = ");
                             Serial.print("+1");
+                            Serial.println();
                         }
                     } else if (newRotaryValue < (shiftRotaryValue - 4)) {
                         rotaryEncoder[i].write(0);
@@ -164,6 +165,7 @@ void rotaryHandler() {
                             Serial.print("Shift Rotary");
                             Serial.print(" = ");
                             Serial.print("-1");
+                            Serial.println();
                         }
                     }
                 }
@@ -204,7 +206,11 @@ void buttonHandler() {
 
             // TODO: Add serial output for midi
             if (SERIAL_OUTPUT) {
-
+                Serial.print("Button ");
+                Serial.print(i);
+                Serial.print(" = ");
+                Serial.print(buttonValue[i]);
+                Serial.println();
             }
         }
     }
