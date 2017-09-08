@@ -176,7 +176,7 @@ void rotaryHandler() {
 
 void buttonHandler() {
     // set shift mode
-    if (digitalRead(buttonPin[4]) == 1) {
+    if (io.digitalRead(buttonPin[4]) == 1) {
         shiftMode = true;
     }
     else {
@@ -194,14 +194,19 @@ void buttonHandler() {
         // TODO: get buttons working
         // cycle through all 4 buttons on the current bank to check for changes.
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-            // int newButtonValue = io.digitalRead(buttonPin[i]);
-            // if (buttonValue[i][curBank] != newButtonValue) {
-            //     buttonValue[i][curBank] = newButtonValue;
-            // }
+            int newButtonValue = io.digitalRead(buttonPin[i]);
+            if (buttonValue[i][curBank] != newButtonValue) {
+                buttonValue[i][curBank] = newButtonValue;
+            }
 
             // TODO: Add serial output for debugging
             if (MIDI_OUTPUT) {
-
+                int cc = midiButtonCC[i][curBank];
+                int val = buttonValue[i][curBank];
+                Serial.write(0xB0);
+                Serial.write((byte)cc);
+                Serial.write((byte)val);
+                Serial.write(1);
             }
 
             // TODO: Add serial output for midi
