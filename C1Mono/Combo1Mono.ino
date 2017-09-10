@@ -87,6 +87,8 @@ void loop() {
     ledDisplay();
 }
 
+// TODO: verify encoders work
+// TODO: verify banking works
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
@@ -105,6 +107,7 @@ void rotaryHandler() {
 
             // check for rotary changes, do nothing otherwise
             // for banked rotaries
+
             if ((newRotaryValue >= (rotaryValue[i][curBank] + 4)) || (newRotaryValue <= (rotaryValue[i][curBank] - 4))) {
                 // for banked rotary encoders:
                 // check for min/max value, update value otherwise
@@ -124,7 +127,7 @@ void rotaryHandler() {
                         if (MIDI_OUTPUT) {
                             if (i != NUM_ENCODERS-1) {
                                 int cc = midiRotaryCC[i][curBank];
-                                int val = rotaryValue[i][curBank];
+                                int val = map(rotaryValue[i][curBank], 0, 512, 0, 127);
                                 Serial.write(0xB0);
                                 Serial.write((byte)cc);
                                 Serial.write((byte)val);
@@ -141,14 +144,22 @@ void rotaryHandler() {
                         }
                     }
                 } else {
+
+                    // TODO: verify shift encoder works properly
+
                     // handles shift rotary encoder:
                     // outputs a positive or negative value depending on
                     // rotational direction. Resets encoder class value to 0
                     // to prevent value overflow in either direction.
                     if (newRotaryValue > (shiftRotaryValue + 4)) {
+                        // clockwise rotation
                         rotaryEncoder[i].write(0);
                         if (MIDI_OUTPUT) {
-                            // output positive value
+                            int cc = midiRotaryCC[i][curBank];
+                            Serial.write(0xB0);
+                            Serial.write((byte)cc);
+                            Serial.write("65");
+                            Serial.write(1);
                         }
                         if (SERIAL_OUTPUT) {
                             Serial.print("Shift Rotary");
@@ -157,9 +168,14 @@ void rotaryHandler() {
                             Serial.println();
                         }
                     } else if (newRotaryValue < (shiftRotaryValue - 4)) {
+                        // counter clockwise rotation
                         rotaryEncoder[i].write(0);
                         if (MIDI_OUTPUT) {
-                            // output negative value
+                            int cc = midiRotaryCC[i][curBank];
+                            Serial.write(0xB0);
+                            Serial.write((byte)cc);
+                            Serial.write("63");
+                            Serial.write(1);
                         }
                         if (SERIAL_OUTPUT) {
                             Serial.print("Shift Rotary");
@@ -174,6 +190,9 @@ void rotaryHandler() {
     }
 }
 
+// TODO: get buttons working
+// TODO: Add serial output for debugging
+// TODO: Add serial output for midi
 void buttonHandler() {
     // set shift mode
     if (io.digitalRead(buttonPin[4]) == 1) {
@@ -191,7 +210,6 @@ void buttonHandler() {
             }
         }
     } else {
-        // TODO: get buttons working
         // cycle through all 4 buttons on the current bank to check for changes.
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
             int newButtonValue = io.digitalRead(buttonPin[i]);
@@ -199,7 +217,6 @@ void buttonHandler() {
                 buttonValue[i][curBank] = newButtonValue;
             }
 
-            // TODO: Add serial output for debugging
             if (MIDI_OUTPUT) {
                 int cc = midiButtonCC[i][curBank];
                 int val = buttonValue[i][curBank];
@@ -209,7 +226,6 @@ void buttonHandler() {
                 Serial.write(1);
             }
 
-            // TODO: Add serial output for midi
             if (SERIAL_OUTPUT) {
                 Serial.print("Button ");
                 Serial.print(i);
@@ -221,6 +237,7 @@ void buttonHandler() {
     }
 }
 
+// TODO: verify this works
 void ledBoot() {
     // button and rotary led sequence
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
@@ -241,6 +258,9 @@ void ledBoot() {
 
 }
 
+// TODO: verify leds operate properly
+// TODO: verify banking works with leds
+// TODO: verify shift mode flashing leds work
 void ledDisplay() {
     // check for shift mode
     if (shiftMode) {
@@ -248,8 +268,6 @@ void ledDisplay() {
             // flash leds of current bank
             if (curBank == i) {
                 
-                // TODO: verify this works
-                // this may not work properly
                 int curTime = millis() % 200;
                 if (curTime <= 100) {
                     io.analogWrite(rotaryLEDPin[i], map(curTime, 0, 200, 0, 255));
