@@ -16,8 +16,8 @@ const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
 const int NUM_ENCODERS = 5;
 
-const int rotaryAPin[NUM_ENCODERS] = { 0, 2, 4, 6, 8 };
-const int rotaryBPin[NUM_ENCODERS] = { 1, 3, 5, 7, 9 };
+const int rotaryAPin[NUM_ENCODERS] = { 2, 4, 6, 8, 10 };
+const int rotaryBPin[NUM_ENCODERS] = { 3, 5, 7, 9, 11 };
 const byte buttonPin[NUM_ENCODERS] = { 0, 1, 2, 3, 4 };
 const byte rotaryLEDPin[NUM_ENCODERS-1] = { 5, 6, 7, 8 };
 const byte buttonLEDPin[NUM_ENCODERS-1] = { 9, 10, 11, 12 };
@@ -56,20 +56,17 @@ volatile int buttonValue[NUM_ENCODERS-1][NUM_BANKS] = {
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 }
 };
-
 volatile bool shiftMode = false;
 volatile int curBank = 0, shiftRotaryValue = 0;
 
 void setup() {
     Serial.begin(56000);
-
     // Call io.begin(<address>) to initialize the SX1509. If it 
     // successfully communicates, it'll return 1.
     if (!io.begin(SX1509_ADDRESS)) 
     {
         while (1) ; // If we fail to communicate, loop forever.
     }
-
     // initalize led and button pins on i/o expander board
     for (int i = 0; i < NUM_ENCODERS - 1; i++) {
         io.pinMode(buttonPin[i], DIGITAL_INPUT);
@@ -89,10 +86,10 @@ void loop() {
 
 // TODO: verify encoders work
 // TODO: verify banking works
+// TODO: verify shift encoder works properly
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
-
     }
     else {
         // sets the rotary encoders to the proper bank values and cycles
@@ -100,14 +97,11 @@ void rotaryHandler() {
         for (int i = 0; i < (NUM_ENCODERS-1)) {
             rotaryEncoder[i].write(rotaryValue[i][curBank]);
         }
-
         for (int i = 0; i < (NUM_ENCODERS); i++) {
             long newRotaryValue;
             newRotaryValue = rotaryEncoder[i].read();
-
             // check for rotary changes, do nothing otherwise
             // for banked rotaries
-
             if ((newRotaryValue >= (rotaryValue[i][curBank] + 4)) || (newRotaryValue <= (rotaryValue[i][curBank] - 4))) {
                 // for banked rotary encoders:
                 // check for min/max value, update value otherwise
@@ -122,7 +116,6 @@ void rotaryHandler() {
                     else {
                         rotaryEncoder[i][curBank].write(newRotaryValue);
                         rotaryValue[i][curBank] = newRotaryValue;
-
                         // Midi output
                         if (MIDI_OUTPUT) {
                             if (i != NUM_ENCODERS-1) {
@@ -134,7 +127,6 @@ void rotaryHandler() {
                                 Serial.write(1);
                             }
                         }
-
                         if (SERIAL_OUTPUT) {
                             Serial.print("Rotary ");
                             Serial.print(i);
@@ -144,9 +136,6 @@ void rotaryHandler() {
                         }
                     }
                 } else {
-
-                    // TODO: verify shift encoder works properly
-
                     // handles shift rotary encoder:
                     // outputs a positive or negative value depending on
                     // rotational direction. Resets encoder class value to 0
@@ -201,7 +190,6 @@ void buttonHandler() {
     else {
         shiftMode = false;
     }
-
     // check for shift mode
     if (shiftMode) {
         for (int i = 0; i (NUM_ENCODERS-1); i++) {
@@ -216,7 +204,6 @@ void buttonHandler() {
             if (buttonValue[i][curBank] != newButtonValue) {
                 buttonValue[i][curBank] = newButtonValue;
             }
-
             if (MIDI_OUTPUT) {
                 int cc = midiButtonCC[i][curBank];
                 int val = buttonValue[i][curBank];
@@ -225,7 +212,6 @@ void buttonHandler() {
                 Serial.write((byte)val);
                 Serial.write(1);
             }
-
             if (SERIAL_OUTPUT) {
                 Serial.print("Button ");
                 Serial.print(i);
@@ -267,7 +253,6 @@ void ledDisplay() {
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
             // flash leds of current bank
             if (curBank == i) {
-                
                 int curTime = millis() % 200;
                 if (curTime <= 100) {
                     io.analogWrite(rotaryLEDPin[i], map(curTime, 0, 200, 0, 255));
