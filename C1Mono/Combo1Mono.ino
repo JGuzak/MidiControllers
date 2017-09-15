@@ -106,7 +106,7 @@ void rotaryHandler() {
                 // for banked rotary encoders:
                 // check for min/max value, update value otherwise
                 // handle edge cases where rotary would excede maximum and minimum values
-                if (i < (NUM_ENCODERS-1)) {
+                if (i < (NUM_ENCODERS-2)) {
                     if (newRotaryValue < 0) {
                         rotaryEncoder[i][curBank].write(0);
                     }
