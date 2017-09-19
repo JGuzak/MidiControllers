@@ -86,7 +86,7 @@ void loop() {
 
 // TODO: verify encoders work
 // TODO: verify banking works
-// TODO: verify shift encoder works properly
+// TODO: verify shift encoder works properly    `
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
@@ -163,7 +163,7 @@ void rotaryHandler() {
                             int cc = midiRotaryCC[i][curBank];
                             Serial.write(0xB0);
                             Serial.write((byte)cc);
-                            Serial.write("63");
+                            Serial.write((byte)"63");
                             Serial.write(1);
                         }
                         if (SERIAL_OUTPUT) {
