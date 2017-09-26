@@ -86,6 +86,7 @@ void loop() {
 
 // TODO: verify encoders work
 // TODO: verify banking works
+<<<<<<< HEAD
 // TODO: verify shift encoder works properly
 // void rotaryHandler() {
 //     // check for shift mode
