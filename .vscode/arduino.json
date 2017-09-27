@@ -1,3 +1,5 @@
 {
-    "board": "arduino:avr:uno"
+    "board": "arduino:avr:uno",
+    "port": "COM5",
+    "sketch": "C1Mono\\Combo1Mono.ino"
 }
