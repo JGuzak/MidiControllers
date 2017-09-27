@@ -2,13 +2,65 @@
 Name:		C1Mono.ino
 Created:	4/8/2017 1:54:56 PM
 Author:	Jordan Guzak
+
+Pin Connections:
+
+Arduino:
+A0: N/A
+A1: N/A
+A2: N/A
+A3: N/A
+A4: N/A
+A5: N/A
+
+0: N/A
+1: N/A
+2: N/A
+3: N/A
+4: Rotary 1 A
+5: Rotary 1 B
+6: Rotary 2 A
+7: Rotary 2 B
+8: Rotary 3 A
+9: Rotary 3 B
+10: Rotary 4 A
+11: Rotary 4 B
+12: Rotary 5 A
+13: Rotary 5 B
+
+SCL: I/O Expander
+SDA: I/O Expander
+3.3V: I/O Expander
+GND: I/O Expander
+
+I/O Expander:
+0: Button 5 LED
+1: Rotary 5 LED
+2: Button 4 LED
+3: Rotary 4 LED
+4: Button 3 LED
+5: Rotary 3 LED
+6: Button 2 LED
+7: Rotary 2 LED
+8: N/A
+9: N/A
+10: N/A
+11: Button 5 Input
+12: Button 4 Input
+13: Button 3 Input
+14: Button 2 Input
+15: Button 1 Input
+
+VC1: N/A
+GND: Protoboard
+
 */
 
 #include <Wire.h>
 #include <SparkFunSX1509.h>
 #include <Encoder.h>
 
-// constants:
+// State Constants:
 const bool SERIAL_OUTPUT = true;
 const bool MIDI_OUTPUT = false;
 
@@ -16,8 +68,9 @@ const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
 const int NUM_ENCODERS = 5;
 
-const int rotaryAPin[NUM_ENCODERS] = { 2, 4, 6, 8, 10 };
-const int rotaryBPin[NUM_ENCODERS] = { 3, 5, 7, 9, 11 };
+// Hardware I/O pins
+const int rotaryAPin[NUM_ENCODERS] = { 4, 6, 8, 10, 12 };
+const int rotaryBPin[NUM_ENCODERS] = { 5, 7, 9, 11, 13 };
 const byte buttonPin[NUM_ENCODERS] = { 0, 1, 2, 3, 4 };
 const byte rotaryLEDPin[NUM_ENCODERS-1] = { 5, 6, 7, 8 };
 const byte buttonLEDPin[NUM_ENCODERS-1] = { 9, 10, 11, 12 };
@@ -25,6 +78,7 @@ const byte buttonLEDPin[NUM_ENCODERS-1] = { 9, 10, 11, 12 };
 const byte SX1509_ADDRESS = 0x3E;
 SX1509 io;
 
+// Midi Output Constants and Data Containers
 Encoder rotaryEncoder[NUM_ENCODERS] = {
     { rotaryAPin[0], rotaryBPin[0] },
     { rotaryAPin[1], rotaryBPin[1] },
