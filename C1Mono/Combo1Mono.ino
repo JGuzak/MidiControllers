@@ -127,16 +127,16 @@ void setup() {
             io.pinMode(buttonLEDPin[i], ANALOG_OUTPUT);
         }
     }
-    ledBoot();
+    // ledBoot();
 }
 
 void loop() {
     // for debugging only
     // ledBoot();
-    ledDisplayTest();
-
+    // ledDisplayTest();
     // rotaryHandler();
-    // buttonHandler();
+    buttonHandler();
+    ledDisplay();
 }
 
 // TODO: verify encoders work
@@ -240,43 +240,43 @@ void rotaryHandler() {
 void buttonHandler() {
     // set shift mode
     if (io.digitalRead(buttonPin[0]) == 0) {
-    //     shiftMode = true;
-    // }
-    // else {
-    //     shiftMode = false;
+        shiftMode = true;
+    }
+    else {
+        shiftMode = false;
     }
     // check for shift mode
     if (shiftMode) {
-        // for (int i = 0; i < (NUM_ENCODERS-3); i++) {
-        //     if (io.digitalRead(buttonPin[i+1]) == 1) {
-        //         curBank = i;
-        //     }
-        // }
+        for (int i = 0; i < (NUM_ENCODERS-1); i++) {
+            if (io.digitalRead(buttonPin[i+1]) == 0) {
+                curBank = i;
+            }
+        }
     } else {
         // cycle through all 4 buttons on the current bank to check for changes.
-        for (int i = 1; i < (NUM_ENCODERS); i++) {
-            int newButtonValue = io.digitalRead(buttonPin[i]);
+        for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
+            int newButtonValue = io.digitalRead(buttonPin[i+1]);
             if (newButtonValue == 0) {
-                if (buttonValue[curBank][i-1] == 0) {
-                    buttonValue[curBank][i-1] = 1;
+                if (buttonValue[curBank][i] == 0) {
+                    buttonValue[curBank][i] = 1;
                 } else {
-                    buttonValue[curBank][i-1] = 0;
+                    buttonValue[curBank][i] = 0;
                 }
-            }
-            // if (MIDI_OUTPUT) {
-            //     int cc = midiButtonCC[curBank][i-1];
-            //     int val = buttonValue[curBank][i-1];
-            //     Serial.write(0xB0);
-            //     Serial.write((byte)cc);
-            //     Serial.write((byte)val);
-            //     Serial.write(1);
-            // }
-            if (SERIAL_OUTPUT) {
-                Serial.print("Button ");
-                Serial.print(i);
-                Serial.print(" = ");
-                Serial.print(buttonValue[curBank][i-1]);
-                Serial.println();
+                if (MIDI_OUTPUT) {
+                    int cc = midiButtonCC[curBank][i];
+                    int val = buttonValue[curBank][i];
+                    Serial.write(0xB0);
+                    Serial.write((byte)cc);
+                    Serial.write((byte)val);
+                    Serial.write(1);
+                }
+                if (SERIAL_OUTPUT) {
+                    Serial.print("Button ");
+                    Serial.print(i);
+                    Serial.print(" = ");
+                    Serial.print(buttonValue[curBank][i]);
+                    Serial.println();
+                }
             }
         }
     }
@@ -314,15 +314,41 @@ void ledFlash(byte rotaryPin, byte buttonPin) {
     }
 }
 
-void ledDisplayTest() {
-    
+void ledState(byte rotaryPin, byte buttonPin, int index) {
+    io.analogWrite(rotaryPin, map(rotaryValue[curBank][index], 0, MAX_ENCODER_VAL, 255, 0));
+    io.analogWrite(buttonPin, map(buttonValue[curBank][index], 0, 1, 255, 0));
+}
 
+void ledClear() {
+    for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
+        io.analogWrite(rotaryLEDPin[i], 255);
+        io.analogWrite(buttonLEDPin[i], 255);
+    }
+}
+
+// TODO: verify banking works with leds
+// TODO: verify shift mode flashing leds work
+void ledDisplay() {
+    ledClear();
+    // check for shift mode
+    if (shiftMode) {
+        ledFlash(rotaryLEDPin[curBank], buttonLEDPin[curBank]);
+    } else {
+        for (int i = 0; i < (NUM_ENCODERS-1); i++ ) {
+            // update rotary and button leds to reflect current machine state
+            ledState(rotaryLEDPin[i], buttonLEDPin[i], i);
+        }
+    }
+    ledClear();
+}
+
+void ledDisplayTest() {
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
         shiftMode = true;
         curBank = i;
         int startTime = millis();
         while( (millis() - startTime) < 1000) {
-            ledFlash(rotaryLEDPin[i], buttonLEDPin[i]);
+            ledDisplay();
         }
 
         shiftMode = false;
@@ -347,41 +373,6 @@ void ledDisplayTest() {
             delay(1);
             ledDisplay();
             ledClear();
-        }
-
-
-    }
-}
-
-void ledState(byte rotaryPin, byte buttonPin, int index) {
-    io.analogWrite(rotaryPin, map(rotaryValue[curBank][index], 0, MAX_ENCODER_VAL, 255, 0));
-    io.analogWrite(buttonPin, map(buttonValue[curBank][index], 0, 1, 255, 0));
-}
-
-void ledClear() {
-    for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
-        io.analogWrite(rotaryLEDPin[i], 255);
-        io.analogWrite(buttonLEDPin[i], 255);
-    }
-}
-
-// TODO: verify leds operate properly
-// TODO: verify banking works with leds
-// TODO: verify shift mode flashing leds work
-void ledDisplay() {
-    // check for shift mode
-    if (shiftMode) {
-        // for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-        //     // flash leds of current bank
-        //     if (curBank == i) {
-        //         ledFlash(rotaryLEDPin[i], buttonLEDPin[i]);
-        //     }
-        // }
-    } else {
- 
-        for (int i = 0; i < (NUM_ENCODERS-1); i++ ) {
-            // update rotary and button leds to reflect current machine state
-            ledState(rotaryLEDPin[i], buttonLEDPin[i], i);
         }
     }
 }
