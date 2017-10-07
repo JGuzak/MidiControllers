@@ -134,11 +134,11 @@ void setup() {
 void loop() {
     // for debugging only
     // ledBoot();
-    // ledDisplayTest();
+    ledDisplayTest();
 
     // rotaryHandler();
-    buttonHandler();
-    ledDisplay();
+    // buttonHandler();
+    // ledDisplay();
 }
 
 // TODO: verify encoders work
