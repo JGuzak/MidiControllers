@@ -58,6 +58,7 @@ GND: Protoboard
 
 #include <Wire.h>
 #include <SparkFunSX1509.h>
+#define ENCODER_DO_NOT_USE_INTERRUPTS
 #include <Encoder.h>
 
 // State Constants:
@@ -68,8 +69,8 @@ const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
 const int NUM_ENCODERS = 5;
 
-const uint8_t rotaryAPin[NUM_ENCODERS] = { 4, 6, 8, 10, 12 };
-const uint8_t rotaryBPin[NUM_ENCODERS] = { 5, 7, 9, 11, 13 };
+const uint8_t rotaryBPin[NUM_ENCODERS] = { 7, 9, 11, 13, 5 };
+const uint8_t rotaryAPin[NUM_ENCODERS] = { 6, 8, 10, 12, 4 };
 const byte buttonPin[NUM_ENCODERS] = { 11, 12, 13, 14, 15 };
 const byte rotaryLEDPin[NUM_ENCODERS-1] = { 6, 4, 2, 0 };
 const byte buttonLEDPin[NUM_ENCODERS-1] = { 7, 5, 3, 1 };
@@ -78,7 +79,7 @@ const byte SX1509_ADDRESS = 0x3E;
 SX1509 io;
 
 Encoder rotaryEncoder[NUM_ENCODERS] = {
-    { rotaryAPin[0], rotaryBPin[0] },
+    Encoder(rotaryAPin[0], rotaryBPin[0]),
     { rotaryAPin[1], rotaryBPin[1] },
     { rotaryAPin[2], rotaryBPin[2] },
     { rotaryAPin[3], rotaryBPin[3] },
@@ -134,13 +135,16 @@ void setup() {
 void loop() {
     // for debugging only
     // ledBoot();
-    ledDisplayTest();
+    // ledDisplayTest();
+    rotaryTest();
 
     // rotaryHandler();
     // buttonHandler();
-    // ledDisplay();
+    ledDisplay();
 }
 
+// ---------------------------------------------------------------------
+// 
 // TODO: verify encoders work
 // TODO: verify banking works
 // TODO: verify shift encoder works properly
@@ -152,18 +156,18 @@ void rotaryHandler() {
         // sets the rotary encoders to the proper bank values and cycles
         // through all 4 rotaries on the selected bank and check for changes.
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-            rotaryEncoder[i].write(rotaryValue[i][curBank]);
+            rotaryEncoder[i].write(rotaryValue[curBank][i]);
         }
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
             long newRotaryValue;
             newRotaryValue = rotaryEncoder[i].read();
-            // check for rotary changes, do nothing otherwise
-            // for banked rotaries
-            if ((newRotaryValue >= (rotaryValue[curBank][i] + 4)) || (newRotaryValue <= (rotaryValue[curBank][i] - 4))) {
-                // for banked rotary encoders:
-                // check for min/max value, update value otherwise
-                // handle edge cases where rotary would excede maximum and minimum values
-                if (i < (NUM_ENCODERS-2)) {
+            if (i != 4) {
+                // check for rotary changes, do nothing otherwise
+                // for banked rotaries
+                if ((newRotaryValue >= (rotaryValue[curBank][i] + 4)) || (newRotaryValue <= (rotaryValue[curBank][i] - 4))) {
+                    // for banked rotary encoders:
+                    // check for min/max value, update value otherwise
+                    // handle edge cases where rotary would excede maximum and minimum values
                     if (newRotaryValue < 0) {
                         rotaryEncoder[i].write(0);
                     }
@@ -175,14 +179,12 @@ void rotaryHandler() {
                         rotaryValue[curBank][i] = newRotaryValue;
                         // Midi output
                         if (MIDI_OUTPUT) {
-                            if (i != NUM_ENCODERS-1) {
-                                int cc = midiRotaryCC[curBank][i];
-                                int val = map(rotaryValue[curBank][i], 0, 512, 0, 127);
-                                Serial.write(0xB0);
-                                Serial.write((byte)cc);
-                                Serial.write((byte)val);
-                                Serial.write(1);
-                            }
+                            int cc = midiRotaryCC[curBank][i];
+                            int val = map(rotaryValue[curBank][i], 0, 512, 0, 127);
+                            Serial.write(0xB0);
+                            Serial.write((byte)cc);
+                            Serial.write((byte)val);
+                            Serial.write(1);
                         }
                         if (SERIAL_OUTPUT) {
                             Serial.print("Rotary ");
@@ -192,44 +194,113 @@ void rotaryHandler() {
                             Serial.println();
                         }
                     }
-                } else {
+            } else {
                     // handles shift rotary encoder:
                     // outputs a positive or negative value depending on
                     // rotational direction. Resets encoder class value to 0
                     // to prevent value overflow in either direction.
-                    if (newRotaryValue > (shiftRotaryValue + 4)) {
-                        // clockwise rotation
-                        rotaryEncoder[i].write(0);
-                        if (MIDI_OUTPUT) {
-                            int cc = midiRotaryCC[curBank][i];
-                            Serial.write(0xB0);
-                            Serial.write((byte)cc);
-                            Serial.write("65");
-                            Serial.write(1);
-                        }
-                        if (SERIAL_OUTPUT) {
-                            Serial.print("Shift Rotary");
-                            Serial.print(" = ");
-                            Serial.print("+1");
-                            Serial.println();
-                        }
-                    } else if (newRotaryValue < (shiftRotaryValue - 4)) {
-                        // counter clockwise rotation
-                        rotaryEncoder[i].write(0);
-                        if (MIDI_OUTPUT) {
-                            int cc = midiRotaryCC[curBank][i];
-                            Serial.write(0xB0);
-                            Serial.write((byte)cc);
-                            Serial.write("63");
-                            Serial.write(1);
-                        }
-                        if (SERIAL_OUTPUT) {
-                            Serial.print("Shift Rotary");
-                            Serial.print(" = ");
-                            Serial.print("-1");
-                            Serial.println();
-                        }
+                    // if (newRotaryValue > (shiftRotaryValue + 4)) {
+                    //     // clockwise rotation
+                    //     rotaryEncoder[i].write(0);
+                    //     if (MIDI_OUTPUT) {
+                    //         int cc = midiRotaryCC[curBank][i];
+                    //         Serial.write(0xB0);
+                    //         Serial.write((byte)cc);
+                    //         Serial.write("65");
+                    //         Serial.write(1);
+                    //     }
+                    //     if (SERIAL_OUTPUT) {
+                    //         Serial.print("Shift Rotary");
+                    //         Serial.print(" = ");
+                    //         Serial.print("+1");
+                    //         Serial.println();
+                    //     }
+                    // } else if (newRotaryValue < (shiftRotaryValue - 4)) {
+                    //     // counter clockwise rotation
+                    //     rotaryEncoder[i].write(0);
+                    //     if (MIDI_OUTPUT) {
+                    //         int cc = midiRotaryCC[curBank][i];
+                    //         Serial.write(0xB0);
+                    //         Serial.write((byte)cc);
+                    //         Serial.write("63");
+                    //         Serial.write(1);
+                    //     }
+                    //     if (SERIAL_OUTPUT) {
+                    //         Serial.print("Shift Rotary");
+                    //         Serial.print(" = ");
+                    //         Serial.print("-1");
+                    //         Serial.println();
+                    //     }
+                    // }
+                }
+            }
+        }
+    }
+}
+
+void rotaryTest() {
+    for (int i = 0; i < NUM_ENCODERS; i++) {
+        int newVal = rotaryEncoder[i].read();
+        if (i < 4) {
+            if (newVal > (rotaryValue[curBank][i] + 3) || newVal < (rotaryValue[curBank][i] - 3)) {
+                if (newVal < 0) {
+                    rotaryEncoder[i].write(0);
+                    rotaryValue[curBank][i] = 0;
+                } else if (newVal > MAX_ENCODER_VAL) {
+                    rotaryEncoder[i].write(MAX_ENCODER_VAL);
+                    rotaryValue[curBank][i] = MAX_ENCODER_VAL;
+                } else {
+                    rotaryEncoder[i].write(newVal);
+                    rotaryValue[curBank][i] = newVal;
+                    if (MIDI_OUTPUT) {
+                        int cc = midiRotaryCC[curBank][i];
+                        int val = map(rotaryValue[curBank][i], 0, 512, 0, 127);
+                        Serial.write(0xB0);
+                        Serial.write((byte)cc);
+                        Serial.write((byte)val);
+                        Serial.write(1);
                     }
+                    if (SERIAL_OUTPUT) {
+                        Serial.print("Rotary ");
+                        Serial.print(i);
+                        Serial.print(" = ");
+                        Serial.print(map(newVal, 0, MAX_ENCODER_VAL, 0, 127));
+                        Serial.println();
+                    }
+                }
+            }
+        } else {
+            if (newVal > (shiftRotaryValue + 3)) {
+                // clockwise rotation
+                rotaryEncoder[i].write(0);
+                if (MIDI_OUTPUT) {
+                    int cc = midiRotaryCC[curBank][i];
+                    Serial.write(0xB0);
+                    Serial.write((byte)cc);
+                    Serial.write("65");
+                    Serial.write(1);
+                }
+                if (SERIAL_OUTPUT) {
+                    Serial.print("Shift Rotary");
+                    Serial.print(" = ");
+                    Serial.print("+1");
+                    Serial.println();
+                }
+            } else if (newVal < (shiftRotaryValue - 3)) {
+                // counter clockwise rotation
+                rotaryEncoder[i].write(0);
+                if (MIDI_OUTPUT) {
+                    int cc = midiRotaryCC[curBank][i];
+                    Serial.write(0xB0);
+                    Serial.write((byte)cc);
+                    Serial.write("63");
+                    Serial.write(1);
+                }
+                if (SERIAL_OUTPUT) {
+                    Serial.print("Shift Rotary");
+                    Serial.print(" = ");
+                    Serial.print("-1");
+                    Serial.println();
                 }
             }
         }
