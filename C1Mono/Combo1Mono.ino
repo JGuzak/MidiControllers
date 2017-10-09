@@ -71,7 +71,7 @@ const int NUM_ENCODERS = 5;
 
 const uint8_t rotaryBPin[NUM_ENCODERS] = { 7, 9, 11, 13, 5 };
 const uint8_t rotaryAPin[NUM_ENCODERS] = { 6, 8, 10, 12, 4 };
-const byte buttonPin[NUM_ENCODERS] = { 11, 12, 13, 14, 15 };
+const byte buttonPin[NUM_ENCODERS] = { 12, 13, 14, 15, 11 };
 const byte rotaryLEDPin[NUM_ENCODERS-1] = { 6, 4, 2, 0 };
 const byte buttonLEDPin[NUM_ENCODERS-1] = { 7, 5, 3, 1 };
 
@@ -145,9 +145,7 @@ void loop() {
 
 // ---------------------------------------------------------------------
 // 
-// TODO: verify encoders work
-// TODO: verify banking works
-// TODO: verify shift encoder works properly
+// TODO: encoders are backwards
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
@@ -158,10 +156,10 @@ void rotaryHandler() {
         for (int i = 0; i < (NUM_ENCODERS-1); i++) {
             rotaryEncoder[i].write(rotaryValue[curBank][i]);
         }
-        for (int i = 0; i < (NUM_ENCODERS-1); i++) {
+        for (int i = 0; i < NUM_ENCODERS; i++) {
             long newRotaryValue;
             newRotaryValue = rotaryEncoder[i].read();
-            if (i != 4) {
+            if (i < 4) {
                 // check for rotary changes, do nothing otherwise
                 // for banked rotaries
                 if ((newRotaryValue >= (rotaryValue[curBank][i] + 4)) || (newRotaryValue <= (rotaryValue[curBank][i] - 4))) {
@@ -310,12 +308,10 @@ void rotaryTest() {
 // ---------------------------------------------------------------------
 // button handler functions:
 void shiftButtonStateHandler() {
-    int newButtonValue = io.digitalRead(buttonPin[0]);
+    int newButtonValue = io.digitalRead(buttonPin[NUM_ENCODERS-1]);
     if (newButtonValue == 0) {
-        buttonState[0] = true;
         shiftMode = true;
     } else if (newButtonValue == 1) {
-        buttonState[0] = false;
         shiftMode = false;
     }
 }
