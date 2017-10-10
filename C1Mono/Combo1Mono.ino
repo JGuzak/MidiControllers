@@ -155,12 +155,14 @@ void updateControllerState() {
 // midi handler functions:
 // TODO:
 //  [ ] incoming midi messages
-//  [ ] outgoing midi messages
+//  [X] outgoing midi messages
 void receiveMidi() {
     
 }
 
-// sending button signals
+/**
+ * button signal handlers
+ */
 void sendButtonMidi(int index) {
     int cc = midiButtonCC[bank][index];
     int val = buttonValue[bank][index];
@@ -178,7 +180,13 @@ void sendButtonSerial(int index) {
     Serial.println();
 }
 
-// sending banked rotary signals
+void receiveButtonMidi() {
+
+}
+
+/**
+ * banked rotary signal handlers
+ */
 void sendRotaryMidi(int index) {
     int cc = midiRotaryCC[curBank][index];
     int val = map(rotaryValue[curBank][index], 0, 512, 0, 127);
@@ -196,7 +204,13 @@ void sendRotarySerial(int index) {
     Serial.println();
 }
 
-// sending shift rotary signals
+void receiveRotaryMidi() {
+    
+}
+
+/**
+ * shift rotary signal handlers
+ */
 void sendShiftRotaryMidi(bool positiveOutput) {
     if (positiveOutput) {
         int cc = midiRotaryCC[curBank][i];
@@ -225,6 +239,10 @@ void sendShiftRotarySerial(bool positiveOutput) {
         Serial.print("-1");
         Serial.println();
     }
+}
+
+void receiveShiftRotaryMidi() {
+    
 }
 
 // ---------------------------------------------------------------------
@@ -361,7 +379,12 @@ void ledBoot() {
 
 }
 
-// flashes two leds on I/O expander pin a
+
+/**
+ * flashes two leds on I/O expander on pin a
+ * a = byte with a value between 0-15
+ */
+// 
 void ledFlash(byte a) {
     int curTime = millis() % 200;
     if (curTime <= 100) {
