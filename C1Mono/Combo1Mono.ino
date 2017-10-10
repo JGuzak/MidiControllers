@@ -63,7 +63,6 @@ GND: Protoboard
 
 // State Constants:
 const bool SERIAL_OUTPUT = true;
-const bool MIDI_OUTPUT = false;
 
 const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
@@ -85,11 +84,11 @@ Encoder rotaryEncoder[NUM_ENCODERS] = {
     { rotaryAPin[3], rotaryBPin[3] },
     { rotaryAPin[4], rotaryBPin[4] }
 };
-int midiRotaryCC[NUM_BANKS][NUM_ENCODERS] = {
-    { 10, 11, 12, 13, 26 },
-    { 14, 15, 16, 17, 26 },
-    { 18, 19, 20, 21, 26 },
-    { 22, 23, 24, 25, 26 }
+int midiRotaryCC[NUM_BANKS][NUM_ENCODERS-1] = {
+    { 10, 11, 12, 13 },
+    { 14, 15, 16, 17 },
+    { 18, 19, 20, 21 },
+    { 22, 23, 24, 25 }
 };
 const int midiButtonCC[NUM_BANKS][NUM_ENCODERS-1] = {
     { 27, 28, 29, 30 },
@@ -134,21 +133,11 @@ void setup() {
 
 void loop() {
     // for debugging only
-    // ledBoot();
     // ledDisplayTest();
-    rotaryTest();
 
-    // rotaryHandler();
+    rotaryHandler();
     // buttonHandler();
     ledDisplay();
-}
-
-// ---------------------------------------------------------------------
-// 
-void updateControllerState() {
-    for (int i = 0; i < (NUM_ENCODERS-1); i++) {
-        rotaryEncoder[i].write(rotaryValue[curBank][i]);
-    }
 }
 
 // ---------------------------------------------------------------------
@@ -157,7 +146,24 @@ void updateControllerState() {
 //  [ ] incoming midi messages
 //  [X] outgoing midi messages
 void receiveMidi() {
-    
+    bool badRead = false;
+    int midiMessage[4];
+    for (int i = 0; i < 4; i++) {
+        if(Serial.available) {
+            midiMessage[i] = Serial.read();
+        } else {
+            badRead = true;
+            break;
+        }
+    }
+
+    if (!badRead && midiMessage[0] == 0xB0 && midiMessage[3] == 1) {
+        if (midiMessage[1] >= 10 && midiMessage <= 25) {
+            handleRotaryMidi(midiMessage[1], midiMessage[2]);
+        } else if (midiMessage[1] >= 27 && midiMessage <= 42) {
+            handleButtonMidi(midiMessage[1], midiMessage[2]);
+        }
+    }
 }
 
 /**
@@ -180,8 +186,25 @@ void sendButtonSerial(int index) {
     Serial.println();
 }
 
-void receiveButtonMidi() {
+void handleButtonMidi(int cc, int value) {
+    bool ccError = false;
+    for (int y = 0; y < (NUM_BANKS); y++) {
+        for (int x = 0; x < (NUM_ENCODERS - 1); y++) {
+            if (cc == midiButtonCC[y][x]) {
+                buttonValue[y][x] = value;
+            } else {
+                ccError = true;
+                break;
+            }
+        }
+    }
 
+    if (ccError && SERIAL_OUTPUT) {
+        Serial.println();
+        Serial.print("Error reading cc value = ");
+        Serial.print(cc);
+        Serial.println();
+    }
 }
 
 /**
@@ -204,8 +227,25 @@ void sendRotarySerial(int index) {
     Serial.println();
 }
 
-void receiveRotaryMidi() {
-    
+void handleRotaryMidi(int cc, int value) 
+    bool ccError = false;{
+    for (int y = 0; y < (NUM_BANKS); y++) {
+        for (int x = 0; x < (NUM_ENCODERS - 1); y++) {
+            if (cc == midiRotaryCC[y][x]) {
+                rotaryValue[y][x] = value;
+            } else {
+                ccError = true;
+                break;
+            }
+        }
+    }
+
+    if (ccError && SERIAL_OUTPUT) {
+        Serial.println();
+        Serial.print("Error reading cc value = ");
+        Serial.print(cc);
+        Serial.println();
+    }
 }
 
 /**
@@ -241,22 +281,27 @@ void sendShiftRotarySerial(bool positiveOutput) {
     }
 }
 
-void receiveShiftRotaryMidi() {
-    
-}
-
 // ---------------------------------------------------------------------
 // rotary handler functions:
 // TODO:
 //  [ ] encoders are backwards
+//  [ ] added shift encoder feature for changing encoder
+//                      sensitivity while in shift mode.
+void updateRotaryStates() {
+    for (int i = 0; i < (NUM_ENCODERS-1); i++) {
+        rotaryEncoder[i].write(rotaryValue[curBank][i]);
+    }
+}
+
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
+        break;
     }
     else {
         // sets the rotary encoders to the proper bank values and cycles
         // through all 4 rotaries on the selected bank and check for changes.
-        updateControllerState();
+        updateRotaryStates();
         
         for (int i = 0; i < NUM_ENCODERS; i++) {
             int newVal = rotaryEncoder[i].read();
@@ -271,11 +316,10 @@ void rotaryHandler() {
                     } else {
                         rotaryEncoder[i].write(newVal);
                         rotaryValue[curBank][i] = newVal;
-                        if (MIDI_OUTPUT) {
-                            sendRotaryMidi(i);
-                        }
                         if (SERIAL_OUTPUT) {
                             sendRotarySerial(i);
+                        } else {
+                            sendRotaryMidi(i);
                         }
                     }
                 }
@@ -283,20 +327,18 @@ void rotaryHandler() {
                 if (newVal > (shiftRotaryValue + 3)) {
                     // clockwise rotation
                     rotaryEncoder[i].write(0);
-                    if (MIDI_OUTPUT) {
-                        sendShiftRotaryMidi(true);
-                    }
                     if (SERIAL_OUTPUT) {
                         sendShiftRotarySerial(true);
+                    } else {
+                        sendShiftRotaryMidi(true);
                     }
                 } else if (newVal < (shiftRotaryValue - 3)) {
                     // counter clockwise rotation
                     rotaryEncoder[i].write(0);
-                    if (MIDI_OUTPUT) {
-                        sendShiftRotaryMidi(false);
-                    }
                     if (SERIAL_OUTPUT) {
                         sendShiftRotarySerial(false);
+                    } else {
+                        sendShiftRotaryMidi(false);
                     }
                 }
             }
@@ -325,11 +367,11 @@ void bankButtonStateHandler(int i) {
         } else {
             buttonValue[curBank][i] = 0;
         }
-        if (MIDI_OUTPUT) {
-            sendButtonMidi(i);
-        }
+        
         if (SERIAL_OUTPUT) {
             sendButtonSerial(i);
+        } else {
+            sendButtonMidi(i);
         }
     } else if (newButtonValue == 1 && buttonState[i+1]) {
         buttonState[i+1] = false;
@@ -379,12 +421,10 @@ void ledBoot() {
 
 }
 
-
 /**
  * flashes two leds on I/O expander on pin a
  * a = byte with a value between 0-15
  */
-// 
 void ledFlash(byte a) {
     int curTime = millis() % 200;
     if (curTime <= 100) {
