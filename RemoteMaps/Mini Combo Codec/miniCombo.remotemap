@@ -1,0 +1,39 @@
+Propellerhead Remote Mapping File	
+File Format Version	1.0.0
+Control Surface Manufacturer	Arturia
+Control Surface Model	MiniLab Combo
+Map Version	1.0.0
+
+Scope	Propellerheads	Reason Document
+//	Control Surface	Item	Key	Remotable Item	Scale	Mode
+Map	button1		Play
+Map	button2		Stop
+Map	button3		Click On/Off
+Map	button4		Record
+Map	button5		Loop On/Off
+Map	button6		Tap Tempo
+Map	button7		Reset Automation Override
+Map	button8		Auto-quantize
+
+Map	button9		Clear Left Loop Subticks
+Map	button10		Clear Right Loop Subticks
+Map	button11		Target Previous Track
+Map	button12		Target Next Track
+
+Scope	Propellerheads	Master Keyboard
+Map	keyboard		Keyboard
+Map	pitch bend		Pitch Bend
+Map	mod wheel		Mod Wheel
+
+// Live performance devices will be in combinators
+
+Scope	Propellerheads	Combinator
+Map	button13		Button 1
+Map	button14		Button 2
+Map	button15		Button 3
+Map	button16		Button 4
+
+Map	rotary13		Rotary 1
+Map	rotary14		Rotary 2
+Map	rotary15		Rotary 3
+Map	rotary16		Rotary 4

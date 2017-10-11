@@ -1,0 +1,18 @@
+Version={1,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="AOTA", model="C1due",
+				source="C1due.lua", picture="C1due.png", 
+				in_ports={{description="In Port"}}, out_ports={{description="Out Port"}},
+				has_keyboard=false, 
+				setup_info_text="C1due is working properly."},
+
+		}	return surfaces
+
+end
+

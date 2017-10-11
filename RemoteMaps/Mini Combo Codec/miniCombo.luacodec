@@ -1,0 +1,17 @@
+Version={1,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="Arturia", model="MiniLab Combo",
+				source="miniCombo.lua", picture="minilab.png", 
+				in_ports={{description="In Port"}}, out_ports={{description="Out Port", optional=true}},
+				has_keyboard=true, 
+				setup_info_text="Mapping for the Arturia MiniLab for deep device integration with Reason."},
+
+		}	return surfaces
+
+end

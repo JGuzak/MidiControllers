@@ -1,0 +1,26 @@
+Propellerhead Remote Mapping File						
+File Format Version	1.0.0					
+Control Surface Manufacturer	Native Instruments					
+Control Surface Model	Traktor D2					
+Map Version	1.0.0					
+						
+
+Scope	Propellerheads	Reason Document				
+//	Control Surface	Item	Key	Remotable Item	Scale	Mode
+Map	play		Play
+Map	pause		Stop
+Map	record		Record
+Map	deck_a_encoder_1		Target Track (Delta)
+Map	deck_a_encoder_2		Bar Position
+Map	deck_a_encoder_button_2		Clear Subticks
+
+Scope	Propellerheads	Combinator
+Map	fader_1		Rotary 1
+Map	fader_2		Rotary 2
+Map	fader_3		Rotary 3
+Map	fader_4		Rotary 4
+
+Map	pad_5		Button 1
+Map	pad_6		Button 2
+Map	pad_7		Button 3
+Map	pad_8		Button 4

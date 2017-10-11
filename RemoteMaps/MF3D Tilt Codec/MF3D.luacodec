@@ -1,0 +1,17 @@
+Version={1,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="DJ Tech Tools", model="MF3D",
+				source="MF3D.lua", picture="midifighter3d.png", 
+				in_ports={{description="In Port"}}, out_ports={{description="Out Port", optional=true}},
+				has_keyboard=true, 
+				setup_info_text="sup"},
+
+		}	return surfaces
+
+end

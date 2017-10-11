@@ -1,0 +1,17 @@
+Version={1,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="Native Instruments", model="Traktor D2",
+				source="traktorD2.lua", picture="traktorD2.png", 
+				in_ports={{description="In Port"}}, out_ports={{description="Out Port"}},
+				has_keyboard=false, 
+				setup_info_text="sup"},
+
+		}	return surfaces
+
+end

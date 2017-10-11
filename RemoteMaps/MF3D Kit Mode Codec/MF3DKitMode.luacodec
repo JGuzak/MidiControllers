@@ -1,0 +1,17 @@
+Version={1,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="DJ Tech Tools", model="MF3D Kit Mode",
+				source="MF3DKitMode.lua", picture="midifighter3d.png", 
+				in_ports={{description="In Port"}}, out_ports={{description="Out Port", optional=true}},
+				has_keyboard=true, 
+				setup_info_text="This mapping is designed for controlling combinators with sound selection on each page"},
+
+		}	return surfaces
+
+end
