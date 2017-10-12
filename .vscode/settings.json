@@ -1,3 +1,6 @@
 {
-    "C_Cpp.intelliSenseEngine": "Default"
+    "C_Cpp.intelliSenseEngine": "Default",
+    "files.associations": {
+        "complex": "cpp"
+    }
 }
