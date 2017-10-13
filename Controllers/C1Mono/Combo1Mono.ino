@@ -47,7 +47,7 @@ GND: Protoboard
 
 
 -------------------------
-Controller Logic
+Controller Logic:
 
 */
 
@@ -314,8 +314,13 @@ void sendShiftRotarySerial(bool positiveOutput) {
 // Rotary handler functions:
 // TODO:
 //  [ ] encoders are backwards
-//  [ ] added shift encoder feature for changing encoder
+//  [X] added shift encoder feature for changing encoder
 //                      sensitivity while in shift mode.
+
+/**
+ * Updates the encoder object values with the current
+ * bank of values.
+ */
 void updateRotaryStates() {
     for (int i = 0; i < (NUM_ENCODERS-1); i++) {
         rotaryEncoder[i].write(rotaryValue[curBank][i]);
