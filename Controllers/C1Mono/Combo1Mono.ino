@@ -3,20 +3,11 @@ Name:		C1Mono.ino
 Created:	4/8/2017 1:54:56 PM
 Author:	Jordan Guzak
 
-Pin Connections:
+-------------------------
+Hardware Pin Connections:
 
-Arduino:
-A0: N/A
-A1: N/A
-A2: N/A
-A3: N/A
-A4: N/A
-A5: N/A
-
-0: N/A
-1: N/A
-2: N/A
-3: N/A
+------------
+Arduino Pins:
 4: Rotary 1 A
 5: Rotary 1 B
 6: Rotary 2 A
@@ -27,13 +18,14 @@ A5: N/A
 11: Rotary 4 B
 12: Rotary 5 A
 13: Rotary 5 B
-
 SCL: I/O Expander
 SDA: I/O Expander
 3.3V: I/O Expander
 GND: I/O Expander
+All others: N/A
 
-I/O Expander:
+------------
+I/O Expander Pins:
 0: Button 5 LED
 1: Rotary 5 LED
 2: Button 4 LED
@@ -50,9 +42,12 @@ I/O Expander:
 13: Button 3 Input
 14: Button 2 Input
 15: Button 1 Input
-
 VC1: N/A
 GND: Protoboard
+
+
+-------------------------
+Controller Logic
 
 */
 
@@ -61,7 +56,8 @@ GND: Protoboard
 #define ENCODER_DO_NOT_USE_INTERRUPTS
 #include <Encoder.h>
 
-// State Constants:
+// ---------------------------------------------------------------------
+// Controller state constants:
 const bool SERIAL_OUTPUT = true;
 
 const int MAX_ENCODER_VAL = 512;
@@ -100,20 +96,21 @@ const int midiButtonCC[NUM_BANKS][NUM_ENCODERS-1] = {
     { 39, 40, 41, 42 }
 };
 
-// hardware state global values
+// ---------------------------------------------------------------------
+// Controller state containers:
 volatile int rotaryValue[NUM_BANKS][NUM_ENCODERS-1] = {
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 }
 };
-volatile bool buttonState[NUM_ENCODERS] = { false };
 volatile int buttonValue[NUM_BANKS][NUM_ENCODERS-1] = {
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 },
     { 0, 0, 0, 0 }
 };
+volatile bool buttonState[NUM_ENCODERS] = { false };
 volatile int rotaryPrecision = 1;
 volatile bool shiftMode = false;
 volatile int curBank = 0, prevBank = 0;
@@ -141,6 +138,9 @@ void setup() {
     ledBoot();
 }
 
+/**
+ * 
+ */
 void loop() {
     // for debugging only
     // ledDisplayTest();
@@ -151,10 +151,20 @@ void loop() {
 }
 
 // ---------------------------------------------------------------------
-// midi handler functions:
+// Midi handler functions:
 // TODO:
 //  [ ] incoming midi messages
 //  [X] outgoing midi messages
+
+/**
+ * Handles incoming midi messages.
+ * 
+ * CC values 10 - 25 are banked rotary
+ *              incoming values changes.
+ * CC values 27 - 42 are banked button
+ *              incoming value changes.
+ * Rejects partial midi messages.
+ */
 void receiveMidi() {
     bool badRead = false;
     int midiMessage[4];
@@ -177,7 +187,10 @@ void receiveMidi() {
 }
 
 /**
- * button signal handlers
+ * Banked button signal handlers
+ * 
+ * Outputs midi and serial signals.
+ * Called on banked button state changes.
  */
 void sendButtonMidi(int index) {
     int cc = midiButtonCC[curBank][index];
@@ -218,7 +231,10 @@ void handleButtonMidi(int cc, int value) {
 }
 
 /**
- * banked rotary signal handlers
+ * Banked rotary signal handlers
+ * 
+ * Outputs midi and serial signals.
+ * Called on banked rotary state changes.
  */
 void sendRotaryMidi(int index) {
     int cc = midiRotaryCC[curBank][index];
@@ -259,7 +275,10 @@ void handleRotaryMidi(int cc, int value) {
 }
 
 /**
- * shift rotary signal handlers
+ * Shift rotary signal handlers
+ * 
+ * Outputs midi and serial signals.
+ * Called on shift rotary state changes.
  */
 void sendShiftRotaryMidi(bool positiveOutput) {
     if (positiveOutput) {
@@ -292,7 +311,7 @@ void sendShiftRotarySerial(bool positiveOutput) {
 }
 
 // ---------------------------------------------------------------------
-// rotary handler functions:
+// Rotary handler functions:
 // TODO:
 //  [ ] encoders are backwards
 //  [ ] added shift encoder feature for changing encoder
@@ -303,6 +322,11 @@ void updateRotaryStates() {
     }
 }
 
+/**
+ * Updates the banked rotary encoder precision
+ * 
+ * !FOR A DELTA ENCODER! (THIS WILL RESET THE STORED ENCODER VALUE TO ZERO)
+ */
 void updateRotaryPrecision(Encoder encoder) {
     int newVal = encoder.read();
     if (newVal > 4) {
@@ -320,9 +344,26 @@ void updateRotaryPrecision(Encoder encoder) {
         }
         Serial.println(rotaryPrecision);
     }
-
 }
 
+/**
+ * Checks rotary hardware and updates various state parameters.
+ * 
+ * Logic Outline:
+ * When in shift mode:
+ *  Updates the precision scaler with the shift rotary encoder.
+ * 
+ * When not in shift mode:
+ *  Checks if the current bank state has changed. If it changed,
+ *  Updates state of rotary objects for the new current bank.
+ * 
+ *  Checks all banked rotary encoders for new states and updates
+ *  the coresponding controller state values with a scalable
+ *  parameter for adjusting encoder step precision.
+ *  Outputs proper midi messages on state changes.
+ * 
+ *  Checks the shift encoder and outputs midi.
+ */
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
@@ -384,6 +425,11 @@ void rotaryHandler() {
 
 // ---------------------------------------------------------------------
 // button handler functions:
+
+/**
+ * Updates shift mode based on shift rotary button.
+ * This does not output a midi signal on state change.
+ */
 void shiftButtonStateHandler() {
     int newButtonValue = io.digitalRead(buttonPin[4]);
     if (newButtonValue == 0) {
@@ -393,6 +439,10 @@ void shiftButtonStateHandler() {
     }
 }
 
+/**
+ * Updates the controller state for banked rotary i.
+ * Outputs midi signal for coresponding change.
+ */
 void bankButtonStateHandler(int i) {
     int newButtonValue = io.digitalRead(buttonPin[i]);
     if (newButtonValue == 0 && !buttonState[i]) {
@@ -410,6 +460,19 @@ void bankButtonStateHandler(int i) {
     }
 }
 
+/**
+ * Checks button hardware and updates various state parameters.
+ * 
+ * Logic Outline:
+ * Checks for shift mode change and updates controller state.
+ * When in shift mode:
+ *  Checks button states to update current bank state.
+ * 
+ * When not in shift mode:
+ *  Checks all banked buttons for new states and updates the 
+ *  coresponding controller state values.
+ *  Outputs proper midi messages on state changes.
+ */
 void buttonHandler() {
     // set shift mode
     shiftButtonStateHandler();
@@ -455,7 +518,7 @@ void ledBoot() {
 
 /**
  * flashes two leds on I/O expander on pin a
- * a = byte with a value between 0-15
+ * a = byte with a value between 0-15 (for pins 0-15)
  */
 void ledFlash(byte a) {
     float time = 600 * (rotaryPrecision / MAX_PRECISION);
@@ -487,7 +550,7 @@ void ledClear() {
 }
 
 /**
- * sets led values depending on:
+ * Sets led values depending on:
  *  shift mode
  *  current bank state
  *  rotary and button values
