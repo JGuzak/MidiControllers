@@ -570,7 +570,8 @@ void ledBoot() {
  * a = byte with a value between 0-15 (for pins 0-15)
  */
 void ledFlash(byte a) {
-    float time = 600 * (rotaryPrecision / MAX_PRECISION);
+    // float time = 600 * (rotaryPrecision / MAX_PRECISION);
+    float time = 200;
     int curTime = millis() % (int)time;
     if (curTime <= (int)(time / 2)) {
         io.analogWrite(a, map(curTime, 0, (int)time, 255, 0));
