@@ -48,12 +48,13 @@ GND: Protoboard
 
 -------------------------
 Controller Logic:
+TODO: WRITE THIS
 
 */
 
+#define ENCODER_DO_NOT_USE_INTERRUPTS
 #include <Wire.h>
 #include <SparkFunSX1509.h>
-#define ENCODER_DO_NOT_USE_INTERRUPTS
 #include <Encoder.h>
 
 // ---------------------------------------------------------------------
@@ -76,7 +77,7 @@ const byte SX1509_ADDRESS = 0x3E;
 SX1509 io;
 
 Encoder rotaryEncoder[NUM_ENCODERS] = {
-    Encoder(rotaryAPin[0], rotaryBPin[0]),
+    { rotaryAPin[0], rotaryBPin[0] },
     { rotaryAPin[1], rotaryBPin[1] },
     { rotaryAPin[2], rotaryBPin[2] },
     { rotaryAPin[3], rotaryBPin[3] },
@@ -138,9 +139,6 @@ void setup() {
     ledBoot();
 }
 
-/**
- * 
- */
 void loop() {
     // for debugging only
     // ledDisplayTest();
@@ -156,14 +154,13 @@ void loop() {
 //  [ ] incoming midi messages
 //  [X] outgoing midi messages
 
-/**
- * Handles incoming midi messages.
- * 
- * CC values 10 - 25 are banked rotary
- *              incoming values changes.
- * CC values 27 - 42 are banked button
- *              incoming value changes.
- * Rejects partial midi messages.
+/*
+ * Handles incoming midi messages:
+ *  CC values 10 - 25 are banked rotary
+ *               incoming values changes.
+ *  CC values 27 - 42 are banked button
+ *               incoming value changes.
+ *  Rejects partial midi messages.
  */
 void receiveMidi() {
     bool badRead = false;
@@ -186,13 +183,16 @@ void receiveMidi() {
     }
 }
 
-/**
- * Banked button signal handlers
- * 
- * Outputs midi and serial signals.
- * Called on banked button state changes.
+/*
+ * Banked button signal handlers:
+ *  Outputs midi and serial signals.
+ *  Called on banked button state changes.
  */
-void sendButtonMidi(int index) {
+
+/**
+ * Sends midi output for a button value.
+ */
+ void sendButtonMidi(int index) {
     int cc = midiButtonCC[curBank][index];
     int val = buttonValue[curBank][index];
     Serial.write(0xB0);
@@ -201,6 +201,9 @@ void sendButtonMidi(int index) {
     Serial.write(1);
 }
 
+/**
+ * Sends serial output for a button value.
+ */
 void sendButtonSerial(int index) {
     Serial.print("Button ");
     Serial.print(index);
@@ -209,6 +212,10 @@ void sendButtonSerial(int index) {
     Serial.println();
 }
 
+/**
+ * Updates controller state vale for a given
+ * button cc. Handles bad values properly.
+ */
 void handleButtonMidi(int cc, int value) {
     bool ccError = false;
     for (int y = 0; y < (NUM_BANKS); y++) {
@@ -236,6 +243,9 @@ void handleButtonMidi(int cc, int value) {
  * Outputs midi and serial signals.
  * Called on banked rotary state changes.
  */
+/**
+ * Sends midi output for a rotary value.
+ */
 void sendRotaryMidi(int index) {
     int cc = midiRotaryCC[curBank][index];
     int val = map(rotaryValue[curBank][index], 0, 512, 0, 127);
@@ -245,6 +255,9 @@ void sendRotaryMidi(int index) {
     Serial.write(1);
 }
 
+/**
+ * Sends serial output for a rotary value.
+ */
 void sendRotarySerial(int index) {
     Serial.print("Rotary ");
     Serial.print(index);
@@ -253,6 +266,10 @@ void sendRotarySerial(int index) {
     Serial.println();
 }
 
+/**
+ * Updates controller state vale for a given
+ * rotary cc. Handles bad values properly.
+ */
 void handleRotaryMidi(int cc, int value) {
     bool ccError = false;
     for (int y = 0; y < (NUM_BANKS); y++) {
@@ -499,6 +516,17 @@ void buttonHandler() {
 
 // ---------------------------------------------------------------------
 // led handler functions:
+// TODO:
+//  [ ] Document LED test function
+
+/**
+ * Runs a light animation used in the boot sequence
+ * and as a screensaver.
+ * 
+ * Warnings:
+ *  Takes ~1.02 seconds to return. This function
+ *  is not suitable for time sensitive sequences!
+ */
 void ledBoot() {
     // button and rotary led sequence
     // raises and lowers brightness of column of leds from
@@ -536,16 +564,25 @@ void ledFlash(byte a) {
     }
 }
 
+
+/**
+ * Sets an led brightness for the given rotaryPin on
+ * I/O expander with a rotary value between 0 and MAX_ENCODER_VAL.
+ */
 void setLedRotaryState(byte rotaryPin, int index) {
     io.analogWrite(rotaryPin, map(rotaryValue[curBank][index], 0, MAX_ENCODER_VAL, 255, 0));
 }
 
+/**
+ * Sets and led brightness for the given buttonPin on
+ * I/O expander either on or off.
+ */
 void setLedButtonState(byte buttonPin, int index) {
     io.analogWrite(buttonPin, map(buttonValue[curBank][index], 0, 1, 255, 0));
 }
 
 /**
- * Turns off all rotary and button leds.
+ * Turns off all leds.
  */
 void ledClear() {
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
@@ -576,6 +613,9 @@ void ledDisplay() {
     ledClear();
 }
 
+/**
+ * 
+ */
 void ledDisplayTest() {
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
         shiftMode = true;
