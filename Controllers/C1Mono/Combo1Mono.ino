@@ -1,7 +1,6 @@
 /*
-Name:		C1Mono.ino
-Created:	4/8/2017 1:54:56 PM
 Author:	Jordan Guzak
+Created:	4/8/2017 1:54:56 PM
 
 -------------------------
 Hardware Pin Connections:
@@ -44,7 +43,6 @@ I/O Expander Pins:
 15: Button 1 Input
 VC1: N/A
 GND: Protoboard
-
 
 -------------------------
 Controller Logic:
