@@ -303,26 +303,30 @@ void updateRotaryStates() {
     }
 }
 
+void updateRotaryPrecision(Encoder encoder) {
+    int newVal = encoder.read();
+    if (newVal > 4) {
+        // clockwise rotation
+        encoder.write(0);
+        if (rotaryPrecision < MAX_PRECISION) {
+            rotaryPrecision += 1;
+            Serial.println(rotaryPrecision);
+        }
+    } else if (newVal < -4) {
+        // counter clockwise rotation
+        encoder.write(0);
+        if (rotaryPrecision > MIN_PRECISION) {
+            rotaryPrecision -= 1;
+        }
+        Serial.println(rotaryPrecision);
+    }
+
+}
+
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
-        int newVal = rotaryEncoder[4].read();
-        if (newVal > 4) {
-            // clockwise rotation
-            rotaryEncoder[4].write(0);
-            if (rotaryPrecision < MAX_PRECISION) {
-                rotaryPrecision += 1;
-                Serial.println(rotaryPrecision);
-            }
-        } else if (newVal < -4) {
-            // counter clockwise rotation
-            rotaryEncoder[4].write(0);
-            if (rotaryPrecision > MIN_PRECISION) {
-                rotaryPrecision -= 1;
-            }
-            Serial.println(rotaryPrecision);
-        }
-
+        updateRotaryPrecision(rotaryEncoder[4]);
     }
     else {
         // sets the rotary encoders to the proper bank values and cycles
