@@ -156,10 +156,10 @@ void loop() {
 
 /*
  * Handles incoming midi messages:
- *  CC values 10 - 25 are banked rotary
- *               incoming values changes.
- *  CC values 27 - 42 are banked button
- *               incoming value changes.
+ *  CC values 10 - 25 are banked rotary incoming
+ *                                values changes.
+ *  CC values 27 - 42 are banked button incoming
+ *                                 value changes.
  *  Rejects partial midi messages.
  */
 void receiveMidi() {
@@ -183,7 +183,8 @@ void receiveMidi() {
     }
 }
 
-/*
+/**
+ * ------------------------------
  * Banked button signal handlers:
  *  Outputs midi and serial signals.
  *  Called on banked button state changes.
@@ -213,8 +214,8 @@ void sendButtonSerial(int index) {
 }
 
 /**
- * Updates controller state vale for a given
- * button cc. Handles bad values properly.
+ * Updates controller state vale for a given button cc.
+ * Handles bad values properly.
  */
 void handleButtonMidi(int cc, int value) {
     bool ccError = false;
@@ -238,11 +239,13 @@ void handleButtonMidi(int cc, int value) {
 }
 
 /**
- * Banked rotary signal handlers
+ * ------------------------------
+ * Banked rotary signal handlers:
  * 
  * Outputs midi and serial signals.
  * Called on banked rotary state changes.
  */
+
 /**
  * Sends midi output for a rotary value.
  */
@@ -267,8 +270,8 @@ void sendRotarySerial(int index) {
 }
 
 /**
- * Updates controller state vale for a given
- * rotary cc. Handles bad values properly.
+ * Updates controller state vale for a given rotary cc.
+ * Handles bad values properly.
  */
 void handleRotaryMidi(int cc, int value) {
     bool ccError = false;
@@ -292,10 +295,15 @@ void handleRotaryMidi(int cc, int value) {
 }
 
 /**
- * Shift rotary signal handlers
+ * ------------------------------
+ * Shift rotary signal handlers:
  * 
  * Outputs midi and serial signals.
  * Called on shift rotary state changes.
+ */
+
+/**
+ * Sends midi output for the shift rotary value.
  */
 void sendShiftRotaryMidi(bool positiveOutput) {
     if (positiveOutput) {
@@ -313,6 +321,9 @@ void sendShiftRotaryMidi(bool positiveOutput) {
     }
 }
 
+/**
+ * Sends serial output for the shift rotary value.
+ */
 void sendShiftRotarySerial(bool positiveOutput) {
     if (positiveOutput) {
         Serial.print("Shift Rotary");
@@ -347,7 +358,8 @@ void updateRotaryStates() {
 /**
  * Updates the banked rotary encoder precision
  * 
- * !FOR A DELTA ENCODER! (THIS WILL RESET THE STORED ENCODER VALUE TO ZERO)
+ * !FOR A DELTA ENCODER!
+ * (THIS WILL RESET THE STORED ENCODER VALUE TO ZERO)
  */
 void updateRotaryPrecision(Encoder encoder) {
     int newVal = encoder.read();
@@ -369,19 +381,23 @@ void updateRotaryPrecision(Encoder encoder) {
 }
 
 /**
- * Checks rotary hardware and updates various state parameters.
+ * Checks rotary hardware and updates various state
+ * parameters.
  * 
  * Logic Outline:
  * When in shift mode:
- *  Updates the precision scaler with the shift rotary encoder.
+ *  Updates the precision scaler with the shift rotary
+ *  encoder.
  * 
  * When not in shift mode:
- *  Checks if the current bank state has changed. If it changed,
- *  Updates state of rotary objects for the new current bank.
+ *  Checks if the current bank state has changed. If it
+ *  changed, updates state of rotary objects for the new 
+ *  current bank.
  * 
- *  Checks all banked rotary encoders for new states and updates
- *  the coresponding controller state values with a scalable
- *  parameter for adjusting encoder step precision.
+ *  Checks all banked rotary encoders for new states and
+ *  updates the coresponding controller state values with
+ *  a scalable parameter for adjusting encoder step 
+ *  precision.
  *  Outputs proper midi messages on state changes.
  * 
  *  Checks the shift encoder and outputs midi.
@@ -483,16 +499,18 @@ void bankButtonStateHandler(int i) {
 }
 
 /**
- * Checks button hardware and updates various state parameters.
+ * Checks button hardware and updates various state
+ * parameters.
  * 
  * Logic Outline:
- * Checks for shift mode change and updates controller state.
+ * Checks for shift mode change and updates controller
+ * state.
  * When in shift mode:
  *  Checks button states to update current bank state.
  * 
  * When not in shift mode:
- *  Checks all banked buttons for new states and updates the 
- *  coresponding controller state values.
+ *  Checks all banked buttons for new states and updates
+ *  the coresponding controller state values.
  *  Outputs proper midi messages on state changes.
  */
 void buttonHandler() {
