@@ -65,8 +65,8 @@ const int NUM_ENCODERS = 5;
 const int MAX_PRECISION = 32;
 const int MIN_PRECISION = 1;
 
-const uint8_t rotaryBPin[NUM_ENCODERS] = { 7, 9, 11, 13, 5 };
-const uint8_t rotaryAPin[NUM_ENCODERS] = { 6, 8, 10, 12, 4 };
+const uint8_t rotaryAPin[NUM_ENCODERS] = { 7, 9, 11, 13, 5 };
+const uint8_t rotaryBPin[NUM_ENCODERS] = { 6, 8, 10, 12, 4 };
 const byte buttonPin[NUM_ENCODERS] = { 12, 13, 14, 15, 11 };
 const byte rotaryLEDPin[NUM_ENCODERS-1] = { 6, 4, 2, 0 };
 const byte buttonLEDPin[NUM_ENCODERS-1] = { 7, 5, 3, 1 };
@@ -81,7 +81,7 @@ Encoder rotaryEncoder[NUM_ENCODERS] = {
     { rotaryAPin[3], rotaryBPin[3] },
     { rotaryAPin[4], rotaryBPin[4] }
 };
-const int shiftRotaryCC = 32;
+const int shiftRotaryCC = 26;
 const int midiRotaryCC[NUM_BANKS][NUM_ENCODERS-1] = {
     { 10, 11, 12, 13 },
     { 14, 15, 16, 17 },
@@ -181,7 +181,7 @@ void receiveMidi() {
     }
 }
 
-/**
+/*
  * ------------------------------
  * Banked button signal handlers:
  *  Outputs midi and serial signals.
@@ -236,7 +236,7 @@ void handleButtonMidi(int cc, int value) {
     }
 }
 
-/**
+/*
  * ------------------------------
  * Banked rotary signal handlers:
  * 
@@ -292,7 +292,7 @@ void handleRotaryMidi(int cc, int value) {
     }
 }
 
-/**
+/*
  * ------------------------------
  * Shift rotary signal handlers:
  * 
@@ -359,20 +359,24 @@ void updateRotaryStates() {
  * !FOR A DELTA ENCODER!
  * (THIS WILL RESET THE STORED ENCODER VALUE TO ZERO)
  */
-void updateRotaryPrecision(Encoder encoder) {
-    int newVal = encoder.read();
-    if (newVal > 4) {
+void updateRotaryPrecision(Encoder* encoder) {
+    int newVal = encoder->read();
+    if (newVal > 2) {
         // clockwise rotation
-        encoder.write(0);
-        if (rotaryPrecision < MAX_PRECISION) {
-            rotaryPrecision += 1;
-            Serial.println(rotaryPrecision);
+        encoder->write(0);
+        if ((rotaryPrecision + 2) <= MAX_PRECISION) {
+            rotaryPrecision += 2;
+        } else if ((rotaryPrecision + 2) > MAX_PRECISION) {
+            rotaryPrecision = MAX_PRECISION;
         }
-    } else if (newVal < -4) {
+        Serial.println(rotaryPrecision);
+    } else if (newVal < -2) {
         // counter clockwise rotation
-        encoder.write(0);
-        if (rotaryPrecision > MIN_PRECISION) {
-            rotaryPrecision -= 1;
+        encoder->write(0);
+        if ((rotaryPrecision - 2) >= MIN_PRECISION) {
+            rotaryPrecision -= 2;
+        } else if ((rotaryPrecision - 2) < MIN_PRECISION) {
+            rotaryPrecision = MIN_PRECISION;
         }
         Serial.println(rotaryPrecision);
     }
@@ -403,7 +407,7 @@ void updateRotaryPrecision(Encoder encoder) {
 void rotaryHandler() {
     // check for shift mode
     if (shiftMode) {
-        updateRotaryPrecision(rotaryEncoder[4]);
+        updateRotaryPrecision(&rotaryEncoder[4]);
     }
     else {
         // sets the rotary encoders to the proper bank values and cycles
@@ -570,8 +574,8 @@ void ledBoot() {
  * a = byte with a value between 0-15 (for pins 0-15)
  */
 void ledFlash(byte a) {
-    // float time = 600 * (rotaryPrecision / MAX_PRECISION);
-    float time = 200;
+    float time = 1100 - (((float)rotaryPrecision / (float)MAX_PRECISION) * 900);
+    // float time = 200;
     int curTime = millis() % (int)time;
     if (curTime <= (int)(time / 2)) {
         io.analogWrite(a, map(curTime, 0, (int)time, 255, 0));
