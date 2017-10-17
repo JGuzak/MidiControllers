@@ -1,3 +1,6 @@
+// Set Arduino.json "sketch": "Controllers\\C1Mono\\Combo1Mono.ino"
+
+
 /*
 Author:	Jordan Guzak
 Created:	4/8/2017 1:54:56 PM
@@ -425,37 +428,39 @@ void rotaryHandler() {
                     if (newVal >= MAX_ENCODER_VAL) {
                         rotaryEncoder[i].write(MAX_ENCODER_VAL);
                         rotaryValue[curBank][i] = MAX_ENCODER_VAL;
-                        sendRotarySerial(i);
+                        // sendRotarySerial(i);
+                        sendRotaryMidi(i);
                     } else {
                         rotaryEncoder[i].write(newVal);
                         rotaryValue[curBank][i] = newVal;
-                        sendRotarySerial(i);
-                        // sendRotaryMidi(i);
+                        // sendRotarySerial(i);
+                        sendRotaryMidi(i);
                     }
                 } else if (newVal < (rotaryValue[curBank][i] - 4)) {
                     newVal -= (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal <= 0) {
                         rotaryEncoder[i].write(0);
                         rotaryValue[curBank][i] = 0;
-                        sendRotarySerial(i);
+                        // sendRotarySerial(i);
+                        sendRotaryMidi(i);
                     } else {
                         rotaryEncoder[i].write(newVal);
                         rotaryValue[curBank][i] = newVal;
-                        sendRotarySerial(i);
-                        // sendRotaryMidi(i);
+                        // sendRotarySerial(i);
+                        sendRotaryMidi(i);
                     }
                 }
             } else {
                 if (newVal > 4) {
                     // clockwise rotation
                     rotaryEncoder[i].write(0);
-                    sendShiftRotarySerial(true);
-                    // sendShiftRotaryMidi(true);
+                    // sendShiftRotarySerial(true);
+                    sendShiftRotaryMidi(true);
                 } else if (newVal < -4) {
                     // counter clockwise rotation
                     rotaryEncoder[i].write(0);
-                    sendShiftRotarySerial(false);
-                    // sendShiftRotaryMidi(false);
+                    // sendShiftRotarySerial(false);
+                    sendShiftRotaryMidi(false);
                 }
             }
         }
@@ -493,8 +498,8 @@ void bankButtonStateHandler(int i) {
             buttonValue[curBank][i] = 0;
         }
         
-        sendButtonSerial(i);
-        // sendButtonMidi(i);
+        // sendButtonSerial(i);
+        sendButtonMidi(i);
     } else if (newButtonValue == 1 && buttonState[i]) {
         buttonState[i] = false;
     }

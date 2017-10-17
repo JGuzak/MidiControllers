@@ -1,3 +1,5 @@
+// Set Arduino.json "sketch": "ShieldArduinoISP\\ShieldArduinoISP.ino"
+
 // ArduinoISP
 // Copyright (c) 2008-2011 Randall Bohn
 // If you require a license, see
@@ -70,7 +72,7 @@
 // The standard pin configuration.
 #ifndef ARDUINO_HOODLOADER2 
 
-#define RESET     10 // Use pin 10 to reset the target rather than SS
+#define RESET     10
 #define LED_HB    9
 #define LED_ERR   8
 #define LED_PMODE 7
