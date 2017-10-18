@@ -118,7 +118,7 @@ volatile bool shiftMode = false;
 volatile int curBank = 0, prevBank = 0;
 
 void setup() {
-    Serial.begin(9600);
+    Serial.begin(19200);
     // Call io.begin(<address>) to initialize the SX1509. If it 
     // successfully communicates, it'll return 1.
     if (!io.begin(SX1509_ADDRESS)) 
