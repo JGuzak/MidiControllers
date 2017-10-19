@@ -141,9 +141,6 @@ void setup() {
 }
 
 void loop() {
-    // for debugging only
-    // ledDisplayTest();
-
     rotaryHandler();
     buttonHandler();
     ledDisplay();
@@ -423,7 +420,7 @@ void rotaryHandler() {
         for (int i = 0; i < NUM_ENCODERS; i++) {
             int newVal = rotaryEncoder[i].read();
             if (i < 4) {
-                if (newVal > (rotaryValue[curBank][i] + 4)) {
+                if (newVal >= (rotaryValue[curBank][i] + 2)) {
                     newVal += (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal >= MAX_ENCODER_VAL) {
                         rotaryEncoder[i].write(MAX_ENCODER_VAL);
@@ -436,7 +433,7 @@ void rotaryHandler() {
                         // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     }
-                } else if (newVal < (rotaryValue[curBank][i] - 4)) {
+                } else if (newVal <= (rotaryValue[curBank][i] - 2)) {
                     newVal -= (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal <= 0) {
                         rotaryEncoder[i].write(0);

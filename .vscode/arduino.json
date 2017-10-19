@@ -1,5 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "port": "COM3",
-    "sketch": "ShieldArduinoISP\\ShieldArduinoISP.ino"
+    "port": "COM5",
+    "sketch": "Controllers\\C1Mono\\Combo1Mono.ino"
 }
