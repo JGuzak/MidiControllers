@@ -1,6 +1,4 @@
 // Set Arduino.json "sketch": "Controllers\\C1Mono\\Combo1Mono.ino"
-
-
 /*
 Author:	Jordan Guzak
 Created:	4/8/2017 1:54:56 PM
@@ -637,9 +635,9 @@ void ledDisplay() {
 }
 
 /**
- * 
+ * Internal State Tester cycles through 
  */
-void ledDisplayTest() {
+void HardwareStateTest() {
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
         shiftMode = true;
         curBank = i;
@@ -650,7 +648,7 @@ void ledDisplayTest() {
 
         shiftMode = false;
         ledClear();
-        
+
         for (int v = 0; v < 1024; v++) {
             for (int i = 0; i < (NUM_ENCODERS-1); i++) {
                 if (v == 512) {
