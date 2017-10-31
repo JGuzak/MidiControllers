@@ -1,4 +1,4 @@
-// Set Arduino.json "sketch": "Controllers\\C1Mono\\Combo1Mono.ino"
+// Set Arduino.json "sketch": "Controllers\\C1Mono\\C1Mono.ino"
 
 
 /*
@@ -50,6 +50,16 @@ GND: Protoboard
 -------------------------
 Controller Logic:
 TODO: WRITE THIS
+
+Boot Sequence:
+
+Step 1: Rotary State Updates
+
+Step 2: Button state updates
+
+Step 3: LED outputs
+
+Step 4: Incoming midi messages
 
 */
 
@@ -113,12 +123,12 @@ volatile int buttonValue[NUM_BANKS][NUM_ENCODERS-1] = {
     { 0, 0, 0, 0 }
 };
 volatile bool buttonState[NUM_ENCODERS] = { false };
-volatile int rotaryPrecision = 1;
+volatile int rotaryPrecision = 32;
 volatile bool shiftMode = false;
 volatile int curBank = 0, prevBank = 0;
 
 void setup() {
-    Serial.begin(19200);
+    Serial.begin(31250);
     // Call io.begin(<address>) to initialize the SX1509. If it 
     // successfully communicates, it'll return 1.
     if (!io.begin(SX1509_ADDRESS)) 
@@ -144,6 +154,9 @@ void loop() {
     rotaryHandler();
     buttonHandler();
     ledDisplay();
+    if (Serial.peek() == 0xB0) {
+        receiveMidi();
+    }
 }
 
 // ---------------------------------------------------------------------
@@ -161,22 +174,20 @@ void loop() {
  *  Rejects partial midi messages.
  */
 void receiveMidi() {
-    bool badRead = false;
-    int midiMessage[4];
-    for (int i = 0; i < 4; i++) {
-        if(Serial.available()) {
-            midiMessage[i] = Serial.read();
-        } else {
-            badRead = true;
-            break;
-        }
-    }
+    byte cmdByte, channelByte, ccByte, valueByte;
+    
+    if (Serial.available() > 2) {
+        cmdByte = Serial.read();
+        ccByte = Serial.read();
+        valueByte = Serial.read();
+        channelByte = Serial.read();
 
-    if (!badRead && midiMessage[0] == 0xB0 && midiMessage[3] == 1) {
-        if (midiMessage[1] >= 10 && midiMessage[1] <= 25) {
-            handleRotaryMidi(midiMessage[1], midiMessage[2]);
-        } else if (midiMessage[1] >= 27 && midiMessage[1] <= 42) {
-            handleButtonMidi(midiMessage[1], midiMessage[2]);
+        if (cmdByte == 0xB0 && channelByte == 1) {
+            if (ccByte >= 10 && ccByte <= 25) {
+                handleRotaryMidi(ccByte, valueByte);
+            } else if (ccByte >= 27 && ccByte <= 42) {
+                handleButtonMidi(ccByte, valueByte);
+            }
         }
     }
 }
@@ -197,7 +208,6 @@ void receiveMidi() {
     Serial.write(0xB0);
     Serial.write((byte)cc);
     Serial.write((byte)val);
-    Serial.write(1);
 }
 
 /**
@@ -253,7 +263,6 @@ void sendRotaryMidi(int index) {
     Serial.write(0xB0);
     Serial.write((byte)cc);
     Serial.write((byte)val);
-    Serial.write(1);
 }
 
 /**
@@ -309,13 +318,11 @@ void sendShiftRotaryMidi(bool positiveOutput) {
         Serial.write(0xB0);
         Serial.write((byte)cc);
         Serial.write("65");
-        Serial.write(1);
     } else {
         int cc = shiftRotaryCC;
         Serial.write(0xB0);
         Serial.write((byte)cc);
         Serial.write("63");
-        Serial.write(1);
     }
 }
 
@@ -369,7 +376,6 @@ void updateRotaryPrecision(Encoder* encoder) {
         } else if ((rotaryPrecision + 2) > MAX_PRECISION) {
             rotaryPrecision = MAX_PRECISION;
         }
-        Serial.println(rotaryPrecision);
     } else if (newVal < -2) {
         // counter clockwise rotation
         encoder->write(0);
@@ -378,7 +384,6 @@ void updateRotaryPrecision(Encoder* encoder) {
         } else if ((rotaryPrecision - 2) < MIN_PRECISION) {
             rotaryPrecision = MIN_PRECISION;
         }
-        Serial.println(rotaryPrecision);
     }
 }
 

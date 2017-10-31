@@ -1,4 +1,5 @@
-// Set Arduino.json "sketch": "ShieldArduinoISP\\ShieldArduinoISP.ino"
+// Set Arduino.json:
+// "sketch": "ShieldArduinoISP\\ShieldArduinoISP.ino"
 
 // ArduinoISP
 // Copyright (c) 2008-2011 Randall Bohn
