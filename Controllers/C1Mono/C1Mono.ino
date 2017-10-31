@@ -642,9 +642,9 @@ void ledDisplay() {
 }
 
 /**
- * 
+ * Internal State Tester cycles through 
  */
-void ledDisplayTest() {
+void HardwareStateTest() {
     for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
         shiftMode = true;
         curBank = i;
@@ -655,7 +655,7 @@ void ledDisplayTest() {
 
         shiftMode = false;
         ledClear();
-        
+
         for (int v = 0; v < 1024; v++) {
             for (int i = 0; i < (NUM_ENCODERS-1); i++) {
                 if (v == 512) {
