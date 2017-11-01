@@ -1,6 +1,13 @@
 {
     "C_Cpp.intelliSenseEngine": "Default",
     "files.associations": {
-        "complex": "cpp"
+        "complex": "cpp",
+        "bitset": "cpp",
+        "set": "cpp",
+        "valarray": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "vector": "cpp",
+        "memory": "cpp"
     }
 }

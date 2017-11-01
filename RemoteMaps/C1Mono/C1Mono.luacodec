@@ -1,0 +1,18 @@
+Version={1,0,0}
+
+
+
+function remote_supported_control_surfaces()
+
+	local surfaces =		{
+
+			{ manufacturer="AOTA", model="C1Mono",
+				source="C1Mono.lua", picture="C1Mono.png", 
+				in_ports={{description="In Port"}}, out_ports={{description="Out Port"}},
+				has_keyboard=false, 
+				setup_info_text="C1Mono is working properly."},
+
+		}	return surfaces
+
+end
+
