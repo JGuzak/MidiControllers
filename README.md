@@ -23,4 +23,4 @@ More details [here]
 
 ![protoboard shield and ribbon cabble for ISP programming](https://github.com/JGuzak/MidiControllers/blob/master/ShieldArduinoISP/ISPshield.jpg)
 
-More details [here]
+More details [here](https://github.com/JGuzak/MidiControllers/tree/master/ShieldArduinoISP)
