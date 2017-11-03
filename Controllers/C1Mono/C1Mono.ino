@@ -1,6 +1,4 @@
-// Set Arduino.json "sketch": "Controllers\\C1Mono\\C1Mono.ino"
-
-
+// "sketch": "Controllers\\C1Mono\\C1Mono.ino"
 /*
 Author:	Jordan Guzak
 Created:	4/8/2017 1:54:56 PM
@@ -184,9 +182,9 @@ void receiveMidi() {
 
         if (cmdByte == 0xB0 && channelByte == 1) {
             if (ccByte >= 10 && ccByte <= 25) {
-                handleRotaryMidi(ccByte, valueByte);
+                receiveRotaryMidi(ccByte, valueByte);
             } else if (ccByte >= 27 && ccByte <= 42) {
-                handleButtonMidi(ccByte, valueByte);
+                receiveButtonMidi(ccByte, valueByte);
             }
         }
     }
@@ -225,7 +223,7 @@ void sendButtonSerial(int index) {
  * Updates controller state vale for a given button cc.
  * Handles bad values properly.
  */
-void handleButtonMidi(int cc, int value) {
+void receiveButtonMidi(int cc, int value) {
     bool ccError = false;
     for (int y = 0; y < (NUM_BANKS); y++) {
         for (int x = 0; x < (NUM_ENCODERS - 1); y++) {
@@ -280,7 +278,7 @@ void sendRotarySerial(int index) {
  * Updates controller state vale for a given rotary cc.
  * Handles bad values properly.
  */
-void handleRotaryMidi(int cc, int value) {
+void receiveRotaryMidi(int cc, int value) {
     bool ccError = false;
     for (int y = 0; y < (NUM_BANKS); y++) {
         for (int x = 0; x < (NUM_ENCODERS - 1); y++) {
@@ -346,7 +344,7 @@ void sendShiftRotarySerial(bool positiveOutput) {
 // ---------------------------------------------------------------------
 // Rotary handler functions:
 // TODO:
-//  [ ] encoders are backwards
+//  [X] encoders are backwards
 //  [X] added shift encoder feature for changing encoder
 //                      sensitivity while in shift mode.
 
@@ -544,7 +542,7 @@ void buttonHandler() {
 // ---------------------------------------------------------------------
 // led handler functions:
 // TODO:
-//  [ ] Document LED test function
+//  [X] Document LED test function
 
 /**
  * Runs a light animation used in the boot sequence

@@ -1,9 +1,5 @@
 {
     "board": "arduino:avr:uno",
-    "port": "COM4",
-<<<<<<< HEAD
+    "port": "COM5",
     "sketch": "Controllers\\C1Mono\\C1Mono.ino"
-=======
-    "sketch": "ShieldArduinoISP\\ShieldArduinoISP.ino"
->>>>>>> df87e1cba39263af85a0f76e6943130b22a91896
 }
