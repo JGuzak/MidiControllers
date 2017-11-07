@@ -24,6 +24,6 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Remote
 
 ### Arduino as ISP Shield:
 
-![protoboard shield and ribbon cabble for ISP programming](https://github.com/JGuzak/MidiControllers/blob/master/ShieldArduinoISP/ISPshield.jpg)
+![protoboard shield and ribbon cabble for ISP programming](https://github.com/JGuzak/MidiControllers/blob/master/uno_isp/uno_isp_shield (1).jpg)
 
-More details [here](https://github.com/JGuzak/MidiControllers/tree/master/ShieldArduinoISP)
+More details [here](https://github.com/JGuzak/MidiControllers/tree/master/uno_isp)
