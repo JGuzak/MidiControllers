@@ -1,0 +1,317 @@
+Propellerhead Remote Mapping File					
+File Format Version	1.0.0				
+Control Surface Manufacturer	AOTA				
+Control Surface Model	C1Mono	
+Map Version	1.0.0				
+
+// *****************************************************
+//	Stock Devices:
+
+Scope	Propellerheads	Reason Document
+Map	deltaRotary		Target Track (Delta)
+
+Scope	Propellerheads	Combinator
+// page 1
+Map	rotary1		Rotary 1
+Map	rotary2		Rotary 2
+Map	rotary3		Rotary 3
+Map	rotary4		Rotary 4
+Map	button1		Button 1
+Map	button2		Button 2
+Map	button3		Button 3
+Map	button4		Button 4
+
+Scope	Propellerheads	Thor Polysonic Synthesizer
+// page 1
+Map	rotary1		Amp Env Attack
+Map	rotary2		Amp Env Decay
+Map	rotary3		Amp Env Sustain
+Map	rotary4		Amp Env Release
+// page 2
+Map	rotary5		Filter Env Attack
+Map	rotary6		Filter Env Decay
+Map	rotary7		Filter Env Sustain
+Map	rotary8		Filter Env Release
+// page 3
+Map	rotary9		Filter 1 Freq
+Map	rotary10		Filter 1 Res
+Map	rotary11		Filter 1 Env Amount
+Map	rotary12		Filter 1 Drive
+Map	button9		Filter 1 Env Invert
+Map	button10		Osc 1 To Filter 1 Enable
+Map	button11		Osc 2 To Filter 1 Enable
+Map	button12		Osc 3 To Filter 1 Enable
+// page 4
+Map	rotary13		Chorus Dry Wet
+Map	rotary14		LFO 1 Rate
+Map	rotary15		Portamento
+Map	rotary16		Polyphony
+Map	button13		Chorus On
+Map	button14		LFO 1 Temp Sync
+Map	button15		Portamento Mode
+
+Scope	Propellerheads	NN19 Digital Sampler
+// page 1
+Map	rotary1		Amp Env Attack
+Map	rotary2		Amp Env Decay
+Map	rotary3		Amp Env Sustain
+Map	rotary4		Amp Env Release
+// page 2
+Map	rotary5		Filter Env Attack
+Map	rotary6		Filter Env Decay
+Map	rotary7		Filter Env Sustain
+Map	rotary8		Filter Env Release
+// page 3
+Map	rotary9		Filter Freq
+Map	rotary10		Filter Res
+Map	rotary11		Filter Env Amount
+Map	rotary12		Filter Mode
+Map	button9		Filter On/Off
+Map	button10		Filter Env Invert
+
+Scope	Propellerheads	Kong Drum Designer
+// page 1
+Map	rotary1		Drum 1 DM Decay
+Map	rotary2		Drum 2 DM Decay
+Map	rotary3		Drum 3 DM Decay
+Map	rotary4		Drum 4 DM Decay
+Map	button1		Drum 1 DM On
+Map	button2		Drum 2 DM On
+Map	button3		Drum 3 DM On
+Map	button4		Drum 4 DM On
+// page 2
+Map	rotary5		Drum 5 DM Decay
+Map	rotary6		Drum 6 DM Decay
+Map	rotary7		Drum 7 DM Decay
+Map	rotary8		Drum 8 DM Decay
+Map	button5		Drum 5 DM On
+Map	button6		Drum 6 DM On
+Map	button7		Drum 7 DM On
+Map	button8		Drum 8 DM On
+// page 3
+Map	rotary9		Drum 1 Output
+Map	rotary10		Drum 2 Output
+Map	rotary11		Drum 3 Output
+Map	rotary12		Drum 4 Output
+// page 4
+Map	rotary13		Drum 5 Output
+Map	rotary14		Drum 6 Output
+Map	rotary15		Drum 7 Output
+Map	rotary16		Drum 8 Output
+
+Scope	Propellerheads	Line Mixer 6:2			
+// page 1
+Map	rotary1		Channel 1 Level			
+Map	rotary2		Channel 2 Level			
+Map	rotary3		Channel 3 Level			
+Map	rotary4		Channel 4 Level				
+Map	button1		Channel 1 Pan			
+Map	button2		Channel 2 Pan			
+Map	button3		Channel 3 Pan			
+Map	button4		Channel 4 Pan
+
+Scope	Propellerheads	MClass Equalizer
+// page 1
+Map	rotary1		Low Shelf Frequency
+Map	rotary2		Parametric 1 Frequency
+Map	rotary3		Parametric 2 Frequency
+Map	rotary4		Hi Shelf Frequency
+Map	button1		Low Shelf Enable
+Map	button2		Parametric 1 Enable
+Map	button3		Parametric 2 Enable
+Map	button4		Hi Shelf Enable
+// page 2
+Map	rotary5		Low Shelf Gain
+Map	rotary6		Parametric 1 Gain
+Map	rotary7		Parametric 2 Gain		
+Map	rotary8		Hi Shelf Gain
+// page 3
+Map	rotary9		Low Shelf Q
+Map	rotary10		Parametric 1 Q	
+Map	rotary11		Parametric 2 Q
+Map	rotary12		Hi Shelf Q
+
+Scope	Propellerheads	Scream 4 Distortion
+// page 1
+Map	rotary1		Damage Control
+Map	rotary2		Damage Type
+Map	rotary3		Parameter 1
+Map	rotary4		Parameter 2
+Map	button1		Damage On/Off
+// page 2
+Map	rotary5		Cut Lo
+Map	rotary6		Cut Mid
+Map	rotary7		Cut Hi
+Map	button5		Cut On/Off
+
+// *****************************************************
+//	Rack Extensions:
+
+// ******************
+//	Propellerhead Extensions:
+
+Scope	Propellerhead Software	se.propellerheads.Pulsar
+// page 1
+Map	rotary1		LFO1 Level
+Map	rotary2		LFO1 Phase
+Map	rotary3		LFO1 Rate Free
+Map	rotary4		LFO1 Rate Synced
+Map	button3		LFO1 Tempo Sync
+// page 2
+Map	rotary5		LFO1 Waveform
+Map	rotary6		LFO1 Lag
+Map	button8		LFO1 Shuffle
+// page 3
+Map	rotary9		LFO2 Level
+Map	rotary10		LFO2 Phase
+Map	rotary11		LFO2 Rate Free
+Map	rotary12		LFO2 Rate Synced
+Map	button9		LFO2 Enabled
+Map	button11		LFO2 Tempo Sync
+// page 4
+Map	rotary13		LFO2 Waveform
+Map	rotary14		LFO2 Lag
+Map	button16		LFO2 Shuffle
+
+Scope	Propellerhead Software	se.propellerheads.Audiomatic
+Map	rotary1		Dry Wet
+Map	rotary2		Input Gain
+Map	rotary3		Transform
+Map	rotary4		Preset
+Map	button1		Enabled
+
+// ******************
+//	Cakewalk Extensions:
+
+Scope	Cakewalk	com.cakewalk.RE2A
+Map	rotary1		OutputGain
+Map	rotary2		PeakReduction
+Map	rotary3		R37
+Map	button1		Enabled
+Map	button2		Compress/Limit
+Map	button3		MeterSetting
+
+// ******************
+//	iZotope Extensions:
+
+Scope	iZotope Inc	com.izotope.ozonemaximizer
+// page 1: limiter control
+Map	rotary1		Threshold
+Map	rotary2		Margin
+Map	rotary3		Stereo Link Amount
+Map	button1		Enabled
+// page 2: dithering
+Map	rotary5		Noise Shaping
+Map	rotary6		Dither Amount
+Map	rotary7		Bit Depth
+Map	button5		Enable Dither
+// page 3: extra buttons
+Map	button9		Enable Auto Blank
+Map	button10		Enable Limit Peaks
+Map	button11		Enable Harmonic Suppression
+Map	button12		Enable DC Filter
+
+// ******************
+//	kiloHearts Extensions:
+
+Scope	kiloHearts	com.kilohearts.Faturator
+// page 1
+Map	rotary1		Drive
+Map	rotary2		Fuzz
+Map	rotary3		Color
+Map	rotary4		Mix
+Map	button1		Enabled
+// page 2
+Map	rotary5		Stereo Turbo
+
+
+// ******************
+//	Softube Extensions:
+
+Scope	Softube	Com.softube.re.SaturationKnob
+Map	rotary1		Saturation
+Map	rotary2		Saturation Type
+Map	button1		Enabled
+
+// ******************
+//	Synapse Audio Extensions:
+
+Scope	Synapse Audio Software	com.synapseAudioSoftware.SynapseChorus
+//page 1
+Map	rotary1		Dry/Wet
+Map	rotary2		Delay
+Map	rotary3		Depth
+Map	rotary4		Feedback
+Map	button1		Enabled
+Map	button2		Type
+Map	button3		Sync On/Off
+// page 2
+Map	rotary5		Rate
+Map	rotary6		Rate (sync)
+
+Scope	Synapse Audio Software	com.synapseAudioSoftware.SynapseFilter
+//page 1
+Map	rotary1		Drive
+Map	rotary2		Cutoff
+Map	rotary3		Resonance
+Map	rotary4		Filter Type
+Map	button1		Enabled
+
+Scope	Synapse Audio Software	com.synapseAudioSoftware.SynapsePhaser
+// page 1: main controls
+Map	rotary1		Output Mix
+Map	rotary2		Phaser Frequency
+Map	rotary3		Phaser Feedback
+Map	rotary4		spread
+Map	button1		Enabled
+Map	button2		Phaser Stages Switch
+// page 2: LFO controls
+Map	rotary5		LFO Mod
+Map	rotary6		LFO Rate
+Map	rotary7		LFO Rate (SYNC)
+Map	button5		LFO Tempo Sync On/Off
+
+Scope	Synapse Audio Software	com.synapseAudioSoftware.SynapseReverb1
+// page 1
+Map	rotary1		Dry/Wet
+Map	rotary2		Reverb Time
+Map	rotary3		Low Cut
+Map	rotary4		High Cut
+Map	button1		Enabled
+// page 2
+Map	rotary5		Mod Amount
+Map	rotary6		HF-Damp
+Map	rotary7		Pre-Delay
+Map	button5		Mod Switch Off/On
+
+Scope	Synapse Audio Software	com.synapseAudioSoftware.SynapseRingMod
+// page 1: basic controls
+Map	rotary1		Output Mix
+Map	button1		Enabled
+// page 2: modulation controls
+Map	rotary5		Input Drive
+Map	rotary6		Modulator Frequency
+Map	rotary7		Modulator waveform
+Map	rotary8		Frequency Range
+Map	button5		Sidechain Solo
+
+//Scope	Synapse Audio Software	com.synapseAudioSoftware.SynapseFilter
+
+// ******************
+//	Unfiltered Audio Extensions:
+
+Scope	Unfiltered Audio	com.unfilteredaudio.Yoko
+// page 1: general controls
+Map	rotary1		Volume
+Map	rotary2		Slope Amount
+Map	rotary3		Low Cutoff
+Map	rotary4		High Cutoff
+Map	button1		Enabled
+// page 2: mixing controls
+Map	rotary5		Low Gain
+Map	rotary6		Mid Gain
+Map	rotary7		High Gain
+Map	button5		Low Solo
+Map	button6		Mid Solo
+Map	button7		High Solo
+
