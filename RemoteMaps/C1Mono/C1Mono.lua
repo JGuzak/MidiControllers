@@ -34,7 +34,7 @@ function remote_init()
 		{name="button14", input="button", output="value"},
 		{name="button15", input="button", output="value"},
 		{name="button16", input="button", output="value"},
-		
+
 		{name="deltaRotary", input="delta"}
 
 	}
@@ -77,7 +77,7 @@ function remote_init()
 		{pattern="b0 29 xx", name="button16", value="1"},
 
 		{pattern="b0 2A xx", name="deltaRotary", value="(64-x)"}
-	
+
 	}
 	remote.define_auto_inputs(inputs)
 
@@ -127,7 +127,7 @@ function remote_probe()
 
 	local controlRequest="F0 7E 7F 06 01 F7"
 	local controlResponse="F0 7E 00 06 02 00 20 6B 02 00 04 ?? ?? ?? ?? ?? F7"
-	
+
 	return {
 			request=controlRequest,
 			response=controlResponse,

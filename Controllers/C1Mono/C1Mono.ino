@@ -92,7 +92,7 @@ Encoder rotaryEncoder[NUM_ENCODERS] = {
     { rotaryAPin[3], rotaryBPin[3] },
     { rotaryAPin[4], rotaryBPin[4] }
 };
-const int shiftRotaryCC = 26;
+const int shiftRotaryCC = 42;
 const int midiRotaryCC[NUM_BANKS][NUM_ENCODERS-1] = {
     { 10, 11, 12, 13 },
     { 14, 15, 16, 17 },
@@ -100,10 +100,10 @@ const int midiRotaryCC[NUM_BANKS][NUM_ENCODERS-1] = {
     { 22, 23, 24, 25 }
 };
 const int midiButtonCC[NUM_BANKS][NUM_ENCODERS-1] = {
-    { 27, 28, 29, 30 },
-    { 31, 32, 33, 34 },
-    { 35, 36, 37, 38 },
-    { 39, 40, 41, 42 }
+    { 26, 27, 28, 29 },
+    { 30, 31, 32, 33 },
+    { 34, 35, 36, 37 },
+    { 38, 39, 40, 41 }
 };
 
 // ---------------------------------------------------------------------
@@ -315,12 +315,12 @@ void sendShiftRotaryMidi(bool positiveOutput) {
         int cc = shiftRotaryCC;
         Serial.write(0xB0);
         Serial.write((byte)cc);
-        Serial.write("65");
+        Serial.write(65);
     } else {
         int cc = shiftRotaryCC;
         Serial.write(0xB0);
         Serial.write((byte)cc);
-        Serial.write("63");
+        Serial.write(63);
     }
 }
 
@@ -527,7 +527,7 @@ void buttonHandler() {
     // check for shift mode
     if (shiftMode) {
         for (int i = 0; i < (NUM_ENCODERS - 1); i++) {
-            if (io.digitalRead(buttonPin[i+1]) == 0) {
+            if (io.digitalRead(buttonPin[i]) == 0) {
                 curBank = i;
             }
         }
