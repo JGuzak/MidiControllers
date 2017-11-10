@@ -2,7 +2,7 @@
 
 ![Shield and ribbon](https://github.com/JGuzak/MidiControllers/blob/master/uno_isp/uno_isp_shield%20(1).jpg)
 
-A simple shield made for icsp microcontroller programming. Works with all Arduino boards with iscp pin headers.
+A simple shield made for icsp microcontroller programming. Works with all Arduino boards with icsp pin headers.
 
 ### Setup:
  1.
@@ -16,7 +16,7 @@ A simple shield made for icsp microcontroller programming. Works with all Arduin
 ![ISP programming](https://github.com/JGuzak/MidiControllers/blob/master/uno_isp/uno_isp_shield%20(2).jpg)
 
     1. Connect the isp shield to the Arduino that will be acting as the programmer.
-    2. Connect the ribbon cable from the isp shield to the ISCP pin headers on the target Arduino.
+    2. Connect the ribbon cable from the isp shield to the icsp pin headers on the target Arduino.
     3. Connect the isp Arduino via usb to your computer.
     3. Open Command Prompt or Terminal and navigate to "/MidiControllers/Controllers/avrdude-win-64bit/avrdude" in this repo.
 
