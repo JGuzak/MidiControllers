@@ -315,7 +315,7 @@ void sendShiftRotaryMidi(bool positiveOutput) {
         int cc = shiftRotaryCC;
         Serial.write(0xB0);
         Serial.write((byte)cc);
-        Serial.write(65);
+        Serial.write((byte)65);
     } else {
         int cc = shiftRotaryCC;
         Serial.write(0xB0);
@@ -423,7 +423,7 @@ void rotaryHandler() {
         for (int i = 0; i < NUM_ENCODERS; i++) {
             int newVal = rotaryEncoder[i].read();
             if (i < 4) {
-                if (newVal >= (rotaryValue[curBank][i] + 2)) {
+                if (newVal >= (rotaryValue[curBank][i] + 4)) {
                     newVal += (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal >= MAX_ENCODER_VAL) {
                         rotaryEncoder[i].write(MAX_ENCODER_VAL);
@@ -436,7 +436,7 @@ void rotaryHandler() {
                         // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     }
-                } else if (newVal <= (rotaryValue[curBank][i] - 2)) {
+                } else if (newVal <= (rotaryValue[curBank][i] - 4)) {
                     newVal -= (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal <= 0) {
                         rotaryEncoder[i].write(0);

@@ -14,26 +14,28 @@ A Remote Script contains these four files:
     ControllerName.remotemap
 
 #### On Windows:
-1. Press [Start] and type "%ProgramData%"
-2. Navigate to C:/ProgramData/Properllerhead Software/Remote/
+1. Navigate to C:/ProgramData/Properllerhead Software/Remote/
 
 #### On Mac:
 1. Navigate to Library:Application Support:Propellerhead Software:Remote:
 
-    Side Note: If the folders in steps 3 and 4 don't exist inside Codecs/ and Maps/, make them with the same name as the manufacturer specified inside the .luacodec file on line 9.
 
-3. The .lua, .luacodec, and .png files all go inside Codecs/ControllerCompanyName/ folder. 
-4. The .remotemap file goes inside the Maps/ControllerCompanyName/ folder.
+"Side Note: If the folders in steps 2 and 3 don't exist inside Codecs/ and Maps/, make them with the same name as the manufacturer specified inside the .luacodec file on line 9."
+
+2. The .lua, .luacodec, and .png files all go inside Codecs/ControllerCompanyName/ folder. 
+3. The .remotemap file goes inside the Maps/ControllerCompanyName/ folder.
+4. Launch Reason and open the Preferences window.
+5. Navigate to the 
 
 ##### Correct File Structure:
     Remote/
         Codecs/
             ControllerCompanyName/
-                .lua
-                .luacodec
-                .png
+                ControllerName.lua
+                ControllerName.luacodec
+                ControllerName.png
         Maps/
             ControllerCompanyName/
-                .remotemap
+                ControllerName.remotemap
 
 (add content)
