@@ -4,7 +4,7 @@
 
 ## C1Mono
 
-![protoboard image]()
+![protoboard image](https://github.com/JGuzak/MidiControllers/blob/master/Controllers/C1Mono/proto%20C1%20for%20due/C1due%20(3).JPG)
 
 (add content)
 

@@ -432,7 +432,7 @@ void rotaryHandler() {
                         sendRotaryMidi(i);
                     } else {
                         rotaryEncoder[i].write(newVal);
-                        rotaryValue[curBank][i] = newVal;
+                        rotaryValue[curBank][i] = newVal ;
                         // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     }
@@ -454,12 +454,10 @@ void rotaryHandler() {
                 if (newVal > 4) {
                     // clockwise rotation
                     rotaryEncoder[i].write(0);
-                    // sendShiftRotarySerial(true);
                     sendShiftRotaryMidi(true);
                 } else if (newVal < -4) {
                     // counter clockwise rotation
                     rotaryEncoder[i].write(0);
-                    // sendShiftRotarySerial(false);
                     sendShiftRotaryMidi(false);
                 }
             }
