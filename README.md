@@ -25,11 +25,11 @@ Apply for free to become a Remote developer [here](https://www.propellerheads.se
 
 #### Custom Mappings:
 
-++ DJTT - Midi Fighter 3D [files]()
-++ NI - Traktor D2 [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Traktor%20D2) 
-++ Akai - MPK Mini [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Akai%20ReMPC%20Mini%20Codec) 
-++ Arturia - MiniLab [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Arturia%20MiniLab%20Codec) 
-++ AOTA - C1Mono [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/C1Mono)
+... DJTT - Midi Fighter 3D [files]()
+... NI - Traktor D2 [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Traktor%20D2) 
+... Akai - MPK Mini [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Akai%20ReMPC%20Mini%20Codec) 
+... Arturia - MiniLab [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Arturia%20MiniLab%20Codec) 
+... AOTA - C1Mono [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/C1Mono)
 
 More details [here](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps)
 
