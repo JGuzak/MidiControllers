@@ -6,7 +6,7 @@
 
 ![protoboard image](https://github.com/JGuzak/MidiControllers/blob/master/Controllers/C1Mono/proto%20C1%20for%20due/C1due%20(3).JPG)
 
-Uses [this](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/C1Mono) Remote Map for controlling Reason 10. Currently designing and testing pcb and case options for the final product.
+Uses [this](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/C1Mono) Remote Map for controlling [Reason 10](https://www.propellerheads.se/en/reason). Currently designing and testing pcb and case options for the final product.
 
 (add content)
 
