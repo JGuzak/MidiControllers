@@ -11,7 +11,7 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Contro
 
 ### Libraries:
 
---ControllerLib:
+* ControllerLib:
     Made for the Arduino Due, this library uses hardware interrupts to trigger state changing logic.
 
 More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Libraries)
@@ -23,7 +23,7 @@ Remote is a system designed by Propellerheads for integrating usb midi controlle
 Remote overview [here](https://www.propellerheads.se/support/user/reason/remote/)
 Apply for free to become a Remote developer [here](https://www.propellerheads.se/developer/remote.php)
 
-#### Custom Mappings:
+#### Custom Mappings: (Manufacturer - Model)
 
 * DJTT - Midi Fighter 3D [files]()
 * NI - Traktor D2 [files](https://github.com/JGuzak/MidiControllers/tree/master/RemoteMaps/Traktor%20D2) 
@@ -37,5 +37,6 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Remote
 ### Arduino as ISP Shield:
 
 ![protoboard shield and ribbon cabble for ISP programming](https://github.com/JGuzak/MidiControllers/blob/master/uno_isp/uno_isp_shield%20(1).jpg)
+A shield for using an Arduino as an ISP programmer to easily upload new firmware.
 
 More details [here](https://github.com/JGuzak/MidiControllers/tree/master/uno_isp)
