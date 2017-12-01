@@ -13,3 +13,5 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Contro
 ## Hiduino
 
 (add content)
+
+uses (arduino as ISP to flash the usb control)
