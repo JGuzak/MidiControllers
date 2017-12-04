@@ -78,27 +78,19 @@ void setup() {
                 digitalWrite(rotaryLEDPins[p], HIGH);
                 digitalWrite(buttonLEDPins[p], HIGH);
             }
-
             delay(2);
-
         }
-
         delay(100);
     }
-
     ledClear();
-
 }
 
 void loop() {
     // shift handler
     if (shift) {
         displayPageSelectLED(curPage);
-
         if (curMode != prevMode) {
-
             displayCurModeLCD();
-
             prevMode = curMode;
         }
 

@@ -68,7 +68,7 @@ Step 4: Incoming midi messages
 
 // ---------------------------------------------------------------------
 // Controller state constants:
-const bool SERIAL_OUTPUT = true;
+const bool SERIAL_OUTPUT = false;
 
 const int MAX_ENCODER_VAL = 512;
 const int NUM_BANKS = 4;
@@ -172,22 +172,34 @@ void loop() {
  *  Rejects partial midi messages.
  */
 void receiveMidi() {
-    byte cmdByte, channelByte, ccByte, valueByte;
-    
-    if (Serial.available() > 2) {
-        cmdByte = Serial.read();
-        ccByte = Serial.read();
-        valueByte = Serial.read();
-        channelByte = Serial.read();
+    byte data[4] = 0;
 
-        if (cmdByte == 0xB0 && channelByte == 1) {
-            if (ccByte >= 10 && ccByte <= 25) {
-                receiveRotaryMidi(ccByte, valueByte);
-            } else if (ccByte >= 27 && ccByte <= 42) {
-                receiveButtonMidi(ccByte, valueByte);
+    if (Serial.available()) {
+        Serial.readBytes(data, 4);
+        if (data[0] == 0xB0) {
+            if (data[2] >= 10 && data[2] <= 25) {
+                receiveRotaryMidi(data[2], data[3]);
+            } else if (data[2] >= 27 && data[2] <= 42) {
+                receiveButtonMidi(data[2], data[3]);
             }
         }
     }
+
+
+    // byte cmdByte, channelByte, ccByte, valueByte;
+    // if (Serial.available() > 2) {
+    //     cmdByte = Serial.read();
+    //     ccByte = Serial.read();
+    //     valueByte = Serial.read();
+    //     channelByte = Serial.read();
+    //     if (cmdByte == 0xB0) {
+    //         if (ccByte >= 10 && ccByte <= 25) {
+    //             receiveRotaryMidi(ccByte, valueByte);
+    //         } else if (ccByte >= 27 && ccByte <= 42) {
+    //             receiveButtonMidi(ccByte, valueByte);
+    //         }
+    //     }
+    // }
 }
 
 /*
@@ -200,7 +212,7 @@ void receiveMidi() {
 /**
  * Sends midi output for a button value.
  */
- void sendButtonMidi(int index) {
+void sendButtonMidi(int index) {
     int cc = midiButtonCC[curBank][index];
     int val = buttonValue[curBank][index];
     Serial.write(0xB0);
@@ -423,7 +435,7 @@ void rotaryHandler() {
         for (int i = 0; i < NUM_ENCODERS; i++) {
             int newVal = rotaryEncoder[i].read();
             if (i < 4) {
-                if (newVal >= (rotaryValue[curBank][i] + 4)) {
+                if (newVal >= (rotaryValue[curBank][i] + 2)) {
                     newVal += (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal >= MAX_ENCODER_VAL) {
                         rotaryEncoder[i].write(MAX_ENCODER_VAL);
@@ -436,7 +448,7 @@ void rotaryHandler() {
                         // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     }
-                } else if (newVal <= (rotaryValue[curBank][i] - 4)) {
+                } else if (newVal <= (rotaryValue[curBank][i] - 2)) {
                     newVal -= (int)(MAX_PRECISION * (rotaryPrecision / MAX_PRECISION));
                     if (newVal <= 0) {
                         rotaryEncoder[i].write(0);
@@ -451,11 +463,11 @@ void rotaryHandler() {
                     }
                 }
             } else {
-                if (newVal > 4) {
+                if (newVal > 2) {
                     // clockwise rotation
                     rotaryEncoder[i].write(0);
                     sendShiftRotaryMidi(true);
-                } else if (newVal < -4) {
+                } else if (newVal < -2) {
                     // counter clockwise rotation
                     rotaryEncoder[i].write(0);
                     sendShiftRotaryMidi(false);

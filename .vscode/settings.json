@@ -8,6 +8,7 @@
         "deque": "cpp",
         "list": "cpp",
         "vector": "cpp",
-        "memory": "cpp"
+        "memory": "cpp",
+        "ostream": "cpp"
     }
 }
