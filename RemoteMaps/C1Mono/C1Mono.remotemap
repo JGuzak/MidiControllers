@@ -10,6 +10,16 @@ Map Version	1.0.0
 Scope	Propellerheads	Reason Document
 Map	deltaRotary		Target Track (Delta)
 
+Scope	Propellerheads	Record Master Section
+Map	rotary1		Rotary 1
+Map	rotary2		Rotary 2
+Map	rotary3		Rotary 3
+Map	rotary4		Rotary 4
+Map	button1		Button 1
+Map	button2		Button 2
+Map	button3		Button 3
+Map	button4		Button 4
+
 Scope	Propellerheads	Combinator
 // page 1
 Map	rotary1		Rotary 1
@@ -27,11 +37,15 @@ Map	rotary1		Amp Env Attack
 Map	rotary2		Amp Env Decay
 Map	rotary3		Amp Env Sustain
 Map	rotary4		Amp Env Release
+Map	button1		Button 1
+Map	button2		Button 2
+
 // page 2
 Map	rotary5		Filter Env Attack
 Map	rotary6		Filter Env Decay
 Map	rotary7		Filter Env Sustain
 Map	rotary8		Filter Env Release
+
 // page 3
 Map	rotary9		Filter 1 Freq
 Map	rotary10		Filter 1 Res
@@ -41,6 +55,7 @@ Map	button9		Filter 1 Env Invert
 Map	button10		Osc 1 To Filter 1 Enable
 Map	button11		Osc 2 To Filter 1 Enable
 Map	button12		Osc 3 To Filter 1 Enable
+
 // page 4
 Map	rotary13		Chorus Dry Wet
 Map	rotary14		LFO 1 Rate

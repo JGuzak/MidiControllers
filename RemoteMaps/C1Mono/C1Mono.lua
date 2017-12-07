@@ -42,12 +42,12 @@ function remote_init()
 
 	local inputs={
 
-		{pattern="b0 0A xx", name="rotary1", value="x"},
-		{pattern="b0 0B xx", name="rotary2", value="x"},
-		{pattern="b0 0C xx", name="rotary3", value="x"},
-		{pattern="b0 0D xx", name="rotary4", value="x"},
-		{pattern="b0 0E xx", name="rotary5", value="x"},
-		{pattern="b0 0F xx", name="rotary6", value="x"},
+		{pattern="b0 0a xx", name="rotary1", value="x"},
+		{pattern="b0 0b xx", name="rotary2", value="x"},
+		{pattern="b0 0c xx", name="rotary3", value="x"},
+		{pattern="b0 0d xx", name="rotary4", value="x"},
+		{pattern="b0 0e xx", name="rotary5", value="x"},
+		{pattern="b0 0f xx", name="rotary6", value="x"},
 		{pattern="b0 10 xx", name="rotary7", value="x"},
 		{pattern="b0 11 xx", name="rotary8", value="x"},
 		{pattern="b0 12 xx", name="rotary9", value="x"},
@@ -59,12 +59,12 @@ function remote_init()
 		{pattern="b0 18 xx", name="rotary15", value="x"},
 		{pattern="b0 19 xx", name="rotary16", value="x"},
 
-		{pattern="b0 1A xx", name="button1", value="1"},
-		{pattern="b0 1B xx", name="button2", value="1"},
-		{pattern="b0 1C xx", name="button3", value="1"},
-		{pattern="b0 1D xx", name="button4", value="1"},
-		{pattern="b0 1E xx", name="button5", value="1"},
-		{pattern="b0 1F xx", name="button6", value="1"},
+		{pattern="b0 1a xx", name="button1", value="1"},
+		{pattern="b0 1b xx", name="button2", value="1"},
+		{pattern="b0 1c xx", name="button3", value="1"},
+		{pattern="b0 1d xx", name="button4", value="1"},
+		{pattern="b0 1e xx", name="button5", value="1"},
+		{pattern="b0 1f xx", name="button6", value="1"},
 		{pattern="b0 20 xx", name="button7", value="1"},
 		{pattern="b0 21 xx", name="button8", value="1"},
 		{pattern="b0 22 xx", name="button9", value="1"},
@@ -76,19 +76,19 @@ function remote_init()
 		{pattern="b0 28 xx", name="button15", value="1"},
 		{pattern="b0 29 xx", name="button16", value="1"},
 
-		{pattern="b0 2A xx", name="deltaRotary", value="(64-x)"}
+		{pattern="b0 2a xx", name="deltaRotary", value="(64-x)"}
 
 	}
 	remote.define_auto_inputs(inputs)
 
 	local outputs={
 
-		{name="rotary1", pattern="b0 0A xx"},
-		{name="rotary2", pattern="b0 0B xx"},
-		{name="rotary3", pattern="b0 0C xx"},
-		{name="rotary4", pattern="b0 0D xx"},
-		{name="rotary5", pattern="b0 0E xx"},
-		{name="rotary6", pattern="b0 0F xx"},
+		{name="rotary1", pattern="b0 0a xx"},
+		{name="rotary2", pattern="b0 0b xx"},
+		{name="rotary3", pattern="b0 0c xx"},
+		{name="rotary4", pattern="b0 0d xx"},
+		{name="rotary5", pattern="b0 0e xx"},
+		{name="rotary6", pattern="b0 0f xx"},
 		{name="rotary7", pattern="b0 10 xx"},
 		{name="rotary8", pattern="b0 11 xx"},
 		{name="rotary9", pattern="b0 12 xx"},
@@ -100,12 +100,12 @@ function remote_init()
 		{name="rotary15", pattern="b0 18 xx"},
 		{name="rotary16", pattern="b0 19 xx"},
 
-		{name="button1", pattern="b0 1A 0<000x>"},
-		{name="button2", pattern="b0 1B 0<000x>"},
-		{name="button3", pattern="b0 1C 0<000x>"},
-		{name="button4", pattern="b0 1D 0<000x>"},
-		{name="button5", pattern="b0 1E 0<000x>"},
-		{name="button6", pattern="b0 1F 0<000x>"},
+		{name="button1", pattern="b0 1a 0<000x>"},
+		{name="button2", pattern="b0 1b 0<000x>"},
+		{name="button3", pattern="b0 1c 0<000x>"},
+		{name="button4", pattern="b0 1d 0<000x>"},
+		{name="button5", pattern="b0 1e 0<000x>"},
+		{name="button6", pattern="b0 1f 0<000x>"},
 		{name="button7", pattern="b0 20 0<000x>"},
 		{name="button8", pattern="b0 21 0<000x>"},
 		{name="button9", pattern="b0 22 0<000x>"},
