@@ -47,17 +47,12 @@ GND: Protoboard
 
 -------------------------
 Controller Logic:
-TODO: WRITE THIS
 
-Boot Sequence:
-
-Step 1: Rotary State Updates
-
-Step 2: Button state updates
-
-Step 3: LED outputs
-
-Step 4: Incoming midi messages
+Loop Cycle:
+    Step 1: Rotary State Updates
+    Step 2: Button state updates
+    Step 3: LED outputs
+    Step 4: Incoming midi messages
 
 */
 
@@ -129,8 +124,7 @@ void setup() {
     Serial.begin(31250);
     // Call io.begin(<address>) to initialize the SX1509. If it 
     // successfully communicates, it'll return 1.
-    if (!io.begin(SX1509_ADDRESS)) 
-    {
+    if (!io.begin(SX1509_ADDRESS)) {
         while (1) ; // If we fail to communicate, loop forever.
     }
     // initalize led and button pins on i/o expander board
@@ -151,10 +145,11 @@ void setup() {
 void loop() {
     rotaryHandler();
     buttonHandler();
-    ledDisplay();
     if (Serial.peek() == 0xB0) {
         receiveMidi();
     }
+    ledDisplay();
+
 }
 
 // ---------------------------------------------------------------------
@@ -172,34 +167,24 @@ void loop() {
  *  Rejects partial midi messages.
  */
 void receiveMidi() {
-    byte data[4] = 0;
+    // old midi read
+    byte cmdByte, channelByte, ccByte, valueByte;
+    if (Serial.available() > 2) {
+        cmdByte = Serial.read();
+        ccByte = Serial.read();
+        valueByte = Serial.read();
+        channelByte = Serial.read();
 
-    if (Serial.available()) {
-        Serial.readBytes(data, 4);
-        if (data[0] == 0xB0) {
-            if (data[2] >= 10 && data[2] <= 25) {
-                receiveRotaryMidi(data[2], data[3]);
-            } else if (data[2] >= 27 && data[2] <= 42) {
-                receiveButtonMidi(data[2], data[3]);
+        if (cmdByte == 0xB0) {
+            if (ccByte >= 10 && ccByte <= 25) {
+                receiveRotaryMidi(ccByte, valueByte);
+            } else if (ccByte >= 27 && ccByte <= 42) {
+                receiveButtonMidi(ccByte, valueByte);
             }
         }
+    // } else {
+    //     Serial.readString();
     }
-
-
-    // byte cmdByte, channelByte, ccByte, valueByte;
-    // if (Serial.available() > 2) {
-    //     cmdByte = Serial.read();
-    //     ccByte = Serial.read();
-    //     valueByte = Serial.read();
-    //     channelByte = Serial.read();
-    //     if (cmdByte == 0xB0) {
-    //         if (ccByte >= 10 && ccByte <= 25) {
-    //             receiveRotaryMidi(ccByte, valueByte);
-    //         } else if (ccByte >= 27 && ccByte <= 42) {
-    //             receiveButtonMidi(ccByte, valueByte);
-    //         }
-    //     }
-    // }
 }
 
 /*
@@ -216,8 +201,8 @@ void sendButtonMidi(int index) {
     int cc = midiButtonCC[curBank][index];
     int val = buttonValue[curBank][index];
     Serial.write(0xB0);
-    Serial.write((byte)cc);
-    Serial.write((byte)val);
+    Serial.write(cc);
+    Serial.write(val);
 }
 
 /**
@@ -248,12 +233,12 @@ void receiveButtonMidi(int cc, int value) {
         }
     }
 
-    if (ccError && SERIAL_OUTPUT) {
-        Serial.println();
-        Serial.print("Error reading cc value = ");
-        Serial.print(cc);
-        Serial.println();
-    }
+    // if (ccError && SERIAL_OUTPUT) {
+    //     Serial.println();
+    //     Serial.print("Error reading cc value = ");
+    //     Serial.print(cc);
+    //     Serial.println();
+    // }
 }
 
 /*
@@ -271,8 +256,8 @@ void sendRotaryMidi(int index) {
     int cc = midiRotaryCC[curBank][index];
     int val = map(rotaryValue[curBank][index], 0, 512, 0, 127);
     Serial.write(0xB0);
-    Serial.write((byte)cc);
-    Serial.write((byte)val);
+    Serial.write(cc);
+    Serial.write(val);
 }
 
 /**
@@ -303,12 +288,12 @@ void receiveRotaryMidi(int cc, int value) {
         }
     }
 
-    if (ccError && SERIAL_OUTPUT) {
-        Serial.println();
-        Serial.print("Error reading cc value = ");
-        Serial.print(cc);
-        Serial.println();
-    }
+    // if (ccError && SERIAL_OUTPUT) {
+    //     Serial.println();
+    //     Serial.print("Error reading cc value = ");
+    //     Serial.print(cc);
+    //     Serial.println();
+    // }
 }
 
 /*
@@ -440,12 +425,10 @@ void rotaryHandler() {
                     if (newVal >= MAX_ENCODER_VAL) {
                         rotaryEncoder[i].write(MAX_ENCODER_VAL);
                         rotaryValue[curBank][i] = MAX_ENCODER_VAL;
-                        // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     } else {
                         rotaryEncoder[i].write(newVal);
                         rotaryValue[curBank][i] = newVal;
-                        // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     }
                 } else if (newVal <= (rotaryValue[curBank][i] - 2)) {
@@ -453,12 +436,10 @@ void rotaryHandler() {
                     if (newVal <= 0) {
                         rotaryEncoder[i].write(0);
                         rotaryValue[curBank][i] = 0;
-                        // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     } else {
                         rotaryEncoder[i].write(newVal);
                         rotaryValue[curBank][i] = newVal;
-                        // sendRotarySerial(i);
                         sendRotaryMidi(i);
                     }
                 }
@@ -466,11 +447,19 @@ void rotaryHandler() {
                 if (newVal > 2) {
                     // clockwise rotation
                     rotaryEncoder[i].write(0);
-                    sendShiftRotaryMidi(true);
+                    if (SERIAL_OUTPUT) {
+                        sendShiftRotarySerial(true);
+                    } else {
+                        sendShiftRotaryMidi(true);
+                    }
                 } else if (newVal < -2) {
                     // counter clockwise rotation
                     rotaryEncoder[i].write(0);
-                    sendShiftRotaryMidi(false);
+                    if (SERIAL_OUTPUT) {
+                        sendShiftRotarySerial(false);
+                    } else {
+                        sendShiftRotaryMidi(false);
+                    }
                 }
             }
         }

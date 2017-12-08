@@ -9,6 +9,7 @@
         "list": "cpp",
         "vector": "cpp",
         "memory": "cpp",
-        "ostream": "cpp"
+        "ostream": "cpp",
+        "istream": "cpp"
     }
 }

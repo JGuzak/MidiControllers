@@ -1,7 +1,5 @@
 Version={1,0,0}
 
-
-
 function remote_supported_control_surfaces()
 
 	local surfaces =		{
@@ -15,4 +13,3 @@ function remote_supported_control_surfaces()
 		}	return surfaces
 
 end
-
