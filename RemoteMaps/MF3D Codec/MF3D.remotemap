@@ -1,0 +1,26 @@
+Propellerhead Remote Mapping File	
+File Format Version	1.0.0
+Control Surface Manufacturer	DJ Tech Tools
+Control Surface Model	MF3D
+Map Version	1.0.0
+
+Scope	Propellerheads	Reason Document
+//	Control Surface	Item	Key	Remotable Item	Scale	Mode
+// Right Side Buttons
+Map	Keyboard	C#0	Target Previous Track
+Map	Keyboard	C0	Target Next Track
+Map	Keyboard	B-1	Click On/Off
+
+// Left Side Buttons
+Map	Keyboard	A#-1	Play
+Map	Keyboard	A-1	Stop
+Map	Keyboard	G#-1	Record
+
+Scope	Propellerheads	Master Keyboard
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	Keyboard		Keyboard
+
+//Map	Keyboard	C-2	0
+//Map	Keyboard	C#-2	0
+//Map	Keyboard	D-2	0
+//Map	Keyboard	D#-2	0
