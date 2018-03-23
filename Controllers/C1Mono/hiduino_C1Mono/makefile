@@ -17,9 +17,9 @@ BOARD        = UNO
 F_CPU        = 16000000
 F_USB        = $(F_CPU)
 OPTIMIZATION = s
-TARGET       = arduino_midi
+TARGET       = C1Mono
 SRC          = $(TARGET).c Descriptors.c $(LUFA_SRC_USB)
-LUFA_PATH    = ../../LUFA
+LUFA_PATH    = ../../LUFA-170418/LUFA
 CC_FLAGS     = -DUSE_LUFA_CONFIG_HEADER -IConfig/
 LD_FLAGS     =
 

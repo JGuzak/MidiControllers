@@ -10,6 +10,7 @@
         "vector": "cpp",
         "memory": "cpp",
         "ostream": "cpp",
-        "istream": "cpp"
+        "istream": "cpp",
+        "arduino_midi.h": "c"
     }
 }
