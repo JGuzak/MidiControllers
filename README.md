@@ -6,7 +6,7 @@ An open source library for midi controller developement
 ![breadboard version of the C1due](https://github.com/JGuzak/MidiControllers/blob/master/Controllers/C1Mono/proto%20C1%20for%20due/C1due%20(2).JPG)
 C1due (C1Mono prototype)
 
-![caseless version of the C1Mono](https://github.com/JGuzak/MidiControllers/blob/master/Controllers/C1Mono/protoboard_mount_1.jpg)
+![caseless version of the C1Mono](https://github.com/JGuzak/MidiControllers/blob/master/Controllers/C1Mono/proto%20C1%20for%20uno/protoboard_mount_1.jpg)
 C1Mono without an enclosure.
 
 More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Controllers)
