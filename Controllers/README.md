@@ -14,7 +14,7 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Contro
 Original [repo](https://github.com/ddiakopoulos/hiduino)
 
 ### Setup environment for making custom named hiduino firmware (Windows 10):
-1. Install Ubuntu for Windows
+1. Install Ubuntu for Windows. Information found [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 2. Run these commands:
     * sudo apt-get update
     * sudo apt-get install avr-libc avrdude binutils-avr gcc-avr srecord

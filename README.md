@@ -15,7 +15,9 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Contro
 ### Libraries:
 
 * ControllerLib:
-    Made for the Arduino Due, this library uses hardware interrupts to trigger state changing logic.
+    Made for the Arduino Due, this library uses hardware interrupts to trigger state changing logic. Includes classes for handling rotary encoders and buttons.
+* SparkFun SX1509:
+    Made by SparkFun for handling I/O Expander over the IIRC bus. [Original source](https://github.com/sparkfun/SparkFun_SX1509_Arduino_Library)
 
 More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Libraries)
 
