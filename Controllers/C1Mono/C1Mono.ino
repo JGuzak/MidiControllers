@@ -52,8 +52,8 @@ Loop Cycle:
     Step 1: Rotary State Updates
     Step 2: Button state updates
     Step 3: LED outputs
-    Step 4: Incoming midi messages
-
+    Step 4: Check for incoming midi messages
+        Step 5: Handle incoming midi messages by updating controller state
 */
 
 #define ENCODER_DO_NOT_USE_INTERRUPTS
