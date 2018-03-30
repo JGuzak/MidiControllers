@@ -4,7 +4,7 @@
 
 A simple shield made for icsp microcontroller programming. Works with all Arduino boards with icsp pin headers.
 
-### First time setup:
+## First time setup
 
 1. If on windows, install Ubuntu for Windows. Information found [here](https://docs.microsoft.com/en-us/windows/wsl/install-win10)
 2. In the example sketches provided in the Arduino IDE, upload 11.arduinoISP->arduinoISP sketch to the Uno acting as the programmer.
@@ -13,7 +13,7 @@ More detailed info on using an Arduino as ISP can be found [here](https://www.ar
 
 One thing to note, in the context of this project and the hiduino firmware, the target uno should be connected on the ICSP headers closest to the USB connector, not the ICSP header near the analog pins.
 
-### Uploading new firmware:
+## Uploading new firmware
 
 ![ISP programmer](https://github.com/JGuzak/MidiControllers/blob/master/uno_isp/uno_isp_shield%20(2).jpg)
 
