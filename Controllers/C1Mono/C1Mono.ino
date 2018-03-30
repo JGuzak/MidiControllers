@@ -159,12 +159,13 @@ void loop() {
 //  [X] outgoing midi messages
 
 /*
- * Handles incoming midi messages:
- *  CC values 10 - 25 are banked rotary incoming
- *                                values changes.
- *  CC values 27 - 42 are banked button incoming
- *                                 value changes.
- *  Rejects partial midi messages.
+ * TODO:
+ *  [ ] Handle incoming midi messages:
+ *    CC values 10 - 25 are banked rotary incoming
+ *                                  values changes.
+ *    CC values 27 - 42 are banked button incoming
+ *                                   value changes.
+ *    Rejects partial midi messages.
  */
 void receiveMidi() {
     // old midi read
@@ -218,7 +219,8 @@ void sendButtonSerial(int index) {
 
 /**
  * Updates controller state vale for a given button cc.
- * Handles bad values properly.
+ * TODO:
+ *  [ ] Handle bad values properly.
  */
 void receiveButtonMidi(int cc, int value) {
     bool ccError = false;
@@ -232,13 +234,6 @@ void receiveButtonMidi(int cc, int value) {
             }
         }
     }
-
-    // if (ccError && SERIAL_OUTPUT) {
-    //     Serial.println();
-    //     Serial.print("Error reading cc value = ");
-    //     Serial.print(cc);
-    //     Serial.println();
-    // }
 }
 
 /*
@@ -273,7 +268,8 @@ void sendRotarySerial(int index) {
 
 /**
  * Updates controller state vale for a given rotary cc.
- * Handles bad values properly.
+ * TODO:
+ *  [ ] Handle bad values properly.
  */
 void receiveRotaryMidi(int cc, int value) {
     bool ccError = false;
