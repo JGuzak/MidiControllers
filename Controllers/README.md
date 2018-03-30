@@ -13,14 +13,14 @@ More details [here](https://github.com/JGuzak/MidiControllers/tree/master/Contro
 
 Original [repo](https://github.com/ddiakopoulos/hiduino)
 
-Setup environment for making custom named hiduino firmware (Windows 10):
+### Setup environment for making custom named hiduino firmware (Windows 10):
 1. Install Ubuntu for Windows
 2. Run these commands:
     * sudo apt-get update
     * sudo apt-get install avr-libc avrdude binutils-avr gcc-avr srecord
 3. Download LUFA packages from [here](http://www.fourwalledcubicle.com/LUFA.php)
 
-Making a new Hiduino Firmware
+### Making a new Hiduino Firmware
 1. Copy "Controllers/Hiduino/src/arduino_midi" folder to the working directory of the desired controller
 2. Rename "arduino_midi" to "hiduino_{name of the controller}"
 3. Inside "hiduino_{name of the controller}" modify the following:
