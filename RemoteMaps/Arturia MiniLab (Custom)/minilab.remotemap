@@ -1,0 +1,30 @@
+Propellerhead Remote Mapping File					
+File Format Version	1.0.0				
+Control Surface Manufacturer	Arturia				
+Control Surface Model	MiniLab			
+Map Version	1.0.0				
+
+//This is a remote map template for the Arturia MiniLab Keyboard and Reason 6.0
+
+
+//Scope	Propellerheads	Reason Document			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+//Map	button13		Play		
+//Map	button14		Stop		
+//Map	button15		Record		
+//Map	button16		Auto-quantize
+
+Scope	Propellerheads	Master Keyboard			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+Map	keyboard		Keyboard
+Map	pitch bend		Pitch Bend
+Map	mod wheel		Mod Wheel
+Map	damper pedal		Damper Pedal
+
+//Scope	Propellerheads	Combinator			
+//	Control Surface Item	Key	Remotable Item	Scale	Mode
+//Map	button9		Button 1		
+//Map	button10		Button 2		
+//Map	button11		Button 3		
+//Map	button12		Button 4		
+
