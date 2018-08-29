@@ -23,6 +23,7 @@ The full list of requirements is listed on the wiki. At a bare minimum, you'll n
 * (Recommended) [AVRISPMKII](http://www.atmel.com/tools/AVRISPMKII.aspx)
 
 ## MIDI Library
+
 Since HIDUINO doesn't come with code for consuming or producing MIDI data in sketches themselves, a separate Arduino library must be used to encode/decode the MIDI format inbetween the HIDUINO firmware and the sketch. Notably, the standard Arduino midi library has not been updated to use the most recent "properties" file format, but details on this can be found on the [wiki](https://github.com/ddiakopoulos/hiduino/wiki/arduino_midi-library.properties). 
 
 ## Quickstart
@@ -63,9 +64,11 @@ avrdude -p at90usb82 -F -P usb -c avrispmkii -U flash:w:usbserial_due_16u2.hex \
 ```
 
 ## A Note About Compiling
+
 Compiling the firmware from scratch lets you change the name of the USB device (default HIDUINO).
 
 ## Similar Projects
+
 * [HID](https://github.com/NicoHood/HID) - MIDI-capable HID implementation for 32u4-based-Arduino boards (Leonardo) or Uno/Mega with custom bootloader
 * [arcore](https://github.com/rkistner/arcore) - Similar to HID but only for USB-MIDI on Leonardo
 * [mocoLUFA](https://github.com/kuwatay/mocolufa) - Combined midi/usb-serial firmware
